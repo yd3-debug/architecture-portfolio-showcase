@@ -1,4 +1,4 @@
-import { Building2, Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+import { Building2 } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -155,33 +155,18 @@ const Footer = () => {
       {/* Main Footer */}
       <div className="section-padding">
         <div className="container-professional">
-          <div className="grid lg:grid-cols-4 gap-12 mb-16">
+          <div className="grid lg:grid-cols-3 gap-12 mb-16">
             {/* Company Info */}
             <div className="lg:col-span-1">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="p-2 bg-white/10 rounded-xl">
-                  <Building2 className="w-6 h-6" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold">Business Architecture</h3>
-                  <p className="text-sm text-white/70">Strategic Solutions</p>
-                </div>
-              </div>
+              <img 
+                src="/LOGOYD.png" 
+                alt="Company Logo" 
+                className="h-16 w-auto mb-6"
+              />
               <p className="text-white/70 mb-6 leading-relaxed">
                 Transforming businesses through strategic architecture, process optimization, 
                 and innovative technology solutions.
               </p>
-              <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors duration-200">
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors duration-200">
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a href="#" className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors duration-200">
-                  <Github className="w-5 h-5" />
-                </a>
-              </div>
             </div>
 
             {/* Services */}
@@ -209,40 +194,20 @@ const Footer = () => {
                 <li><a href="#" className="hover:text-white transition-colors duration-200">Technical Documentation</a></li>
               </ul>
             </div>
-
-            {/* Contact */}
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Contact Information</h4>
-              <div className="space-y-4 text-white/70">
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 flex-shrink-0" />
-                  <span>contact@businessarchitecture.com</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 flex-shrink-0" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 flex-shrink-0" />
-                  <span>San Francisco, CA</span>
-                </div>
-              </div>
-            </div>
           </div>
 
-          {/* Legal Documents Section */}
+          {/* Legal Quick Links */}
           <div className="border-t border-white/10 pt-16">
-            <h4 className="text-2xl font-bold mb-8 text-center">Legal Documents & Policies</h4>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <h4 className="text-lg font-semibold mb-6">Legal & Policies</h4>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {legalDocuments.map((doc, index) => (
                 <details key={index} className="group">
-                  <summary className="cursor-pointer p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors duration-200">
-                    <h5 className="font-semibold text-lg">{doc.title}</h5>
-                    <p className="text-sm text-white/70 mt-1">Click to view details</p>
+                  <summary className="cursor-pointer p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors duration-200">
+                    <span className="font-medium text-sm text-white/90">{doc.title}</span>
                   </summary>
-                  <div className="mt-4 p-6 bg-white/5 rounded-xl">
+                  <div className="mt-2 p-4 bg-white/5 rounded-lg">
                     <div 
-                      className="text-sm text-white/80 space-y-4 [&>h3]:text-lg [&>h3]:font-semibold [&>h3]:mb-3 [&>h4]:font-medium [&>h4]:mb-2 [&>ul]:pl-5 [&>ul]:space-y-1 [&>li]:list-disc [&>p]:mb-3 [&>p]:leading-relaxed"
+                      className="text-xs text-white/70 space-y-2 [&>h3]:text-sm [&>h3]:font-semibold [&>h3]:mb-2 [&>h4]:font-medium [&>h4]:mb-1 [&>ul]:pl-4 [&>ul]:space-y-1 [&>li]:list-disc [&>p]:mb-2 [&>p]:leading-relaxed"
                       dangerouslySetInnerHTML={{ __html: doc.content }}
                     />
                   </div>
