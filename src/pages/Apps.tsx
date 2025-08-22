@@ -13,7 +13,6 @@ const Apps = () => {
       tech: ["React Native", "Firebase", "Node.js", "MongoDB"],
       features: ["Age-Based Activities", "Mood Detection", "Location-Aware", "12,000+ Ideas", "Parent-Approved", "Screen-Free Fun"],
       status: "Live on App Store",
-      users: "10,000+",
       platform: "iOS"
     }
   ];
@@ -120,8 +119,7 @@ const Apps = () => {
                   </div>
                 </div>
 
-                    <div className="flex items-center justify-between pt-6 border-t border-border">
-                      <span className="text-sm font-semibold text-primary">{app.users} Active Users</span>
+                    <div className="flex items-center justify-center pt-6 border-t border-border">
                       <span className="text-xs text-muted-foreground">Parent Approved</span>
                     </div>
                   </div>
