@@ -23,13 +23,13 @@ const Apps = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="hero-full-screen hero-overlay relative overflow-hidden">
+      <section className="hero-full-screen hero-overlay relative overflow-hidden flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${appsHeroBg})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary-light/70 to-primary-soft/60" />
-        <div className="container-professional flex items-center h-full relative z-10">
+        <div className="container-professional relative z-10 py-20">
           <div className="text-center text-white w-full">
             <h1 className="heading-hero mb-6">
               Mobile Applications

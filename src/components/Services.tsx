@@ -1,42 +1,30 @@
-import { Building, Cog, Users, TrendingUp, Shield, Zap } from 'lucide-react';
+import { Zap, Code, Globe, TrendingUp } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
-      icon: Building,
-      title: "Enterprise Architecture",
-      description: "Comprehensive enterprise-wide architecture strategies that align business objectives with technology infrastructure.",
-      features: ["Technology Roadmaps", "System Integration", "Digital Transformation"]
+      icon: Zap,
+      title: "Work Automation Solutions",
+      description: "Streamline repetitive tasks and workflows to save time and reduce manual errors in your business operations.",
+      features: ["Process Automation", "Workflow Optimization", "Task Management", "Data Integration"]
     },
     {
-      icon: Cog,
-      title: "Process Optimization",
-      description: "Streamline operations and eliminate inefficiencies through data-driven process re-engineering and automation.",
-      features: ["Workflow Analysis", "Automation Strategy", "Performance Metrics"]
+      icon: Code,
+      title: "Micro SaaS Development", 
+      description: "Build custom software solutions and rapid prototypes tailored to your specific business needs and market opportunities.",
+      features: ["Custom Applications", "API Development", "MVP Creation", "Scalable Architecture"]
     },
     {
-      icon: Users,
-      title: "Organizational Design",
-      description: "Design optimal organizational structures that support business growth and foster innovation across teams.",
-      features: ["Team Structure", "Capability Mapping", "Change Management"]
+      icon: Globe,
+      title: "Website Design & Optimization",
+      description: "Create modern, responsive websites that drive engagement and convert visitors into customers.",
+      features: ["Responsive Design", "User Experience", "Performance Optimization", "SEO Implementation"]
     },
     {
       icon: TrendingUp,
-      title: "Growth Strategy",
-      description: "Develop scalable business models and growth strategies that position your organization for long-term success.",
-      features: ["Market Analysis", "Scalability Planning", "Revenue Optimization"]
-    },
-    {
-      icon: Shield,
-      title: "Risk Management",
-      description: "Implement comprehensive risk management frameworks to protect and future-proof your business operations.",
-      features: ["Risk Assessment", "Compliance Strategy", "Security Architecture"]
-    },
-    {
-      icon: Zap,
-      title: "Innovation Framework",
-      description: "Build innovation capabilities and frameworks that drive continuous improvement and competitive advantage.",
-      features: ["Innovation Labs", "R&D Strategy", "Technology Adoption"]
+      title: "Business Architecture Guidance",
+      description: "Get expert guidance on process improvement and strategic direction when you're unsure what needs optimization.",
+      features: ["Process Analysis", "Strategic Planning", "Efficiency Consulting", "Growth Roadmaps"]
     }
   ];
 
@@ -45,11 +33,11 @@ const Services = () => {
       <div className="container-professional">
         <div className="text-center mb-16">
           <h2 className="heading-section mb-6">
-            Comprehensive Business Architecture Services
+            Core Business Solutions
           </h2>
           <p className="text-professional max-w-3xl mx-auto">
-            I provide end-to-end business architecture solutions that transform organizations, 
-            optimize processes, and drive sustainable growth through strategic technology alignment.
+            Specialized services that automate workflows, create custom software solutions, 
+            and optimize business processes to drive growth and efficiency.
           </p>
         </div>
 

@@ -16,17 +16,17 @@ const Hero = () => {
           <div className="animate-fade-in-up text-white">
             <div className="mb-6">
               <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/20 text-white border border-white/30">
-                ✨ Strategic Business Architecture
+                ✨ Business Process Automation
               </span>
             </div>
             
             <h1 className="heading-hero mb-6 text-white">
-              Transform Your Business with
-              <span className="bg-gradient-to-r from-white to-primary-light bg-clip-text text-transparent"> Strategic Architecture</span>
+              Streamline Your Business with
+              <span className="bg-gradient-to-r from-white to-primary-light bg-clip-text text-transparent"> Smart Automation</span>
             </h1>
             
             <p className="text-xl leading-relaxed mb-8 max-w-lg text-white/90">
-              We design and implement comprehensive business architectures that align technology, processes, and people to drive sustainable growth and operational excellence.
+              Transform your operations with work automation, micro SaaS solutions, and optimized business architecture. Get expert guidance when you don't know what needs improvement.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -43,15 +43,15 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-sm text-white/80">
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-white" />
-                15+ Years Experience
+                Process Automation Expert
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-white" />
-                200+ Projects Delivered
+                Custom SaaS Development
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-white" />
-                Fortune 500 Clients
+                Business Optimization
               </div>
             </div>
           </div>

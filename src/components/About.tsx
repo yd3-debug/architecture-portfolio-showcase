@@ -2,32 +2,32 @@ import { Award, Users, Target, Lightbulb } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { number: "15+", label: "Years Experience", description: "Leading enterprise transformations" },
-    { number: "200+", label: "Projects Completed", description: "Across multiple industries" },
-    { number: "50+", label: "Enterprise Clients", description: "Including Fortune 500 companies" },
-    { number: "99%", label: "Client Satisfaction", description: "Proven track record of success" }
+    { number: "50+", label: "Automations Built", description: "Streamlining business processes" },
+    { number: "25+", label: "SaaS Solutions", description: "Custom applications delivered" },
+    { number: "100+", label: "Websites Created", description: "Modern, responsive designs" },
+    { number: "98%", label: "Client Satisfaction", description: "Proven results and quality" }
   ];
 
   const expertise = [
     {
       icon: Target,
-      title: "Strategic Vision",
-      description: "Aligning business objectives with technology capabilities to create sustainable competitive advantages."
+      title: "Process Automation",
+      description: "Creating automated workflows that eliminate repetitive tasks and reduce manual errors in business operations."
     },
     {
       icon: Users,
-      title: "Cross-functional Leadership",
-      description: "Leading diverse teams across business units, IT, and operations to deliver cohesive solutions."
+      title: "Custom Development",
+      description: "Building tailored software solutions that address specific business challenges and market opportunities."
     },
     {
       icon: Lightbulb,
-      title: "Innovation Management",
-      description: "Driving digital transformation and innovation adoption while managing organizational change."
+      title: "Business Optimization",
+      description: "Analyzing and improving business processes to increase efficiency, reduce costs, and accelerate growth."
     },
     {
       icon: Award,
-      title: "Industry Recognition",
-      description: "Certified enterprise architect with recognition from leading industry organizations."
+      title: "Technical Excellence",
+      description: "Delivering high-quality solutions using modern technologies and best practices for scalable results."
     }
   ];
 
@@ -38,26 +38,24 @@ const About = () => {
           {/* Content */}
           <div>
             <h2 className="heading-section mb-6">
-              Transforming Businesses Through Strategic Architecture
+              Delivering Results Through Smart Automation
             </h2>
             
             <div className="space-y-6 text-professional">
               <p>
-                With over 15 years of experience in business architecture and enterprise transformation, 
-                I specialize in creating comprehensive strategies that bridge the gap between business 
-                vision and technical execution.
+                Specializing in work automation, micro SaaS development, and business optimization 
+                to help companies streamline operations and accelerate growth through technology.
               </p>
               
               <p>
-                My approach combines deep industry knowledge with cutting-edge technology insights 
-                to design scalable, future-ready architectures that drive sustainable growth and 
-                operational excellence.
+                The approach combines practical automation solutions with custom software development 
+                to create scalable systems that reduce manual work and improve business efficiency.
               </p>
               
               <p>
-                I've led digital transformations for Fortune 500 companies, managed multi-million 
-                dollar initiatives, and built applications serving hundreds of thousands of users 
-                across various industries including finance, healthcare, manufacturing, and retail.
+                From process automation tools to full-stack applications, the focus is on delivering 
+                measurable results that save time, reduce costs, and enable businesses to scale 
+                their operations effectively.
               </p>
             </div>
 
@@ -90,12 +88,12 @@ const About = () => {
           </div>
         </div>
 
-        {/* Certifications and Education */}
+        {/* Technology Stack */}
         <div className="mt-24">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold mb-4">Certifications & Education</h3>
+            <h3 className="text-2xl font-bold mb-4">Technology Stack</h3>
             <p className="text-professional max-w-2xl mx-auto">
-              Continuous learning and professional development to stay at the forefront of business architecture.
+              Modern technologies and frameworks used to deliver high-quality automation and software solutions.
             </p>
           </div>
 
@@ -104,24 +102,24 @@ const About = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary-soft rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-white" />
               </div>
-              <h4 className="font-bold mb-2">TOGAF 9.2 Certified</h4>
-              <p className="text-sm text-muted-foreground">Enterprise Architecture Framework</p>
+              <h4 className="font-bold mb-2">Full-Stack Development</h4>
+              <p className="text-sm text-muted-foreground">React, Node.js, TypeScript, Python</p>
             </div>
             
             <div className="card-professional text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary-soft rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Target className="w-8 h-8 text-white" />
               </div>
-              <h4 className="font-bold mb-2">Zachman Framework</h4>
-              <p className="text-sm text-muted-foreground">Enterprise Architecture Methodology</p>
+              <h4 className="font-bold mb-2">Automation Tools</h4>
+              <p className="text-sm text-muted-foreground">Zapier, Make.com, Custom Scripts</p>
             </div>
             
             <div className="card-professional text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary-soft rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Lightbulb className="w-8 h-8 text-white" />
               </div>
-              <h4 className="font-bold mb-2">MBA in Technology</h4>
-              <p className="text-sm text-muted-foreground">Strategic Business Leadership</p>
+              <h4 className="font-bold mb-2">Cloud Platforms</h4>
+              <p className="text-sm text-muted-foreground">AWS, Vercel, Supabase, Firebase</p>
             </div>
           </div>
         </div>
