@@ -74,17 +74,6 @@ const Apps = () => {
                           </span>
                         </div>
                       </div>
-                      <div className="flex space-x-2">
-                        <a 
-                          href="https://apps.apple.com" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors duration-200"
-                        >
-                          <img src="/Apple_LOGO_STORE.png" alt="Apple Store" className="w-6 h-6 mr-2" />
-                          App Store
-                        </a>
-                      </div>
                     </div>
 
                 <p className="text-muted-foreground mb-6 leading-relaxed">{app.description}</p>
@@ -130,15 +119,6 @@ const Apps = () => {
             <p className="text-professional mb-8">
               Interested in learning more about BusyBees or discussing mobile app development?
             </p>
-            <a 
-              href="https://apps.apple.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-hero mr-4"
-            >
-              <img src="/Apple_LOGO_STORE.png" alt="Apple Store" className="w-6 h-6 mr-2" />
-              Download on App Store
-            </a>
             <button className="btn-professional">
               Contact for App Development
             </button>
