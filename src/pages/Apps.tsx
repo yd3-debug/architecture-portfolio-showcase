@@ -1,4 +1,4 @@
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Apple } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -70,7 +70,7 @@ const Apps = () => {
                             {app.status}
                           </span>
                           <span className="flex items-center">
-                            <img src="/Apple_LOGO_STORE.png" alt="Apple" className="w-4 h-4 mr-1" />
+                            <Apple className="w-4 h-4 mr-1" />
                             Available on {app.platform}
                           </span>
                         </div>
@@ -82,7 +82,7 @@ const Apps = () => {
                           rel="noopener noreferrer"
                           className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors duration-200"
                         >
-                          <img src="/Apple_LOGO_STORE.png" alt="Apple" className="w-4 h-4 mr-2" />
+                          <Apple className="w-4 h-4 mr-2" />
                           App Store
                         </a>
                       </div>
@@ -137,7 +137,7 @@ const Apps = () => {
               rel="noopener noreferrer"
               className="btn-hero mr-4"
             >
-              <img src="/Apple_LOGO_STORE.png" alt="Apple" className="w-4 h-4 mr-2" />
+              <Apple className="w-4 h-4 mr-2" />
               Download on App Store
             </a>
             <button className="btn-professional">
