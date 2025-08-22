@@ -69,8 +69,7 @@ const Apps = () => {
                             <div className="w-2 h-2 rounded-full mr-2 bg-green-500"></div>
                             {app.status}
                           </span>
-                          <span className="flex items-center">
-                            <img src="/Apple_LOGO_STORE.png" alt="Apple" className="w-4 h-4 mr-1" />
+                          <span>
                             Available on {app.platform}
                           </span>
                         </div>
@@ -82,7 +81,7 @@ const Apps = () => {
                           rel="noopener noreferrer"
                           className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors duration-200"
                         >
-                          <img src="/Apple_LOGO_STORE.png" alt="Apple Store" className="w-4 h-4 mr-2" />
+                          <img src="/Apple_LOGO_STORE.png" alt="Apple Store" className="w-6 h-6 mr-2" />
                           App Store
                         </a>
                       </div>
@@ -137,7 +136,7 @@ const Apps = () => {
               rel="noopener noreferrer"
               className="btn-hero mr-4"
             >
-              <img src="/Apple_LOGO_STORE.png" alt="Apple Store" className="w-4 h-4 mr-2" />
+              <img src="/Apple_LOGO_STORE.png" alt="Apple Store" className="w-6 h-6 mr-2" />
               Download on App Store
             </a>
             <button className="btn-professional">
