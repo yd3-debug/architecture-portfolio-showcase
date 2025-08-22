@@ -3,7 +3,7 @@ import heroImage from '@/assets/hero-image.jpg';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center bg-gradient-to-br from-primary via-primary-light to-primary-soft relative overflow-hidden">
+    <section className="hero-full-screen hero-overlay flex items-center bg-gradient-to-br from-primary via-primary-light to-primary-soft relative overflow-hidden">
       <div className="container-professional pt-20">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}

@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Smartphone, Globe, Database, BarChart3, ArrowLeft } from 'lucide-react';
+import { ExternalLink, ArrowLeft, Apple } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -6,64 +6,15 @@ import Footer from '../components/Footer';
 const Apps = () => {
   const apps = [
     {
-      title: "Enterprise Resource Planning Suite",
-      category: "Web Application",
-      description: "Comprehensive ERP system built for manufacturing companies to manage inventory, production, and supply chain operations with real-time analytics and reporting.",
-      icon: BarChart3,
-      tech: ["React", "Node.js", "PostgreSQL", "Redis"],
-      features: ["Real-time Dashboards", "Inventory Management", "Supply Chain Tracking", "Advanced Analytics"],
-      status: "Production",
-      users: "5,000+"
-    },
-    {
-      title: "Financial Planning Mobile App",
+      title: "BusyBees",
       category: "Mobile Application",
-      description: "AI-powered financial planning application that helps users manage investments, track expenses, and plan retirement with personalized recommendations.",
-      icon: Smartphone,
-      tech: ["React Native", "Python", "MongoDB", "TensorFlow"],
-      features: ["AI Recommendations", "Portfolio Tracking", "Risk Analysis", "Goal Planning"],
-      status: "Production",
-      users: "50,000+"
-    },
-    {
-      title: "Customer Relationship Management Platform",
-      category: "SaaS Platform",
-      description: "Modern CRM platform designed for B2B companies with advanced lead scoring, pipeline management, and customer journey analytics.",
-      icon: Globe,
-      tech: ["Vue.js", "Laravel", "MySQL", "ElasticSearch"],
-      features: ["Lead Scoring", "Pipeline Management", "Email Automation", "Customer Analytics"],
-      status: "Production",
-      users: "10,000+"
-    },
-    {
-      title: "Supply Chain Analytics Dashboard",
-      category: "Data Platform",
-      description: "Real-time supply chain visibility platform that provides predictive analytics and optimization recommendations for global logistics operations.",
-      icon: Database,
-      tech: ["Angular", "Django", "Apache Kafka", "Apache Spark"],
-      features: ["Predictive Analytics", "Real-time Tracking", "Cost Optimization", "Risk Monitoring"],
-      status: "Production",
-      users: "2,000+"
-    },
-    {
-      title: "Digital Banking Platform",
-      category: "FinTech Application",
-      description: "Next-generation digital banking platform with advanced security features, micro-services architecture, and seamless user experience.",
-      icon: Globe,
-      tech: ["React", "Spring Boot", "PostgreSQL", "Kubernetes"],
-      features: ["Multi-factor Authentication", "Real-time Transactions", "Investment Tools", "Credit Scoring"],
-      status: "Beta",
-      users: "25,000+"
-    },
-    {
-      title: "Workforce Management System",
-      category: "Enterprise Software",
-      description: "Intelligent workforce management system with AI-powered scheduling, performance tracking, and compliance management for large organizations.",
-      icon: BarChart3,
-      tech: ["Svelte", "FastAPI", "Redis", "Docker"],
-      features: ["AI Scheduling", "Performance Metrics", "Compliance Tracking", "Resource Optimization"],
-      status: "Production",
-      users: "15,000+"
+      description: "BusyBees helps you keep your kids happy without screens. When you are out of ideas and running on empty BusyBees gives you fast low effort activities based on your child's age mood and location. Whether it is a rainy day a busy work call or just a restless afternoon we are here with more than twelve thousand real parent approved ideas. Created by parents for parents BusyBees makes it easy to enjoy calm fun moments together without spending hours planning or scrolling",
+      logo: "/BUSYBEELOGO.png",
+      tech: ["React Native", "Firebase", "Node.js", "MongoDB"],
+      features: ["Age-Based Activities", "Mood Detection", "Location-Aware", "12,000+ Ideas", "Parent-Approved", "Screen-Free Fun"],
+      status: "Live on App Store",
+      users: "10,000+",
+      platform: "iOS"
     }
   ];
 
@@ -72,9 +23,9 @@ const Apps = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary via-primary-light to-primary-soft">
-        <div className="container-professional">
-          <div className="text-center text-white mb-12">
+      <section className="hero-full-screen hero-overlay bg-gradient-to-br from-primary via-primary-light to-primary-soft">
+        <div className="container-professional flex items-center h-full">
+          <div className="text-center text-white w-full">
             <Link 
               to="/" 
               className="inline-flex items-center text-white/80 hover:text-white mb-6 group"
@@ -83,11 +34,11 @@ const Apps = () => {
               Back to Home
             </Link>
             <h1 className="heading-hero mb-6">
-              Applications I've Built
+              Mobile Applications
             </h1>
             <p className="text-xl text-white/90 max-w-3xl mx-auto">
-              A comprehensive showcase of enterprise-grade applications and platforms I've designed and developed, 
-              serving hundreds of thousands of users across various industries.
+              Discover BusyBees - the parenting app that helps keep your kids engaged without screens, 
+              featuring over 12,000 activities tailored to your child's age, mood, and location.
             </p>
           </div>
         </div>
@@ -98,34 +49,46 @@ const Apps = () => {
         <div className="container-professional">
           <div className="grid lg:grid-cols-2 gap-8">
             {apps.map((app, index) => (
-              <div key={index} className="card-elevated group">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-primary to-primary-soft rounded-xl flex items-center justify-center">
-                      <app.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold mb-1">{app.title}</h3>
-                      <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                        <span>{app.category}</span>
-                        <span className="flex items-center">
-                          <div className={`w-2 h-2 rounded-full mr-2 ${
-                            app.status === 'Production' ? 'bg-green-500' : 'bg-yellow-500'
-                          }`}></div>
-                          {app.status}
-                        </span>
+              <div key={index} className="card-elevated group col-span-full">
+                <div className="flex flex-col lg:flex-row lg:items-center gap-8">
+                  {/* Logo Section */}
+                  <div className="flex-shrink-0">
+                    <img 
+                      src={app.logo} 
+                      alt={`${app.title} Logo`}
+                      className="w-32 h-32 rounded-2xl shadow-lg"
+                    />
+                  </div>
+                  
+                  {/* Content Section */}
+                  <div className="flex-grow">
+                    <div className="flex items-start justify-between mb-6">
+                      <div>
+                        <h3 className="text-3xl font-bold mb-2">{app.title}</h3>
+                        <div className="flex items-center space-x-4 text-sm text-muted-foreground mb-4">
+                          <span className="bg-primary/10 text-primary px-3 py-1 rounded-full">{app.category}</span>
+                          <span className="flex items-center">
+                            <div className="w-2 h-2 rounded-full mr-2 bg-green-500"></div>
+                            {app.status}
+                          </span>
+                          <span className="flex items-center">
+                            <Apple className="w-4 h-4 mr-1" />
+                            Available on {app.platform}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="flex space-x-2">
+                        <a 
+                          href="https://apps.apple.com" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors duration-200"
+                        >
+                          <Apple className="w-4 h-4 mr-2" />
+                          App Store
+                        </a>
                       </div>
                     </div>
-                  </div>
-                  <div className="flex space-x-2">
-                    <button className="p-2 bg-secondary hover:bg-secondary/80 rounded-lg transition-colors duration-200">
-                      <ExternalLink className="w-4 h-4" />
-                    </button>
-                    <button className="p-2 bg-secondary hover:bg-secondary/80 rounded-lg transition-colors duration-200">
-                      <Github className="w-4 h-4" />
-                    </button>
-                  </div>
-                </div>
 
                 <p className="text-muted-foreground mb-6 leading-relaxed">{app.description}</p>
 
@@ -157,9 +120,11 @@ const Apps = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between pt-4 border-t border-border">
-                  <span className="text-sm font-semibold text-primary">{app.users} Active Users</span>
-                  <span className="text-xs text-muted-foreground">Enterprise Grade</span>
+                    <div className="flex items-center justify-between pt-6 border-t border-border">
+                      <span className="text-sm font-semibold text-primary">{app.users} Active Users</span>
+                      <span className="text-xs text-muted-foreground">Parent Approved</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
@@ -167,13 +132,19 @@ const Apps = () => {
 
           <div className="text-center mt-16">
             <p className="text-professional mb-8">
-              Interested in seeing detailed case studies or technical documentation?
+              Interested in learning more about BusyBees or discussing mobile app development?
             </p>
-            <button className="btn-hero mr-4">
-              View Case Studies
-            </button>
+            <a 
+              href="https://apps.apple.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn-hero mr-4"
+            >
+              <Apple className="w-4 h-4 mr-2" />
+              Download on App Store
+            </a>
             <button className="btn-professional">
-              Technical Details
+              Contact for App Development
             </button>
           </div>
         </div>

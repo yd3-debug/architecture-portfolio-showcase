@@ -137,6 +137,26 @@
     @apply text-lg text-muted-foreground leading-relaxed;
   }
 
+  /* Hero Sections */
+  .hero-full-screen {
+    @apply min-h-screen w-full;
+  }
+
+  .hero-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 100%);
+    pointer-events: none;
+  }
+
+  .hero-bg-image {
+    @apply bg-cover bg-center bg-no-repeat relative;
+  }
+
   /* Animations */
   .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
