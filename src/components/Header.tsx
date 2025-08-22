@@ -6,7 +6,7 @@ const Header = () => {
 
   const navItems = [
     { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Apps', href: '/apps' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -20,7 +20,7 @@ const Header = () => {
             <img 
               src="/LOGOYD.png" 
               alt="Company Logo" 
-              className="h-12 w-auto"
+              className="h-20 w-auto"
             />
           </div>
 
@@ -36,9 +36,6 @@ const Header = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full"></span>
               </a>
             ))}
-            <button className="btn-professional ml-4">
-              Get Started
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -64,9 +61,6 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <button className="btn-professional self-start mt-4">
-                Get Started
-              </button>
             </div>
           </div>
         )}

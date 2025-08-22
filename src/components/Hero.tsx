@@ -1,4 +1,5 @@
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import heroImage from '@/assets/hero-image.jpg';
 
 const Hero = () => {
   return (
@@ -49,22 +50,15 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Visual */}
+          {/* Hero Image */}
           <div className="relative animate-fade-in-delay">
-            <div className="relative z-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
-              <div className="aspect-square bg-gradient-to-br from-white/10 via-white/5 to-transparent rounded-2xl p-8 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-r from-white/20 to-white/10 rounded-2xl flex items-center justify-center">
-                    <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                      <div className="w-6 h-6 bg-primary rounded-md"></div>
-                    </div>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-2">Strategic Vision</h3>
-                  <p className="text-white/80">
-                    Connecting business goals with technical excellence
-                  </p>
-                </div>
-              </div>
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src={heroImage} 
+                alt="Strategic Business Architecture"
+                className="w-full h-auto rounded-2xl"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
             </div>
             
             {/* Background Elements */}

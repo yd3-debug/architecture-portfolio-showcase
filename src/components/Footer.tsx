@@ -196,28 +196,9 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Legal Quick Links */}
-          <div className="border-t border-white/10 pt-16">
-            <h4 className="text-lg font-semibold mb-6">Legal & Policies</h4>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {legalDocuments.map((doc, index) => (
-                <details key={index} className="group">
-                  <summary className="cursor-pointer p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors duration-200">
-                    <span className="font-medium text-sm text-white/90">{doc.title}</span>
-                  </summary>
-                  <div className="mt-2 p-4 bg-white/5 rounded-lg">
-                    <div 
-                      className="text-xs text-white/70 space-y-2 [&>h3]:text-sm [&>h3]:font-semibold [&>h3]:mb-2 [&>h4]:font-medium [&>h4]:mb-1 [&>ul]:pl-4 [&>ul]:space-y-1 [&>li]:list-disc [&>p]:mb-2 [&>p]:leading-relaxed"
-                      dangerouslySetInnerHTML={{ __html: doc.content }}
-                    />
-                  </div>
-                </details>
-              ))}
-            </div>
-          </div>
 
           {/* Bottom Bar */}
-          <div className="border-t border-white/10 mt-16 pt-8">
+          <div className="border-t border-white/10 mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <div className="text-white/70 text-sm">
                 © {currentYear} Business Architecture Strategic Solutions. All rights reserved.

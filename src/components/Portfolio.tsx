@@ -69,16 +69,16 @@ const Portfolio = () => {
       <div className="container-professional">
         <div className="text-center mb-16">
           <h2 className="heading-section mb-6">
-            Applications I've Architected & Built
+            Featured Applications
           </h2>
           <p className="text-professional max-w-3xl mx-auto">
-            A showcase of enterprise-grade applications and platforms I've designed and developed, 
-            serving hundreds of thousands of users across various industries.
+            A preview of enterprise-grade applications I've designed and developed. 
+            <a href="/apps" className="text-primary hover:underline ml-1">View all applications →</a>
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
-          {apps.map((app, index) => (
+          {apps.slice(0, 4).map((app, index) => (
             <div key={index} className="card-elevated group">
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center space-x-4">
@@ -148,11 +148,11 @@ const Portfolio = () => {
 
         <div className="text-center mt-16">
           <p className="text-professional mb-8">
-            Interested in seeing detailed case studies or technical documentation?
+            Want to see all applications and detailed case studies?
           </p>
-          <button className="btn-hero mr-4">
-            View Case Studies
-          </button>
+          <a href="/apps" className="btn-hero mr-4">
+            View All Applications
+          </a>
           <button className="btn-professional">
             Technical Details
           </button>
