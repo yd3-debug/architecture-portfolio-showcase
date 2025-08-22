@@ -1,7 +1,8 @@
-import { ExternalLink, ArrowLeft, Apple } from 'lucide-react';
+import { ExternalLink, Apple } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import appsHeroBg from '@/assets/apps-hero-bg.jpg';
 
 const Apps = () => {
   const apps = [
@@ -22,16 +23,14 @@ const Apps = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="hero-full-screen hero-overlay bg-gradient-to-br from-primary via-primary-light to-primary-soft">
-        <div className="container-professional flex items-center h-full">
+      <section className="hero-full-screen hero-overlay relative overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${appsHeroBg})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary-light/70 to-primary-soft/60" />
+        <div className="container-professional flex items-center h-full relative z-10">
           <div className="text-center text-white w-full">
-            <Link 
-              to="/" 
-              className="inline-flex items-center text-white/80 hover:text-white mb-6 group"
-            >
-              <ArrowLeft className="mr-2 w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200" />
-              Back to Home
-            </Link>
             <h1 className="heading-hero mb-6">
               Mobile Applications
             </h1>
