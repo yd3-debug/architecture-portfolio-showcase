@@ -25,12 +25,12 @@ const Testimonials = () => {
     {
       id: 3,
       quote: "Workflow automation eliminated 80% of manual tasks. Our team now focuses on strategy instead of repetitive work. ROI was achieved in just 3 months.",
-      name: "Li Wei",
+      name: "Michael Thompson",
       title: "Operations Manager",
-      location: "Singapore",
+      location: "Toronto, Canada",
       service: "Workflow Optimization",
       rating: 5,
-      avatar: "LW"
+      avatar: "MT"
     },
     {
       id: 4,
@@ -45,22 +45,22 @@ const Testimonials = () => {
     {
       id: 5,
       quote: "Negotiated better vendor contracts and streamlined operations. Saved 30% on operational costs while improving service quality across all locations.",
-      name: "Carlos Rodriguez",
+      name: "Liam O'Connor",
       title: "Digital Agency Founder",
-      location: "São Paulo, Brazil",
+      location: "Dublin, Ireland",
       service: "Business Optimization",
       rating: 5,
-      avatar: "CR"
+      avatar: "LO"
     },
     {
       id: 6,
       quote: "The micro SaaS solution handles complex inventory management beautifully. Real-time tracking, automated reordering, and detailed analytics in one platform.",
-      name: "Priya Sharma",
+      name: "Amira Hassan",
       title: "Supply Chain Director",
-      location: "Mumbai, India",
+      location: "Dubai, UAE",
       service: "Micro SaaS",
       rating: 5,
-      avatar: "PS"
+      avatar: "AH"
     }
   ];
 
