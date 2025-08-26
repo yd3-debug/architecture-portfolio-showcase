@@ -1,9 +1,8 @@
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import Services from '../components/Services';
+import ServicesHero from '../components/ServicesHero';
 import Testimonials from '../components/Testimonials';
-import Portfolio from '../components/Portfolio';
-import About from '../components/About';
+import AboutHero from '../components/AboutHero';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import CookieBanner from '../components/CookieBanner';
@@ -13,10 +12,9 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <Services />
+      <ServicesHero />
       <Testimonials />
-      <Portfolio />
-      <About />
+      <AboutHero />
       <Contact />
       <Footer />
       <CookieBanner />
