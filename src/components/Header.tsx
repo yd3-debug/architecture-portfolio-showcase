@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Building2 } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -16,17 +16,20 @@ const Header = () => {
 
   const navItems = [
     { name: 'Services', href: '#services' },
-    { name: 'Apps', href: '/apps' },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-gray-100/95 backdrop-blur-md shadow-lg' : ''}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-background/95 backdrop-blur-md shadow-lg border-b border-border/50' 
+        : 'bg-transparent'
+    }`}>
       <nav className="container-professional">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center z-50">
             <img 
               src="/LOGOYD.png" 
               alt="Company Logo" 
@@ -35,22 +38,31 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium hover:text-primary transition-colors duration-200 relative group ${isScrolled ? 'text-gray-800' : 'text-white'}`}
+                className={`text-sm font-semibold transition-all duration-200 relative group ${
+                  isScrolled ? 'text-foreground hover:text-accent' : 'text-white hover:text-accent'
+                }`}
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-200 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
+            <a href="#contact">
+              <button className="btn-hero text-sm px-6 py-3">
+                Get Started
+              </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden p-2 transition-colors duration-200 ${isScrolled ? 'text-gray-800' : 'text-white'}`}
+            className={`md:hidden p-2 rounded-lg transition-colors duration-200 z-50 ${
+              isScrolled ? 'text-foreground hover:bg-secondary' : 'text-white hover:bg-white/10'
+            }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -59,18 +71,23 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-white/20 bg-background/95 backdrop-blur-md">
-            <div className="flex flex-col space-y-4">
+          <div className="md:hidden fixed inset-0 top-24 bg-background/98 backdrop-blur-lg z-40">
+            <div className="flex flex-col p-8 space-y-6">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-sm font-medium text-foreground hover:text-primary transition-colors duration-200 py-2"
+                  className="text-lg font-semibold text-foreground hover:text-accent transition-colors duration-200 py-3 border-b border-border/50"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
+              <a href="#contact" onClick={() => setIsMenuOpen(false)}>
+                <button className="btn-hero w-full mt-4">
+                  Get Started
+                </button>
+              </a>
             </div>
           </div>
         )}

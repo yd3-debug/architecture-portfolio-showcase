@@ -1,75 +1,100 @@
-import { ArrowRight, CheckCircle } from 'lucide-react';
-import heroImage from '@/assets/hero-image.jpg';
-import businessHeroBg from '@/assets/business-hero-bg.jpg';
+import { ArrowRight, Sparkles, Zap, TrendingUp } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="hero-full-screen hero-overlay flex items-center relative overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${businessHeroBg})` }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary-light/70 to-primary-soft/60" />
-      <div className="container-professional pt-20 relative z-10">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-mesh">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-accent/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-coral/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
+      </div>
+
+      <div className="container-professional pt-20 pb-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
-          <div className="animate-fade-in-up text-white">
-            <div className="mb-6">
-              <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/20 text-white border border-white/30">
-                ✨ Business Process Automation
-              </span>
+          <div className="animate-slide-in-left">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-accent/10 text-accent border border-accent/20 mb-8">
+              <Sparkles className="w-4 h-4" />
+              <span>Business Process Automation</span>
             </div>
             
-            <h1 className="heading-hero mb-6 text-white">
-              Streamline Your Business with
-              <span className="bg-gradient-to-r from-white to-primary-light bg-clip-text text-transparent"> Smart Automation</span>
+            <h1 className="heading-hero mb-8 text-foreground">
+              Streamline Your
+              <span className="block bg-gradient-to-r from-accent via-accent-light to-coral bg-clip-text text-transparent">
+                Business with Smart Automation
+              </span>
             </h1>
             
-            <p className="text-xl leading-relaxed mb-8 max-w-lg text-white/90">
+            <p className="text-xl leading-relaxed mb-10 max-w-2xl text-muted-foreground">
               Transform your operations with work automation, micro SaaS solutions, and optimized business architecture. Get expert guidance when you don't know what needs improvement.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <button className="btn-hero group">
                 View Our Work
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="btn-professional">
+              <button className="btn-secondary">
                 Schedule Consultation
               </button>
             </div>
 
-            {/* Trust Indicators */}
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-sm text-white/80">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-white" />
-                Process Automation Expert
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border/50">
+              <div>
+                <div className="text-3xl font-bold text-foreground mb-1">500+</div>
+                <div className="text-sm text-muted-foreground">Projects</div>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-white" />
-                Custom SaaS Development
+              <div>
+                <div className="text-3xl font-bold text-foreground mb-1">98%</div>
+                <div className="text-sm text-muted-foreground">Satisfaction</div>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-white" />
-                Business Optimization
+              <div>
+                <div className="text-3xl font-bold text-foreground mb-1">24/7</div>
+                <div className="text-sm text-muted-foreground">Support</div>
               </div>
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="relative animate-fade-in-delay">
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src={heroImage} 
-                alt="Strategic Business Architecture"
-                className="w-full h-auto rounded-2xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
+          {/* Visual Elements */}
+          <div className="relative animate-slide-in-right">
+            <div className="grid grid-cols-2 gap-6">
+              {/* Card 1 */}
+              <div className="card-premium bg-gradient-to-br from-accent to-accent-soft text-white p-8 col-span-2">
+                <Zap className="w-12 h-12 mb-4" />
+                <h3 className="text-2xl font-bold mb-2">Process Automation</h3>
+                <p className="text-white/80">Eliminate repetitive tasks and boost efficiency by 80%</p>
+                <div className="mt-6 flex items-center gap-2">
+                  <div className="flex -space-x-2">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="w-8 h-8 rounded-full bg-white/20 border-2 border-white"></div>
+                    ))}
+                  </div>
+                  <span className="text-sm text-white/90">500+ automations built</span>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="card-premium">
+                <div className="w-12 h-12 rounded-2xl bg-coral/10 flex items-center justify-center mb-4">
+                  <TrendingUp className="w-6 h-6 text-coral" />
+                </div>
+                <h4 className="font-bold text-lg mb-2">Growth</h4>
+                <p className="text-sm text-muted-foreground">340% average conversion increase</p>
+              </div>
+
+              {/* Card 3 */}
+              <div className="card-premium bg-gradient-to-br from-primary to-primary-soft text-white">
+                <div className="text-4xl font-bold mb-2">50K+</div>
+                <p className="text-white/80 text-sm">Users served daily by our SaaS solutions</p>
+              </div>
             </div>
-            
-            {/* Background Elements */}
-            <div className="absolute -top-4 -right-4 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-white/10 rounded-full blur-2xl"></div>
+
+            {/* Floating badge */}
+            <div className="absolute -top-6 -right-6 bg-coral text-white px-6 py-3 rounded-full font-semibold shadow-xl animate-float">
+              ⚡ Fast Delivery
+            </div>
           </div>
         </div>
       </div>
