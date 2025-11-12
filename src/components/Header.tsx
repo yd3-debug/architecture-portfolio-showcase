@@ -27,13 +27,13 @@ const Header = () => {
         : 'bg-transparent'
     }`}>
       <nav className="container-professional">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center z-50">
             <img 
               src="/LOGOYD.png" 
               alt="Company Logo" 
-              className="h-20 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
 
@@ -71,7 +71,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-24 bg-background/98 backdrop-blur-lg z-40">
+          <div className="md:hidden fixed inset-0 top-20 bg-background/98 backdrop-blur-lg z-40">
             <div className="flex flex-col p-8 space-y-6">
               {navItems.map((item) => (
                 <a

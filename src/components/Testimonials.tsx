@@ -63,30 +63,27 @@ const Testimonials = () => {
             <span>Client Success Stories</span>
           </div>
           
-          <h2 className="heading-section mb-8">
-            Trusted by Businesses
-            <span className="block bg-gradient-to-r from-accent to-coral bg-clip-text text-transparent">
-              Worldwide
-            </span>
+          <h2 className="heading-section mb-4">
+            Trusted by Businesses Worldwide
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-professional max-w-2xl mx-auto">
             From startups to established enterprises, businesses across the globe trust our solutions 
             to drive growth and operational excellence.
           </p>
         </div>
 
-        {/* Magazine-style Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
+        {/* Testimonial Grid */}
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className={`group ${testimonial.featured ? 'md:col-span-2' : ''}`}
+              className="group"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="card-premium h-full relative overflow-hidden">
-                {/* Large decorative quote mark */}
-                <Quote className="absolute -top-4 -left-2 w-32 h-32 text-accent/5 transform rotate-180" />
+                {/* Subtle quote mark */}
+                <Quote className="absolute -top-2 -left-1 w-20 h-20 text-accent/5 transform rotate-180" />
                 
                 <div className="relative z-10">
                   {/* Header */}
@@ -105,18 +102,18 @@ const Testimonials = () => {
                   </div>
 
                   {/* Quote */}
-                  <blockquote className={`${testimonial.featured ? 'text-2xl' : 'text-lg'} font-medium leading-relaxed text-foreground mb-8`}>
+                  <blockquote className="text-base font-medium leading-relaxed text-foreground mb-6">
                     "{testimonial.quote}"
                   </blockquote>
 
                   {/* Client Info */}
-                  <div className="flex items-center gap-4 pt-6 border-t border-border/50">
-                    <div className="w-14 h-14 rounded-full bg-gradient-to-br from-accent to-coral flex items-center justify-center text-white font-bold text-lg group-hover:scale-110 transition-transform">
+                  <div className="flex items-center gap-3 pt-4 border-t border-border/50">
+                    <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-bold text-sm">
                       {testimonial.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <div className="flex-1">
-                      <div className="font-bold text-foreground text-lg">{testimonial.name}</div>
-                      <div className="text-sm text-muted-foreground">{testimonial.title}, {testimonial.company}</div>
+                      <div className="font-bold text-foreground">{testimonial.name}</div>
+                      <div className="text-xs text-muted-foreground">{testimonial.title}, {testimonial.company}</div>
                       <div className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
                         <MapPin className="w-3 h-3" />
                         {testimonial.location}
@@ -130,18 +127,14 @@ const Testimonials = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid sm:grid-cols-3 gap-6 mt-16 animate-fade-in-up">
+        <div className="grid sm:grid-cols-3 gap-6 mt-12 animate-fade-in-up">
           {[
-            { value: "500+", label: "Projects Completed", color: "accent" },
-            { value: "98%", label: "Client Satisfaction", color: "coral" },
-            { value: "24/7", label: "Support Available", color: "primary" }
+            { value: "500+", label: "Projects Completed" },
+            { value: "98%", label: "Client Satisfaction" },
+            { value: "24/7", label: "Support Available" }
           ].map((stat, index) => (
             <div key={index} className="card-premium text-center">
-              <div className={`text-5xl font-bold mb-3 bg-gradient-to-r ${
-                stat.color === 'accent' ? 'from-accent to-accent-light' :
-                stat.color === 'coral' ? 'from-coral to-coral/80' :
-                'from-primary to-primary-soft'
-              } bg-clip-text text-transparent`}>
+              <div className="text-3xl font-bold mb-2 text-accent">
                 {stat.value}
               </div>
               <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
