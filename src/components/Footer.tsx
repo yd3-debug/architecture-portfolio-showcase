@@ -30,13 +30,13 @@ const Footer = () => {
               
               {/* Social Links */}
               <div className="flex items-center gap-4">
-                <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-accent flex items-center justify-center transition-all hover:scale-110">
+                <a href="https://linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 hover:bg-accent flex items-center justify-center transition-all hover:scale-110">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-accent flex items-center justify-center transition-all hover:scale-110">
+                <a href="https://twitter.com/yourcompany" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 hover:bg-accent flex items-center justify-center transition-all hover:scale-110">
                   <Twitter className="w-5 h-5" />
                 </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-accent flex items-center justify-center transition-all hover:scale-110">
+                <a href="https://github.com/yourcompany" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 hover:bg-accent flex items-center justify-center transition-all hover:scale-110">
                   <Github className="w-5 h-5" />
                 </a>
               </div>
@@ -62,6 +62,7 @@ const Footer = () => {
               <h4 className="text-lg font-bold mb-6">Company</h4>
               <ul className="space-y-3 mb-6">
                 <li><a href="#about" className="text-white/70 hover:text-accent transition-colors duration-200">About Us</a></li>
+                <li><a href="#portfolio" className="text-white/70 hover:text-accent transition-colors duration-200">Portfolio</a></li>
                 <li><Link to="/legal/privacy-policy" className="text-white/70 hover:text-accent transition-colors duration-200">Privacy Policy</Link></li>
                 <li><Link to="/legal/terms-of-service" className="text-white/70 hover:text-accent transition-colors duration-200">Terms of Service</Link></li>
                 <li><Link to="/legal/cookie-policy" className="text-white/70 hover:text-accent transition-colors duration-200">Cookie Policy</Link></li>
