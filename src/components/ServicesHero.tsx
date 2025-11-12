@@ -85,8 +85,8 @@ const ServicesHero = () => {
 
               <div className="relative z-10">
                 {/* Icon */}
-                <div className={`w-12 h-12 rounded-xl bg-${service.color}/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <service.icon className={`w-6 h-6 text-${service.color}`} />
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <service.icon className="w-6 h-6 text-accent" />
                 </div>
 
                 {/* Content */}

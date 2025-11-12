@@ -3,48 +3,45 @@ import heroWorkspace from '../assets/hero-workspace.jpg';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-      {/* Professional Background Image */}
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Visible Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
           src={heroWorkspace} 
-          alt="Professional workspace" 
+          alt="Professional workspace showcasing modern business automation solutions" 
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent"></div>
       </div>
 
-      <div className="container-professional relative z-10 py-20">
-        <div className="max-w-3xl mx-auto text-center">
-          {/* Small Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-accent/10 text-accent border border-accent/20 mb-8">
-            <CheckCircle2 className="w-4 h-4" />
-            <span>Business Process Automation</span>
-          </div>
+      <div className="container-professional relative z-10 py-32">
+        <div className="max-w-3xl">
+          {/* Backdrop blur container for text */}
+          <div className="backdrop-blur-sm bg-black/20 rounded-3xl p-8 md:p-12">
+            {/* Bold White Headline with Shadow */}
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.5)' }}>
+              Transform Your Business with Smart Automation
+            </h1>
 
-          {/* Clean Headline */}
-          <h1 className="heading-hero text-foreground mb-6">
-            Transform Your Business with Smart Automation
-          </h1>
+            {/* White Subheading with Shadow */}
+            <p className="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>
+              We build custom solutions that streamline operations, boost productivity, and drive measurable growth for forward-thinking businesses.
+            </p>
 
-          {/* Concise Subheading */}
-          <p className="text-lg sm:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-            We build custom solutions that streamline operations, boost productivity, and drive measurable growth for forward-thinking businesses.
-          </p>
-
-          {/* Single Primary CTA */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="#contact">
-              <button className="btn-hero group">
-                Get Started
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </a>
-            <a href="#services">
-              <button className="btn-secondary">
-                View Services
-              </button>
-            </a>
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row items-start gap-4">
+              <a href="#contact">
+                <button className="btn-hero group">
+                  Get Started
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </a>
+              <a href="#services">
+                <button className="btn-secondary">
+                  View Services
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -82,8 +82,8 @@ const Testimonials = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="card-premium h-full relative overflow-hidden">
-                {/* Subtle quote mark */}
-                <Quote className="absolute -top-2 -left-1 w-20 h-20 text-accent/5 transform rotate-180" />
+                {/* Orange quote mark */}
+                <Quote className="absolute -top-2 -left-1 w-20 h-20 text-accent/10 transform rotate-180" />
                 
                 <div className="relative z-10">
                   {/* Header */}
@@ -108,7 +108,7 @@ const Testimonials = () => {
 
                   {/* Client Info */}
                   <div className="flex items-center gap-3 pt-4 border-t border-border/50">
-                    <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center text-white font-bold text-sm">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent to-coral flex items-center justify-center text-white font-bold text-sm">
                       {testimonial.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <div className="flex-1">

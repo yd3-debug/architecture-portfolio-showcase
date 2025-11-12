@@ -69,8 +69,8 @@ const AboutHero = () => {
                 className="card-premium group"
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
-                    <item.icon className="w-6 h-6 text-accent" />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-coral flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <item.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="text-lg font-bold mb-2 text-foreground">
