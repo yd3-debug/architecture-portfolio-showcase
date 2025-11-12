@@ -19,12 +19,12 @@ const Hero = () => {
           {/* Backdrop blur container for text */}
           <div className="backdrop-blur-sm bg-black/20 rounded-3xl p-8 md:p-12">
             {/* Bold White Headline with Shadow */}
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.5)' }}>
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight" style={{ textShadow: '0 4px 12px rgba(0,0,0,0.5)' }}>
               Transform Your Business with Smart Automation
             </h1>
 
             {/* White Subheading with Shadow */}
-            <p className="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>
+            <p className="text-base md:text-lg text-white/90 mb-10 leading-relaxed" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>
               We build custom solutions that streamline operations, boost productivity, and drive measurable growth for forward-thinking businesses.
             </p>
 
