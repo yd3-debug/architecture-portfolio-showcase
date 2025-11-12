@@ -1,13 +1,18 @@
 import { ArrowRight, Sparkles, Zap, TrendingUp } from 'lucide-react';
+import heroWorkspace from '@/assets/hero-workspace.jpg';
+import automationDashboard from '@/assets/automation-dashboard.jpg';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-mesh">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-accent/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-coral/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Hero Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroWorkspace} 
+          alt="Professional workspace with automation dashboards" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-background/85"></div>
       </div>
 
       <div className="container-professional pt-20 pb-16 relative z-10">
@@ -60,18 +65,26 @@ const Hero = () => {
           {/* Visual Elements */}
           <div className="relative animate-slide-in-right">
             <div className="grid grid-cols-2 gap-6">
-              {/* Card 1 */}
-              <div className="card-premium bg-gradient-to-br from-accent to-accent-soft text-white p-8 col-span-2">
-                <Zap className="w-12 h-12 mb-4" />
-                <h3 className="text-2xl font-bold mb-2">Process Automation</h3>
-                <p className="text-white/80">Eliminate repetitive tasks and boost efficiency by 80%</p>
-                <div className="mt-6 flex items-center gap-2">
-                  <div className="flex -space-x-2">
-                    {[1, 2, 3].map((i) => (
-                      <div key={i} className="w-8 h-8 rounded-full bg-white/20 border-2 border-white"></div>
-                    ))}
+              {/* Card 1 - Featured with Image */}
+              <div className="relative card-premium p-8 col-span-2 overflow-hidden">
+                <img 
+                  src={automationDashboard} 
+                  alt="Automation dashboard with analytics" 
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-primary/90"></div>
+                <div className="relative z-10 text-white">
+                  <Zap className="w-12 h-12 mb-4" />
+                  <h3 className="text-2xl font-bold mb-2">Process Automation</h3>
+                  <p className="text-white/90">Eliminate repetitive tasks and boost efficiency by 80%</p>
+                  <div className="mt-6 flex items-center gap-2">
+                    <div className="flex -space-x-2">
+                      {[1, 2, 3].map((i) => (
+                        <div key={i} className="w-8 h-8 rounded-full bg-white/20 border-2 border-white"></div>
+                      ))}
+                    </div>
+                    <span className="text-sm text-white/90">500+ automations built</span>
                   </div>
-                  <span className="text-sm text-white/90">500+ automations built</span>
                 </div>
               </div>
 
@@ -85,9 +98,9 @@ const Hero = () => {
               </div>
 
               {/* Card 3 */}
-              <div className="card-premium bg-gradient-to-br from-primary to-primary-soft text-white">
+              <div className="card-premium bg-primary text-white">
                 <div className="text-4xl font-bold mb-2">50K+</div>
-                <p className="text-white/80 text-sm">Users served daily by our SaaS solutions</p>
+                <p className="text-white/90 text-sm">Users served daily by our SaaS solutions</p>
               </div>
             </div>
 

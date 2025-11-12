@@ -1,4 +1,5 @@
 import { Award, Users, Target, Lightbulb, ArrowRight } from 'lucide-react';
+import aboutBackground from '@/assets/about-background.jpg';
 
 const AboutHero = () => {
   const stats = [
@@ -33,10 +34,13 @@ const AboutHero = () => {
 
   return (
     <section id="about" className="section-padding bg-background relative overflow-hidden">
-      {/* Geometric background */}
+      {/* Background Image */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-br from-accent/5 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-coral/5 to-transparent rounded-full blur-3xl"></div>
+        <img 
+          src={aboutBackground} 
+          alt="Professional team collaboration" 
+          className="w-full h-full object-cover opacity-5"
+        />
       </div>
       
       <div className="container-professional relative z-10">
@@ -50,7 +54,7 @@ const AboutHero = () => {
             
             <h2 className="heading-section mb-8">
               Delivering Results Through
-              <span className="block bg-gradient-to-r from-accent to-coral bg-clip-text text-transparent">
+              <span className="block text-accent">
                 Smart Automation
               </span>
             </h2>
@@ -85,7 +89,7 @@ const AboutHero = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent to-accent-soft flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-2xl bg-accent flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                     <item.icon className="w-7 h-7 text-white" />
                   </div>
                   <div className="flex-1">

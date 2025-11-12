@@ -188,14 +188,18 @@
   }
 
   /* Background Patterns */
-  .bg-gradient-mesh {
-    background: var(--gradient-mesh);
-    animation: meshAnimation 20s ease infinite;
-  }
-  
   .bg-dots {
     background-image: radial-gradient(circle, hsl(var(--border)) 1px, transparent 1px);
     background-size: 24px 24px;
+  }
+
+  /* Image Overlay Utilities */
+  .img-overlay-dark::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: hsl(var(--background) / 0.85);
+    pointer-events: none;
   }
 
   /* Hero Sections */

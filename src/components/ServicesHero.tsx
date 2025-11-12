@@ -1,4 +1,8 @@
 import { Zap, Code, Globe, TrendingUp, ArrowRight } from 'lucide-react';
+import automationService from '@/assets/automation-service.jpg';
+import saasService from '@/assets/saas-service.jpg';
+import websiteService from '@/assets/website-service.jpg';
+import businessService from '@/assets/business-service.jpg';
 
 const ServicesHero = () => {
   const services = [
@@ -8,6 +12,7 @@ const ServicesHero = () => {
       description: "Streamline repetitive tasks and workflows with intelligent automation",
       features: ["Process Automation", "Workflow Optimization", "Data Integration"],
       color: "accent",
+      image: automationService,
       featured: true
     },
     {
@@ -15,21 +20,24 @@ const ServicesHero = () => {
       title: "Micro SaaS",
       description: "Custom software solutions and rapid prototypes",
       features: ["Custom Applications", "API Development", "MVP Creation"],
-      color: "coral"
+      color: "coral",
+      image: saasService
     },
     {
       icon: Globe,
       title: "Website Design",
       description: "Modern, responsive websites that convert",
       features: ["Responsive Design", "User Experience", "SEO Implementation"],
-      color: "primary"
+      color: "primary",
+      image: websiteService
     },
     {
       icon: TrendingUp,
       title: "Business Architecture",
       description: "Strategic guidance for process improvement",
       features: ["Process Analysis", "Strategic Planning", "Growth Roadmaps"],
-      color: "accent"
+      color: "accent",
+      image: businessService
     }
   ];
 
@@ -47,7 +55,7 @@ const ServicesHero = () => {
           
           <h2 className="heading-section mb-8">
             Services That Drive
-            <span className="block bg-gradient-to-r from-accent via-accent-light to-coral bg-clip-text text-transparent">
+            <span className="block text-accent">
               Real Results
             </span>
           </h2>
@@ -63,18 +71,26 @@ const ServicesHero = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className={`card-bento group cursor-pointer ${
+              className={`relative card-bento group cursor-pointer overflow-hidden ${
                 service.featured ? 'lg:col-span-2 lg:row-span-1' : ''
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${
-                service.color === 'accent' ? 'bg-gradient-to-br from-accent to-accent-soft' :
-                service.color === 'coral' ? 'bg-gradient-to-br from-coral to-coral/80' :
-                'bg-gradient-to-br from-primary to-primary-soft'
-              }`}>
-                <service.icon className="w-8 h-8 text-white" />
-              </div>
+              {/* Background Image */}
+              <img 
+                src={service.image} 
+                alt={`${service.title} service`}
+                className="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-15 transition-opacity"
+              />
+              
+              <div className="relative z-10">
+                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${
+                  service.color === 'accent' ? 'bg-accent' :
+                  service.color === 'coral' ? 'bg-coral' :
+                  'bg-primary'
+                }`}>
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
               
               <h3 className={`text-2xl font-bold mb-4 ${
                 service.featured ? 'text-3xl' : ''
@@ -97,8 +113,9 @@ const ServicesHero = () => {
                 ))}
               </div>
 
-              <div className="flex items-center gap-2 text-sm font-semibold text-accent group-hover:gap-3 transition-all">
-                Learn More <ArrowRight className="w-4 h-4" />
+                <div className="flex items-center gap-2 text-sm font-semibold text-accent group-hover:gap-3 transition-all">
+                  Learn More <ArrowRight className="w-4 h-4" />
+                </div>
               </div>
             </div>
           ))}
