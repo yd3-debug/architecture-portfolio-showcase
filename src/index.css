@@ -6,68 +6,69 @@
 
 @layer base {
   :root {
-    /* Core Colors - Bright & Clean */
+    /* Core Colors - Elegant & Minimal */
     --background: 0 0% 100%;
     --foreground: 0 0% 16%;
 
-    /* Brand Colors - Deep Charcoal */
+    /* Brand Colors - Sophisticated Charcoal */
+    --charcoal: 0 0% 10%;
+    --charcoal-light: 0 0% 16%;
+    --soft-gray: 0 0% 96%;
+    
     --primary: 0 0% 10%;
     --primary-foreground: 0 0% 100%;
     --primary-soft: 0 0% 20%;
     --primary-light: 0 0% 30%;
 
-    /* Accent Colors - Vibrant Orange */
-    --accent: 14 100% 60%;
+    /* Accent Colors - Refined Orange (Used Sparingly) */
+    --accent: 14 92% 58%;
     --accent-foreground: 0 0% 100%;
-    --accent-soft: 14 100% 50%;
-    --accent-light: 14 100% 70%;
+    --accent-soft: 14 88% 54%;
+    --accent-light: 14 95% 65%;
 
-    /* Secondary Accent - Coral Pink */
-    --coral: 6 100% 75%;
+    /* Secondary Accent - Subtle Coral */
+    --coral: 6 85% 72%;
     --coral-foreground: 0 0% 10%;
 
-    /* Neutral Palette */
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 50% 10%;
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    /* Neutral Palette - Muted Tones */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 16%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
 
     /* Surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 220 50% 10%;
+    --card-foreground: 0 0% 16%;
     --popover: 0 0% 100%;
-    --popover-foreground: 220 50% 10%;
+    --popover-foreground: 0 0% 16%;
 
     /* Interactive Elements */
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 188 94% 43%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 16%;
 
     /* Status Colors */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --radius: 1rem;
+    --radius: 0.5rem;
 
-    /* Modern Gradients - Warm */
-    --gradient-primary: linear-gradient(135deg, hsl(0, 0%, 10%) 0%, hsl(0, 0%, 20%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(14, 100%, 60%) 0%, hsl(14, 100%, 70%) 100%);
-    --gradient-mesh: radial-gradient(at 0% 0%, hsl(14, 100%, 60%) 0px, transparent 50%),
-                     radial-gradient(at 100% 0%, hsl(6, 100%, 75%) 0px, transparent 50%),
-                     radial-gradient(at 100% 100%, hsl(45, 100%, 67%) 0px, transparent 50%);
+    /* Minimal Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0, 0%, 10%) 0%, hsl(0, 0%, 16%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(14, 92%, 58%) 0%, hsl(14, 95%, 65%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 98%) 100%);
 
-    /* Premium Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(0 0% 10% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(0 0% 10% / 0.1), 0 2px 4px -2px hsl(0 0% 10% / 0.1);
-    --shadow-lg: 0 20px 25px -5px hsl(0 0% 10% / 0.1), 0 8px 10px -6px hsl(0 0% 10% / 0.1);
-    --shadow-xl: 0 25px 50px -12px hsl(0 0% 10% / 0.25);
-    --shadow-glow: 0 0 40px hsl(14 100% 60% / 0.3);
+    /* Subtle Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.04);
+    --shadow-md: 0 2px 4px -1px hsl(0 0% 0% / 0.06), 0 1px 2px -1px hsl(0 0% 0% / 0.04);
+    --shadow-lg: 0 4px 8px -2px hsl(0 0% 0% / 0.08), 0 2px 4px -2px hsl(0 0% 0% / 0.05);
+    --shadow-xl: 0 8px 16px -4px hsl(0 0% 0% / 0.10);
+    --shadow-glow: 0 0 20px hsl(14 92% 58% / 0.15);
 
     /* Typography */
-    --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-display: 'Playfair Display', serif;
   }
 
   .dark {
@@ -109,71 +110,67 @@
 }
 
 @layer components {
-  /* Modern Button Variants */
+  /* Minimal Button Variants */
   .btn-hero {
-    @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white rounded-2xl transition-all duration-300;
-    background: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-soft)) 100%);
-    box-shadow: 0 4px 15px hsl(var(--accent) / 0.3);
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 text-sm font-light text-white transition-all duration-300;
+    background: hsl(var(--accent));
   }
   
   .btn-hero:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px hsl(var(--accent) / 0.4);
+    background: hsl(var(--charcoal));
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 text-base font-semibold border-2 rounded-2xl transition-all duration-300;
-    border-color: hsl(var(--accent));
-    color: hsl(var(--accent));
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3 text-sm font-light border transition-all duration-300;
+    border-color: hsl(var(--charcoal) / 0.2);
+    color: hsl(var(--charcoal));
     background: transparent;
   }
   
   .btn-secondary:hover {
-    background: hsl(var(--accent));
-    color: hsl(var(--accent-foreground));
-    transform: translateY(-2px);
+    background: hsl(var(--charcoal));
+    color: white;
+    border-color: hsl(var(--charcoal));
   }
 
-  /* Premium Cards - Refined */
+  /* Minimal Cards */
   .card-premium {
-    @apply bg-card rounded-2xl p-6 md:p-8 transition-all duration-300;
-    box-shadow: 0 2px 8px hsl(var(--foreground) / 0.06);
+    @apply bg-card p-6 md:p-8 transition-all duration-300;
+    box-shadow: 0 1px 3px hsl(var(--foreground) / 0.04);
   }
   
   .card-premium:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 16px hsl(var(--foreground) / 0.1);
+    box-shadow: 0 2px 6px hsl(var(--foreground) / 0.08);
   }
 
   .card-elevated {
-    @apply bg-card border border-border/50 rounded-xl p-6 md:p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300;
-    box-shadow: 0 1px 3px hsl(var(--foreground) / 0.05);
+    @apply bg-card border border-border/50 p-6 md:p-8 hover:shadow-sm transition-all duration-300;
   }
 
-  /* Sections - Refined Spacing */
+  /* Sections - Generous Spacing */
   .section-padding {
-    @apply py-16 md:py-24 px-6 sm:px-8 lg:px-12;
+    @apply py-20 md:py-32 px-6 sm:px-8 lg:px-12;
   }
 
   .container-professional {
-    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Typography - Professional Sizing */
+  /* Typography - Elegant & Refined */
   .heading-hero {
-    @apply font-heading text-4xl sm:text-5xl font-bold tracking-tight leading-tight;
+    @apply font-serif text-5xl sm:text-7xl font-medium tracking-tight leading-tight;
   }
 
   .heading-section {
-    @apply font-heading text-3xl sm:text-4xl font-bold tracking-tight;
+    @apply font-serif text-4xl sm:text-5xl font-medium tracking-tight;
   }
   
   .heading-display {
-    @apply font-display text-3xl sm:text-4xl font-bold tracking-tight;
+    @apply font-serif text-3xl sm:text-4xl font-medium tracking-tight;
   }
 
   .text-professional {
-    @apply text-base sm:text-lg text-muted-foreground leading-relaxed;
+    @apply text-base sm:text-lg text-muted-foreground leading-relaxed font-light;
   }
 
   /* Background Patterns */
