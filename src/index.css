@@ -112,12 +112,12 @@
 @layer components {
   /* Minimal Button Variants */
   .btn-hero {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-3 text-sm font-light text-white transition-all duration-300;
-    background: hsl(var(--accent));
+    @apply inline-flex items-center justify-center gap-2 px-0 py-2 text-sm font-light text-white/90 border-b border-white/30 hover:border-white/60 transition-all duration-300;
+    background: transparent;
   }
   
   .btn-hero:hover {
-    background: hsl(var(--charcoal));
+    @apply text-white;
   }
 
   .btn-secondary {
