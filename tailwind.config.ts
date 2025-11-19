@@ -22,8 +22,14 @@ export default {
 				'heading': 'var(--font-heading)',
 				'body': 'var(--font-body)',
 				'display': 'var(--font-display)',
+				'serif': ['Playfair Display', 'serif'],
 			},
 			colors: {
+				'charcoal': {
+					DEFAULT: 'hsl(var(--charcoal))',
+					light: 'hsl(var(--charcoal-light))',
+				},
+				'soft-gray': 'hsl(var(--soft-gray))',
 				'primary-soft': 'hsl(var(--primary-soft))',
 				'primary-light': 'hsl(var(--primary-light))',
 				'accent-soft': 'hsl(var(--accent-soft))',

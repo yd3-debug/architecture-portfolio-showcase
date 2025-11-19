@@ -15,9 +15,10 @@ const Header = () => {
   }, []);
 
   const navItems = [
+    { name: 'Projects', href: '#portfolio' },
     { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'About', href: '#about' },
+    { name: 'Process', href: '#process' },
+    { name: 'Studio', href: '#studio' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -44,17 +45,17 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-semibold transition-all duration-200 relative group ${
+                className={`text-sm font-light tracking-wide transition-all duration-200 relative group ${
                   isScrolled ? 'text-foreground hover:text-accent' : 'text-white hover:text-accent'
                 }`}
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-accent group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
             <a href="#contact">
-              <button className="btn-hero text-sm px-6 py-3">
-                Get Started
+              <button className="px-6 py-2 text-sm font-light text-foreground bg-white border border-charcoal/10 hover:bg-charcoal hover:text-white transition-all duration-300">
+                Get in Touch
               </button>
             </a>
           </div>
