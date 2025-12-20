@@ -7,7 +7,6 @@ import Testimonials from '../components/Testimonials';
 import Studio from '../components/Studio';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import CookieBanner from '../components/CookieBanner';
 
 const Index = () => {
   return (
@@ -21,7 +20,6 @@ const Index = () => {
       <Studio />
       <Contact />
       <Footer />
-      <CookieBanner />
     </div>
   );
 };
