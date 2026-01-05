@@ -1,4 +1,4 @@
-import { Mail, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -27,19 +27,6 @@ const Footer = () => {
                 Transforming businesses through strategic architecture, process optimization, 
                 and innovative technology solutions.
               </p>
-              
-              {/* Social Links */}
-              <div className="flex items-center gap-4">
-                <a href="https://linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 hover:bg-accent flex items-center justify-center transition-all hover:scale-110">
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a href="https://twitter.com/yourcompany" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 hover:bg-accent flex items-center justify-center transition-all hover:scale-110">
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a href="https://github.com/yourcompany" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 hover:bg-accent flex items-center justify-center transition-all hover:scale-110">
-                  <Github className="w-5 h-5" />
-                </a>
-              </div>
             </div>
 
             {/* Services */}
@@ -71,8 +58,8 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <Mail className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <a href="mailto:hello@businesssolutions.com" className="text-white/70 hover:text-accent transition-colors text-sm">
-                    hello@businesssolutions.com
+                  <a href="mailto:contact@maintivo.com" className="text-white/70 hover:text-accent transition-colors text-sm">
+                    contact@maintivo.com
                   </a>
                 </div>
                 <div className="flex items-start gap-3">
