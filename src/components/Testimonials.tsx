@@ -4,18 +4,18 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote: "The automation solution transformed our operations completely. We've eliminated 80% of manual tasks and our team now focuses on what truly matters.",
-      name: "Sarah Chen",
-      title: "CEO, TechVision"
+      name: "Sarah Mitchell",
+      title: "CEO, Northwind Solutions"
     },
     {
       quote: "Outstanding work on our custom application. The attention to detail and commitment to delivering exactly what we needed was impressive.",
-      name: "Michael Thompson",
-      title: "Operations Director, Global Retail"
+      name: "Marcus Rivera",
+      title: "Operations Director, Cascade Industries"
     },
     {
       quote: "Professional, efficient, and remarkably effective. The results exceeded our expectations in every way.",
-      name: "Emma Wilson",
-      title: "Founder, Digital Solutions"
+      name: "Emma Laurent",
+      title: "Founder, Silverline Consulting"
     }
   ];
 
