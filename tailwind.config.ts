@@ -22,7 +22,7 @@ export default {
 				'heading': 'var(--font-heading)',
 				'body': 'var(--font-body)',
 				'display': 'var(--font-display)',
-				'serif': ['Playfair Display', 'serif'],
+				'serif': ['Space Grotesk', 'sans-serif'],
 			},
 			colors: {
 				'charcoal': {
