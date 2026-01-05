@@ -115,9 +115,7 @@ const PrivacyPolicy = () => {
                 </p>
                 <div className="bg-muted p-4 rounded-lg mt-4">
                   <p className="text-muted-foreground">
-                    <strong>Email:</strong> contact@maintivo.com<br />
-                    <strong>Phone:</strong> +1 (555) 123-4567<br />
-                    <strong>Address:</strong> 123 Business District, Suite 100, City, State 12345
+                    <strong>Email:</strong> contact@maintivo.com
                   </p>
                 </div>
               </div>

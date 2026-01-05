@@ -48,16 +48,15 @@ const TermsOfService = () => {
               <div>
                 <h2 className="text-2xl font-semibold mb-4">2. Service Description</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  We provide comprehensive business architecture consulting services, including but not limited to:
+                  We provide comprehensive business solutions and services, including but not limited to:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-                  <li>Enterprise architecture design and implementation</li>
-                  <li>Business process optimization and reengineering</li>
-                  <li>Digital transformation strategy and planning</li>
-                  <li>Organizational design and change management</li>
-                  <li>Custom application development and integration</li>
-                  <li>Risk assessment and mitigation strategies</li>
-                  <li>Performance measurement and improvement</li>
+                  <li>Work automation and process optimization</li>
+                  <li>Custom SaaS and application development</li>
+                  <li>Website design and development</li>
+                  <li>Digital transformation strategy and implementation</li>
+                  <li>Business architecture and process consulting</li>
+                  <li>Ongoing support and maintenance</li>
                 </ul>
               </div>
 
@@ -131,9 +130,7 @@ const TermsOfService = () => {
                 </p>
                 <div className="bg-muted p-4 rounded-lg mt-4">
                   <p className="text-muted-foreground">
-                    <strong>Email:</strong> contact@maintivo.com<br />
-                    <strong>Phone:</strong> +1 (555) 123-4567<br />
-                    <strong>Address:</strong> 123 Business District, Suite 100, City, State 12345
+                    <strong>Email:</strong> contact@maintivo.com
                   </p>
                 </div>
               </div>
