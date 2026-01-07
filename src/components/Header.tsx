@@ -29,13 +29,13 @@ const Header = () => {
         : 'bg-transparent'
     }`}>
       <nav className="container-professional">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center z-50">
             <img 
               src="/LOGOYD.png" 
               alt="Company Logo" 
-              className="h-12 w-auto"
+              className="h-9 sm:h-10 md:h-12 w-auto"
             />
           </Link>
 
@@ -73,20 +73,20 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-20 bg-background/98 backdrop-blur-lg z-40">
-            <div className="flex flex-col p-8 space-y-6">
+          <div className="md:hidden fixed inset-0 top-16 bg-background/98 backdrop-blur-lg z-40">
+            <div className="flex flex-col p-6 space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-lg font-semibold text-foreground hover:text-accent transition-colors duration-200 py-3 border-b border-border/50"
+                  className="text-base font-medium text-foreground hover:text-accent transition-colors duration-200 py-2.5 border-b border-border/50"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
               <a href="#contact" onClick={() => setIsMenuOpen(false)}>
-                <button className="btn-hero w-full mt-4">
+                <button className="w-full mt-4 px-6 py-2.5 text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300">
                   Get Started
                 </button>
               </a>

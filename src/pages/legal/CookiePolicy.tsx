@@ -9,20 +9,20 @@ const CookiePolicy = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="hero-full-screen hero-overlay bg-gradient-to-br from-primary via-primary-light to-primary-soft">
-        <div className="container-professional flex items-center h-full">
+      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 bg-gradient-to-br from-primary via-primary-light to-primary-soft">
+        <div className="container-professional">
           <div className="text-center text-white w-full">
             <Link 
               to="/" 
-              className="inline-flex items-center text-white/80 hover:text-white mb-6 group"
+              className="inline-flex items-center text-white/80 hover:text-white mb-4 sm:mb-6 group text-sm"
             >
-              <ArrowLeft className="mr-2 w-4 h-4 group-hover:-translate-x-1 transition-transform duration-200" />
+              <ArrowLeft className="mr-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:-translate-x-1 transition-transform duration-200" />
               Back to Home
             </Link>
-            <h1 className="heading-hero mb-6">
+            <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight mb-3 sm:mb-4 md:mb-6">
               Cookie Policy
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 max-w-3xl mx-auto">
               Learn about how we use cookies to enhance your browsing experience.
             </p>
           </div>
@@ -30,9 +30,9 @@ const CookiePolicy = () => {
       </section>
 
       {/* Content */}
-      <section className="section-padding">
+      <section className="py-10 sm:py-14 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-12">
         <div className="container-professional max-w-4xl">
-          <div className="prose prose-lg max-w-none">
+          <div className="prose prose-sm sm:prose-base md:prose-lg max-w-none">
             <div className="mb-8 text-sm text-muted-foreground">
               <strong>Last Updated:</strong> January 1, 2024
             </div>
