@@ -20,38 +20,38 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="section-padding bg-soft-gray">
+    <section className="py-12 sm:py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-12 bg-soft-gray">
       <div className="container-professional max-w-5xl">
-        <div className="max-w-3xl mx-auto text-center mb-20">
-          <h2 className="font-serif text-4xl md:text-5xl mb-6 text-charcoal">
+        <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 md:mb-20">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 sm:mb-4 md:mb-6 text-charcoal">
             Client Testimonials
           </h2>
         </div>
 
         {/* Testimonials */}
-        <div className="space-y-16">
+        <div className="space-y-8 sm:space-y-12 md:space-y-16">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="max-w-3xl mx-auto">
               {/* Quote */}
-              <Quote className="w-12 h-12 text-accent/20 mb-6 mx-auto" />
+              <Quote className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-accent/20 mb-4 sm:mb-6 mx-auto" />
               
-              <blockquote className="font-serif text-2xl md:text-3xl text-charcoal text-center mb-8 leading-relaxed font-light">
+              <blockquote className="font-serif text-base sm:text-lg md:text-2xl lg:text-3xl text-charcoal text-center mb-4 sm:mb-6 md:mb-8 leading-relaxed font-light">
                 "{testimonial.quote}"
               </blockquote>
 
               {/* Attribution */}
               <div className="text-center">
-                <div className="font-light text-charcoal mb-1">
+                <div className="font-light text-charcoal mb-1 text-sm sm:text-base">
                   {testimonial.name}
                 </div>
-                <div className="text-sm text-muted-foreground font-light">
+                <div className="text-xs sm:text-sm text-muted-foreground font-light">
                   {testimonial.title}
                 </div>
               </div>
 
               {/* Divider (except last) */}
               {index < testimonials.length - 1 && (
-                <div className="h-px bg-border mt-16"></div>
+                <div className="h-px bg-border mt-8 sm:mt-12 md:mt-16"></div>
               )}
             </div>
           ))}
