@@ -88,7 +88,7 @@ const Studio = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-3 sm:gap-6 md:gap-8 mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 md:pt-12 border-t border-border">
               <div>
-                <div className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl text-charcoal mb-1 sm:mb-2">50+</div>
+                <div className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl text-charcoal mb-1 sm:mb-2">15+</div>
                 <div className="text-xs sm:text-sm text-muted-foreground font-light">Projects Delivered</div>
               </div>
               <div>
