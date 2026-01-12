@@ -16,6 +16,16 @@ const Testimonials = () => {
       quote: "Professional, efficient, and remarkably effective. The results exceeded our expectations in every way.",
       name: "Emma Laurent",
       title: "Founder, Silverline Consulting"
+    },
+    {
+      quote: "They completely transformed our booking system and online presence. Our clients love the seamless experience, and we've seen a significant increase in appointments.",
+      name: "Sahar",
+      title: "Owner, Studio Solena — Ealing, London"
+    },
+    {
+      quote: "From our website to our ordering system, everything works perfectly. The team understood exactly what a busy restaurant needs.",
+      name: "Carlo",
+      title: "Owner, Pizza Fly — Milan, Italy"
     }
   ];
 
