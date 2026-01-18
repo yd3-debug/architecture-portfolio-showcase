@@ -1,4 +1,4 @@
-import { Workflow, Code2, TrendingUp, AlertCircle, ArrowRight } from 'lucide-react';
+import { Workflow, Code2, TrendingUp, Settings, AlertCircle, ArrowRight } from 'lucide-react';
 
 const ServicesHero = () => {
   const services = [
@@ -8,6 +8,13 @@ const ServicesHero = () => {
       title: "Business Architecture",
       outcome: "Clear structure and processes that run without you",
       description: "We design the strategic framework of your business—aligning operations, processes, and goals to create a solid foundation for sustainable growth."
+    },
+    {
+      icon: Settings,
+      pain: "Spending too much time on day-to-day operations?",
+      title: "Operations Management",
+      outcome: "Smooth operations that run without constant oversight",
+      description: "We step in as your Director of Operations—handling international logistics, vendor negotiations, supply chain optimization, and operational efficiency so you can focus on growth."
     },
     {
       icon: Code2,
@@ -38,8 +45,8 @@ const ServicesHero = () => {
           </p>
         </div>
 
-        {/* Services Grid - Pain-focused Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Services Grid - 2x2 Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <div 
               key={index} 
