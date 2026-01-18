@@ -35,7 +35,7 @@ const Hero = () => {
 
         {/* Client-focused Subheading */}
         <p className="text-sm sm:text-base md:text-lg text-white/80 mb-8 sm:mb-12 md:mb-14 leading-relaxed font-light max-w-2xl mx-auto">
-          We help business owners structure, grow, and thrive with clarity and confidence
+          We help proven businesses move beyond word of mouth and get visible to the clients who need them
         </p>
 
         {/* Dual CTAs */}

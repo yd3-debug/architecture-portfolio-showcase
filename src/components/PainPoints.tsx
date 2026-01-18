@@ -11,6 +11,10 @@ const PainPoints = () => {
       solution: "We build systems so your business runs in 20 hours, not 60",
     },
     {
+      pain: "Great reputation but invisible online?",
+      solution: "We put hidden gems in front of the right buyers",
+    },
+    {
       pain: "Getting website traffic but no sales?",
       solution: "Websites optimized to turn browsers into buyers",
     },

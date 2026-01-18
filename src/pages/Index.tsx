@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import PainPoints from '../components/PainPoints';
+import WhoWeHelp from '../components/WhoWeHelp';
 import ServicesHero from '../components/ServicesHero';
 import Studio from '../components/Studio';
 import Testimonials from '../components/Testimonials';
@@ -15,6 +16,7 @@ const Index = () => {
       <Header />
       <Hero />
       <PainPoints />
+      <WhoWeHelp />
       <ServicesHero />
       <Studio />
       <Testimonials />
