@@ -5,26 +5,26 @@ const Services = () => {
     {
       icon: Zap,
       title: "Business Architecture",
-      description: "Design the foundation of your business with strategic frameworks that align operations, processes, and goals for maximum efficiency.",
-      features: ["Market Positioning", "Process Design", "Operational Structure", "Strategic Planning"]
+      description: "Build systems that let your business run without you—SOPs, team structure, and automated workflows for sustainable growth.",
+      features: ["Standard Operating Procedures (SOPs)", "Team & Role Structure", "Automated Workflows", "Scalable Systems"]
     },
     {
       icon: Globe,
       title: "Web Design & Development", 
-      description: "Create stunning, responsive websites that capture your brand essence and drive meaningful engagement with your target audience.",
-      features: ["Responsive Design", "Brand Identity", "User Experience", "Conversion Optimization"]
+      description: "Modern, fast-loading websites that rank on Google and convert visitors into paying customers. Custom designs, no templates.",
+      features: ["Mobile-First Design", "SEO-Optimized Pages", "Fast Load Times", "Clear Call-to-Actions"]
     },
     {
       icon: TrendingUp,
       title: "Business Growth Strategy",
-      description: "Develop actionable growth strategies that position your business correctly in your market and create sustainable competitive advantages.",
-      features: ["Market Analysis", "Competitive Positioning", "Growth Roadmaps", "Revenue Strategy"]
+      description: "Clear action plans to get more customers: who to target, where to find them, what to say, and how to stand out.",
+      features: ["Customer Targeting", "Market Positioning", "Sales Funnels", "Revenue Growth Plans"]
     },
     {
       icon: Code,
-      title: "Digital Transformation",
-      description: "Modernize your business operations with smart automation and digital tools that increase efficiency and reduce operational overhead.",
-      features: ["Process Automation", "Workflow Optimization", "Digital Tools", "System Integration"]
+      title: "Operations Management",
+      description: "We handle the behind-the-scenes chaos: supplier negotiations, inventory, shipping logistics, and vendor relationships.",
+      features: ["Supplier Negotiations", "Inventory Management", "Shipping Logistics", "Vendor Relationships"]
     }
   ];
 

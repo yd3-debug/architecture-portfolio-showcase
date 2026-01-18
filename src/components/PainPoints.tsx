@@ -7,24 +7,24 @@ const PainPoints = () => {
 
   const painPoints = [
     {
-      pain: "Overwhelmed running your business?",
-      solution: "We bring structure and clarity to your operations",
+      pain: "Working 60+ hours but still behind?",
+      solution: "We build systems so your business runs in 20 hours, not 60",
     },
     {
-      pain: "Online presence not converting?",
-      solution: "Professional web design that builds trust and drives results",
+      pain: "Getting website traffic but no sales?",
+      solution: "Websites optimized to turn browsers into buyers",
     },
     {
-      pain: "Unsure how to compete in your market?",
-      solution: "Strategic positioning that sets you apart",
+      pain: "Competitors stealing your customers?",
+      solution: "Positioning that makes you the obvious choice",
     },
     {
-      pain: "Growth has stalled?",
-      solution: "Actionable strategies to unlock your next phase",
+      pain: "Revenue stuck at the same level for months?",
+      solution: "Growth strategies that have worked for 50+ businesses",
     },
     {
-      pain: "Doing everything yourself?",
-      solution: "A strategic partner who works alongside you",
+      pain: "Can't afford to hire but can't do it alone?",
+      solution: "Fractional support—expert help without full-time cost",
     }
   ];
 
