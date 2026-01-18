@@ -13,26 +13,43 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://yektad.com/" />
     <meta property="og:title" content="YektaD — Business Architect & Strategic Partner" />
     <meta property="og:description" content="Your strategic business partner for business architecture, web design, and growth strategy. We help structure your business correctly in your market and drive sustainable growth." />
-    <meta property="og:image" content="/web-app-manifest-512x512.png" />
-    <meta property="og:image:width" content="512" />
-    <meta property="og:image:height" content="512" />
-    <meta property="og:image:alt" content="YektaD — Your Strategic Business Partner" />
+    <meta property="og:image" content="https://yektad.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:alt" content="YektaD — Your Strategic Business Partner for Business Architecture" />
     <meta property="og:site_name" content="YektaD" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:updated_time" content="2025-01-15T10:00:00Z" />
-    <meta property="article:author" content="YektaD" />
-    <meta property="article:tag" content="Business Architecture, Web Design, Growth Strategy" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@YektaD" />
+    <meta name="twitter:creator" content="@YektaD" />
+    <meta name="twitter:title" content="YektaD — Business Architect & Strategic Partner" />
+    <meta name="twitter:description" content="Your strategic business partner for business architecture, web design, and growth strategy. We help structure your business correctly in your market." />
+    <meta name="twitter:image" content="https://yektad.com/og-image.jpg" />
+    <meta name="twitter:image:alt" content="YektaD Business Architecture" />
     
     <!-- Additional Meta Tags -->
-    <meta name="keywords" content="business architecture, strategic partner, web design, business growth, market positioning, digital transformation, business consulting, growth strategy, business structuring" />
-    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="business architecture, strategic partner, web design, business growth, market positioning, digital transformation, business consulting, growth strategy, business structuring, YektaD" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="language" content="English" />
     <meta name="theme-color" content="#1A1A1A" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!-- Apple Mobile Web App -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="YektaD" />
     
     <!-- Geo Tags -->
     <meta name="geo.region" content="US" />
@@ -42,16 +59,30 @@
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
     <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
-    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     
     <!-- Microsoft Tags -->
     <meta name="msapplication-TileColor" content="#1A1A1A" />
+    <meta name="msapplication-TileImage" content="/web-app-manifest-192x192.png" />
+    <meta name="msapplication-config" content="none" />
+    
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="YektaD — Business Architect & Strategic Partner" />
+    <meta name="DC.creator" content="YektaD" />
+    <meta name="DC.subject" content="Business Architecture, Strategic Consulting, Web Design" />
+    <meta name="DC.description" content="Your strategic business partner for business architecture, web design, and growth strategy." />
+    <meta name="DC.language" content="en" />
     
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     
     <!-- Preload Critical Assets -->
-    <link rel="preload" as="image" href="/src/assets/hero-workspace.jpg" />
+    <link rel="preload" as="image" href="/src/assets/hero-desktop.jpg" media="(min-width: 1024px)" />
+    <link rel="preload" as="image" href="/src/assets/hero-mobile.jpg" media="(max-width: 1023px)" />
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -62,16 +93,79 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "ProfessionalService",
+      "@id": "https://yektad.com/#organization",
       "name": "YektaD",
+      "alternateName": "YektaD Business Architecture",
       "description": "Strategic business partner specializing in business architecture, web design, market positioning, and sustainable business growth.",
       "url": "https://yektad.com/",
-      "logo": "https://yektad.com/LOGOYD.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://yektad.com/YD_LOGO.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://yektad.com/og-image.jpg",
+      "priceRange": "$$",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "serviceType": ["Business Architecture", "Web Design", "Growth Strategy", "Digital Transformation"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Business Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Business Architecture",
+              "description": "Strategic business structuring and market positioning"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Web Design & Development",
+              "description": "Custom website design and development solutions"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Growth Strategy",
+              "description": "Sustainable business growth and scaling strategies"
+            }
+          }
+        ]
+      },
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "contact@yektad.com",
         "contactType": "Customer Service",
-        "availableLanguage": "English"
+        "availableLanguage": ["English"]
+      },
+      "sameAs": [
+        "https://linkedin.com/company/yektad",
+        "https://twitter.com/yektad"
+      ]
+    }
+    </script>
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "YektaD",
+      "url": "https://yektad.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://yektad.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
     }
     </script>
