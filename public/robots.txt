@@ -12,3 +12,11 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Disallow admin and private paths
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://yektad.com/sitemap.xml
