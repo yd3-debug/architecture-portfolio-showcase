@@ -1,8 +1,9 @@
-import { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { useState, useCallback } from 'react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 
 const PainPoints = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   const painPoints = [
     {
@@ -27,13 +28,20 @@ const PainPoints = () => {
     }
   ];
 
-  const handleTap = (index: number) => {
-    setActiveIndex(prev => prev === index ? null : index);
-  };
+  const handleTouch = useCallback((index: number) => {
+    setIsTouchDevice(true);
+    setActiveIndex(prev => prev === index ? prev : index);
+  }, []);
+
+  const handleMouseEnter = useCallback((index: number) => {
+    if (!isTouchDevice) {
+      setActiveIndex(index);
+    }
+  }, [isTouchDevice]);
 
   return (
     <section className="py-16 sm:py-20 md:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-white">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-charcoal">
@@ -44,8 +52,76 @@ const PainPoints = () => {
           </p>
         </div>
 
-        {/* Pain Points - Flowing Strips */}
-        <div className="space-y-3 sm:space-y-4">
+        {/* Desktop: Two-Column Split Layout */}
+        <div className="hidden lg:grid lg:grid-cols-2 gap-12 xl:gap-16">
+          {/* Left: Pain Points List */}
+          <div className="space-y-2">
+            {painPoints.map((item, index) => {
+              const isActive = activeIndex === index;
+              
+              return (
+                <div
+                  key={index}
+                  className={`
+                    relative py-5 px-6 rounded-lg cursor-pointer transition-all duration-300
+                    ${isActive 
+                      ? 'bg-charcoal text-white shadow-lg' 
+                      : 'bg-transparent hover:bg-soft-gray/50'
+                    }
+                  `}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                >
+                  <div className="flex items-center gap-4">
+                    <div className={`w-2 h-2 rounded-full transition-colors duration-300 ${
+                      isActive ? 'bg-accent' : 'bg-muted-foreground/30'
+                    }`} />
+                    <h3 className="font-serif text-lg xl:text-xl leading-tight">
+                      {item.pain}
+                    </h3>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Right: Solution Display */}
+          <div className="flex items-center">
+            <div className="relative w-full">
+              <div className="bg-gradient-to-br from-soft-gray to-white rounded-2xl p-8 xl:p-12 border border-border/30 shadow-sm">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">Our Solution</p>
+                    <p className="font-serif text-xl xl:text-2xl text-charcoal leading-relaxed">
+                      {painPoints[activeIndex]?.solution}
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Visual indicator */}
+                <div className="mt-8 pt-6 border-t border-border/30">
+                  <div className="flex gap-2">
+                    {painPoints.map((_, index) => (
+                      <div 
+                        key={index}
+                        className={`h-1 rounded-full transition-all duration-300 ${
+                          index === activeIndex 
+                            ? 'w-8 bg-accent' 
+                            : 'w-2 bg-muted-foreground/20'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile: Flowing Strips with Tap-to-Reveal */}
+        <div className="lg:hidden space-y-3 sm:space-y-4">
           {painPoints.map((item, index) => {
             const isActive = activeIndex === index;
             const isOdd = index % 2 === 1;
@@ -53,25 +129,26 @@ const PainPoints = () => {
             return (
               <div
                 key={index}
-                className={`relative transition-all duration-300 cursor-pointer ${
-                  isOdd ? 'sm:ml-8 lg:ml-16' : 'sm:mr-8 lg:mr-16'
+                className={`relative transition-all duration-300 ${
+                  isOdd ? 'sm:ml-8' : 'sm:mr-8'
                 }`}
-                onClick={() => handleTap(index)}
-                onMouseEnter={() => setActiveIndex(index)}
-                onMouseLeave={() => setActiveIndex(null)}
+                onTouchEnd={(e) => {
+                  e.preventDefault();
+                  handleTouch(index);
+                }}
               >
                 <div className={`
-                  relative py-5 sm:py-6 px-5 sm:px-8 
+                  relative py-5 px-5 sm:px-8 
                   border border-border/50 rounded-xl
                   transition-all duration-300
                   ${isActive 
                     ? 'bg-charcoal text-white border-charcoal shadow-lg' 
-                    : 'bg-white hover:bg-soft-gray/50'
+                    : 'bg-white'
                   }
                 `}>
                   {/* Pain Point */}
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className={`font-serif text-base sm:text-lg md:text-xl leading-tight transition-colors duration-300`}>
+                    <h3 className="font-serif text-base sm:text-lg leading-tight">
                       {item.pain}
                     </h3>
                     <ArrowRight className={`w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-1 transition-all duration-300 ${
@@ -79,7 +156,7 @@ const PainPoints = () => {
                     }`} />
                   </div>
 
-                  {/* Solution - Reveals on hover/tap */}
+                  {/* Solution - Reveals on tap */}
                   <div className={`overflow-hidden transition-all duration-300 ${
                     isActive ? 'max-h-20 opacity-100 mt-3' : 'max-h-0 opacity-0 mt-0'
                   }`}>
