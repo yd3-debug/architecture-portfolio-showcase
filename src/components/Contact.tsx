@@ -17,7 +17,7 @@ const Contact = () => {
         <div className="grid grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 mb-10 sm:mb-14 md:mb-20">
           {/* Email */}
           <div className="text-center">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-charcoal/10 flex items-center justify-center mb-3 sm:mb-4 md:mb-6 mx-auto">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl border border-charcoal/10 flex items-center justify-center mb-3 sm:mb-4 md:mb-6 mx-auto">
               <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-charcoal" />
             </div>
             <h3 className="font-serif text-base sm:text-lg md:text-xl mb-2 sm:mb-3 text-charcoal">Email</h3>
@@ -31,7 +31,7 @@ const Contact = () => {
 
           {/* Location */}
           <div className="text-center">
-            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-charcoal/10 flex items-center justify-center mb-3 sm:mb-4 md:mb-6 mx-auto">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl border border-charcoal/10 flex items-center justify-center mb-3 sm:mb-4 md:mb-6 mx-auto">
               <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-charcoal" />
             </div>
             <h3 className="font-serif text-base sm:text-lg md:text-xl mb-2 sm:mb-3 text-charcoal">Services</h3>
@@ -45,7 +45,7 @@ const Contact = () => {
         {/* CTA */}
         <div className="text-center pt-8 sm:pt-10 md:pt-12 border-t border-border">
           <a href="mailto:contact@yektad.com">
-            <button className="px-6 py-3 sm:px-8 sm:py-3.5 md:px-10 md:py-4 text-xs sm:text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300">
+            <button className="px-6 py-3 sm:px-8 sm:py-3.5 md:px-10 md:py-4 text-xs sm:text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg">
               Get in Touch
             </button>
           </a>

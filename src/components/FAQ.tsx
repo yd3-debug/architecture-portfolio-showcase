@@ -9,23 +9,23 @@ const FAQ = () => {
   const faqs = [
     {
       question: "What types of businesses do you work with?",
-      answer: "We work with established small to medium-sized businesses, entrepreneurs ready to scale, and companies looking to streamline their operations. Our clients range from service-based businesses to product companies across various industries."
+      answer: "We work with a range of businesses—from entrepreneurs ready to scale to established companies that are the 'diamonds in the rough.' These are organizations that have done exceptional work but haven't been noticed due to lack of proper positioning, branding, or strategic direction. We help them shine."
     },
     {
       question: "How long do engagements typically take?",
-      answer: "It depends on the scope. Website projects typically take 4-8 weeks. Business architecture and strategy work can range from a focused 2-week sprint to ongoing quarterly partnerships. We'll give you a clear timeline after our initial consultation."
+      answer: "It really depends on the scope and what we'd like to achieve together. Some projects wrap up in a few weeks, while others evolve into ongoing partnerships. We'll define clear milestones and timelines during our initial planning."
     },
     {
       question: "Do you work remotely or on-site?",
-      answer: "We work primarily remotely, which allows us to serve clients globally. However, for certain strategic planning sessions or workshops, we can arrange on-site visits if needed. Our digital-first approach means we're responsive and accessible regardless of location."
+      answer: "Both. We're flexible and adapt to what works best for your business. Many clients prefer remote collaboration for efficiency, while others benefit from periodic on-site sessions for deeper strategic work."
     },
     {
       question: "How is pricing structured?",
-      answer: "We offer project-based pricing for defined deliverables (websites, strategy documents) and retainer arrangements for ongoing operations management and advisory work. Every engagement starts with a free consultation where we'll discuss your needs and provide a clear proposal."
+      answer: "Pricing depends on the scope of work, your company's specific needs, and the services required. Every business is different, so we provide tailored proposals after our initial conversation. No hidden fees—just transparent pricing that matches your goals."
     },
     {
       question: "What's the first step to working together?",
-      answer: "Simply reach out through our contact form or email. We'll schedule a no-obligation discovery call to understand your challenges, goals, and whether we're the right fit for each other. From there, we'll propose a tailored approach and timeline."
+      answer: "Simply reach out via email or the contact form. We'll schedule a discovery call to understand your challenges, goals, and see if we're the right fit. There's no obligation—just an honest conversation about how we might help."
     },
     {
       question: "What does 'Operations Management' include?",
@@ -52,7 +52,7 @@ const FAQ = () => {
             <AccordionItem 
               key={index} 
               value={`item-${index}`}
-              className="bg-white border-none px-5 sm:px-6 md:px-8 data-[state=open]:bg-white"
+              className="bg-white border-none px-5 sm:px-6 md:px-8 rounded-xl data-[state=open]:bg-white"
             >
               <AccordionTrigger className="text-left text-sm sm:text-base md:text-lg font-medium text-charcoal hover:no-underline py-4 sm:py-5 md:py-6">
                 {faq.question}
@@ -70,7 +70,7 @@ const FAQ = () => {
             Still have questions?
           </p>
           <a href="#contact">
-            <button className="px-6 py-2.5 sm:px-8 sm:py-3 text-xs sm:text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300">
+            <button className="px-6 py-2.5 sm:px-8 sm:py-3 text-xs sm:text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg">
               Get in Touch
             </button>
           </a>

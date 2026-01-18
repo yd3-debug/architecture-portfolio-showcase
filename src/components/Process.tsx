@@ -42,14 +42,14 @@ const Process = () => {
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
           {steps.map((step, index) => (
-            <div key={index} className="text-center group">
+            <div key={index} className="text-center group bg-white p-4 sm:p-6 md:p-8 rounded-xl">
               {/* Step Number */}
               <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-light text-accent/20 mb-3 sm:mb-4 md:mb-6">
                 {step.number}
               </div>
 
               {/* Icon */}
-              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 mx-auto mb-3 sm:mb-4 md:mb-6 rounded-full bg-white border border-border flex items-center justify-center group-hover:border-accent transition-all">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 mx-auto mb-3 sm:mb-4 md:mb-6 rounded-xl bg-soft-gray border border-border flex items-center justify-center group-hover:border-accent transition-all">
                 <step.icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7 text-charcoal group-hover:text-accent transition-colors" />
               </div>
 
@@ -60,13 +60,6 @@ const Process = () => {
               <p className="text-xs sm:text-sm md:text-base text-muted-foreground font-light leading-relaxed">
                 {step.description}
               </p>
-
-              {/* Connector Line (except last) */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-20 left-full w-full h-px bg-border -ml-6" 
-                     style={{ width: 'calc(100% - 3rem)' }}>
-                </div>
-              )}
             </div>
           ))}
         </div>

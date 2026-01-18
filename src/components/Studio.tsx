@@ -25,9 +25,9 @@ const Studio = () => {
     <section id="studio" className="py-16 sm:py-20 md:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-white">
       <div className="container-professional max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 xl:gap-24 items-center">
-          {/* Image - Optimized for mobile */}
+          {/* Image - Optimized for mobile with rounded corners */}
           <div className="order-2 lg:order-1">
-            <div className="relative aspect-[3/4] sm:aspect-square lg:aspect-[4/3] overflow-hidden -mx-4 sm:mx-0">
+            <div className="relative aspect-[3/4] sm:aspect-square lg:aspect-[4/3] overflow-hidden rounded-xl">
               <img
                 src={studioWorkspace}
                 alt="Organized professional workspace representing clarity and structure"
@@ -67,7 +67,7 @@ const Studio = () => {
               <h3 className="font-serif text-lg sm:text-xl text-charcoal">How We Work</h3>
               {values.map((value, index) => (
                 <div key={index} className="flex gap-3 sm:gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-accent/10 flex items-center justify-center">
+                  <div className="flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-accent/10 flex items-center justify-center">
                     <value.icon className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
                   </div>
                   <div>
@@ -80,7 +80,7 @@ const Studio = () => {
 
             {/* CTA */}
             <a href="#contact">
-              <Button variant="outline" className="group text-sm">
+              <Button variant="outline" className="group text-sm rounded-lg">
                 Start a Conversation
                 <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1" />
               </Button>

@@ -54,7 +54,7 @@ const Header = () => {
               </a>
             ))}
             <a href="#contact">
-              <button className="px-6 py-2 text-sm font-light text-foreground bg-white border border-charcoal/10 hover:bg-charcoal hover:text-white transition-all duration-300">
+              <button className="px-6 py-2 text-sm font-light text-foreground bg-white border border-charcoal/10 hover:bg-charcoal hover:text-white transition-all duration-300 rounded-lg">
                 Get in Touch
               </button>
             </a>
@@ -86,7 +86,7 @@ const Header = () => {
                 </a>
               ))}
               <a href="#contact" onClick={() => setIsMenuOpen(false)}>
-                <button className="w-full mt-4 px-6 py-2.5 text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300">
+                <button className="w-full mt-4 px-6 py-2.5 text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg">
                   Get Started
                 </button>
               </a>
