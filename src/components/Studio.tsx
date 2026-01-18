@@ -35,7 +35,7 @@ const Studio = () => {
                 <img
                   src={studioPrimary}
                   alt="Professional partnership and collaboration"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-top"
                   loading="lazy"
                 />
               </div>
@@ -57,7 +57,7 @@ const Studio = () => {
               <img
                 src={studioMobile}
                 alt="Professional partnership moment"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-top"
                 loading="lazy"
               />
             </div>
