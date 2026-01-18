@@ -4,31 +4,31 @@ const ServicesHero = () => {
   const services = [
     {
       icon: Workflow,
-      pain: "Running your business feels chaotic",
+      pain: "Stuck working IN your business instead of ON it?",
       title: "Business Architecture",
-      outcome: "Clear structure and processes that run without you",
-      description: "We design the strategic framework of your business—aligning operations, processes, and goals to create a solid foundation for sustainable growth."
+      outcome: "Systems that let your business run without you",
+      description: "We help you build SOPs, team structures, and automated workflows—so you can stop firefighting and start scaling."
     },
     {
       icon: Settings,
-      pain: "Spending too much time on day-to-day operations?",
+      pain: "Drowning in logistics, vendors, and daily fires?",
       title: "Operations Management",
-      outcome: "Smooth operations that run without constant oversight",
-      description: "We step in as your Director of Operations—handling international logistics, vendor negotiations, supply chain optimization, and operational efficiency so you can focus on growth."
+      outcome: "Operations that run smoothly without your constant attention",
+      description: "We handle supplier negotiations, inventory management, shipping logistics, and vendor relationships. You focus on sales and growth."
     },
     {
       icon: Code2,
-      pain: "Your website doesn't represent your quality",
+      pain: "Losing customers to competitors with better websites?",
       title: "Web Design & Development",
-      outcome: "A professional presence that builds trust and converts",
-      description: "Professional websites that capture your brand essence, engage your audience, and turn visitors into loyal customers."
+      outcome: "A website that converts visitors into paying customers",
+      description: "Modern, fast-loading websites designed to rank on Google and turn browsers into buyers. Custom designs—no templates."
     },
     {
       icon: TrendingUp,
-      pain: "You don't know how to get more customers",
+      pain: "Know you could grow, but don't know where to start?",
       title: "Growth Strategy",
-      outcome: "A clear roadmap to reach your ideal market",
-      description: "Strategic guidance to position your business correctly, identify opportunities, and create sustainable competitive advantages."
+      outcome: "A clear action plan to get more customers",
+      description: "We show you who to target, where to find them, what to say, and how to stand out in a crowded market."
     }
   ];
 
