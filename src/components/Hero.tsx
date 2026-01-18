@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-import heroConsultation from '../assets/hero-consultation.jpg';
+import heroWorkspace from '@/assets/hero-workspace-new.jpg';
 
 const Hero = () => {
   return (
@@ -7,12 +7,12 @@ const Hero = () => {
       {/* Full Background Image - Optimized for mobile */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={heroConsultation} 
-          alt="Strategic business consultation between partners" 
+          src={heroWorkspace} 
+          alt="Professional workspace with strategic planning elements" 
           className="w-full h-full object-cover object-center"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-black/50 sm:bg-black/40"></div>
+        <div className="absolute inset-0 bg-charcoal/60"></div>
       </div>
 
       <div className="container-professional relative z-10 max-w-4xl text-center px-4">
@@ -30,7 +30,7 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <a 
             href="#contact"
-            className="px-6 py-3 sm:px-8 sm:py-3.5 text-sm font-light text-charcoal bg-white hover:bg-white/90 transition-all duration-300"
+            className="px-6 py-3 sm:px-8 sm:py-3.5 text-sm font-light text-charcoal bg-white hover:bg-white/90 transition-all duration-300 rounded-lg"
           >
             Let's Talk
           </a>

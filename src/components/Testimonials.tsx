@@ -41,16 +41,16 @@ const Testimonials = () => {
         {/* Testimonials */}
         <div className="space-y-8 sm:space-y-12 md:space-y-16">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="max-w-3xl mx-auto">
+            <div key={index} className="max-w-3xl mx-auto bg-white p-6 sm:p-8 md:p-10 rounded-xl">
               {/* Quote */}
-              <Quote className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-accent/20 mb-4 sm:mb-6 mx-auto" />
+              <Quote className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-accent/20 mb-4 sm:mb-6" />
               
-              <blockquote className="font-serif text-base sm:text-lg md:text-2xl lg:text-3xl text-charcoal text-center mb-4 sm:mb-6 md:mb-8 leading-relaxed font-light">
+              <blockquote className="font-serif text-base sm:text-lg md:text-2xl lg:text-3xl text-charcoal mb-4 sm:mb-6 md:mb-8 leading-relaxed font-light">
                 "{testimonial.quote}"
               </blockquote>
 
               {/* Attribution */}
-              <div className="text-center">
+              <div>
                 <div className="font-light text-charcoal mb-1 text-sm sm:text-base">
                   {testimonial.name}
                 </div>
@@ -58,11 +58,6 @@ const Testimonials = () => {
                   {testimonial.title}
                 </div>
               </div>
-
-              {/* Divider (except last) */}
-              {index < testimonials.length - 1 && (
-                <div className="h-px bg-border mt-8 sm:mt-12 md:mt-16"></div>
-              )}
             </div>
           ))}
         </div>

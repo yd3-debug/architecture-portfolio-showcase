@@ -50,7 +50,7 @@ const ServicesHero = () => {
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="group bg-soft-gray p-6 sm:p-8 transition-all duration-300 hover:bg-charcoal"
+              className="group bg-soft-gray p-6 sm:p-8 transition-all duration-300 hover:bg-charcoal rounded-xl"
             >
               {/* Pain Point Tag */}
               <div className="flex items-center gap-2 mb-4 sm:mb-6">
@@ -61,7 +61,7 @@ const ServicesHero = () => {
               </div>
 
               {/* Icon */}
-              <div className="w-12 h-12 sm:w-14 sm:h-14 mb-4 sm:mb-6 rounded-full bg-white flex items-center justify-center group-hover:bg-accent transition-all">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 mb-4 sm:mb-6 rounded-xl bg-white flex items-center justify-center group-hover:bg-accent transition-all">
                 <service.icon className="w-5 h-5 sm:w-6 sm:h-6 text-charcoal group-hover:text-white transition-colors" />
               </div>
 
@@ -89,7 +89,7 @@ const ServicesHero = () => {
         {/* CTA */}
         <div className="text-center mt-12 sm:mt-16 md:mt-20">
           <a href="#contact">
-            <button className="px-6 py-2.5 sm:px-8 sm:py-3 text-xs sm:text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300">
+            <button className="px-6 py-2.5 sm:px-8 sm:py-3 text-xs sm:text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg">
               Discuss Your Challenges
             </button>
           </a>
