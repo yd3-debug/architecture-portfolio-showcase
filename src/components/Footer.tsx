@@ -33,7 +33,7 @@ const Footer = () => {
             <div>
               <h4 className="text-sm sm:text-base md:text-lg font-bold mb-3 sm:mb-4 md:mb-6">Services</h4>
               <ul className="space-y-2 sm:space-y-3">
-                {['Work Automation', 'Micro SaaS', 'Website Design', 'Business Architecture'].map((service) => (
+                {['Business Architecture', 'Web Design', 'Growth Strategy', 'Digital Solutions'].map((service) => (
                   <li key={service}>
                     <a href="#services" className="text-white/70 hover:text-accent transition-colors duration-200 flex items-center gap-2 group text-xs sm:text-sm">
                       <span className="w-0 h-0.5 bg-accent group-hover:w-4 transition-all duration-200"></span>
@@ -73,7 +73,7 @@ const Footer = () => {
           <div className="border-t border-white/10 pt-6 sm:pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
               <div className="text-white/60 text-xs sm:text-sm text-center md:text-left">
-                © {currentYear} Business Architecture Strategic Solutions. All rights reserved.
+                © {currentYear} YektaD. All rights reserved.
               </div>
               <div className="text-xs sm:text-sm text-white/60">
                 Built with ❤️ for business growth

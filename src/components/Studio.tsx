@@ -6,18 +6,18 @@ const Studio = () => {
   const values = [
     {
       icon: Target,
-      title: "Strategic Thinking",
-      description: "We begin every project by understanding your business goals, challenges, and opportunities to ensure our solutions align perfectly with your vision."
+      title: "Business Architecture",
+      description: "We design the strategic framework of your business — aligning operations, processes, and goals to create a solid foundation for growth."
     },
     {
       icon: Lightbulb,
-      title: "Technical Excellence",
-      description: "Our team combines deep technical expertise with industry best practices to deliver robust, scalable, and maintainable solutions."
+      title: "Market Positioning",
+      description: "We help you understand your market, identify opportunities, and position your business to stand out from competitors."
     },
     {
       icon: Users,
-      title: "Client Partnership",
-      description: "We believe in collaborative relationships. Your success is our success, and we work alongside you every step of the way."
+      title: "Growth Partnership",
+      description: "We work alongside you as a strategic partner, committed to your long-term success and sustainable business growth."
     }
   ];
 
@@ -39,25 +39,24 @@ const Studio = () => {
           {/* Content */}
           <div className="order-1 lg:order-2">
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-charcoal leading-tight">
-              Building Better Businesses
+              Your Strategic Business Partner
             </h2>
 
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-4 sm:mb-6 md:mb-8">
-              We are a team of strategists, developers, and problem-solvers dedicated to helping 
-              businesses thrive in the digital age.
+              We are business architects and strategic partners dedicated to helping businesses 
+              structure, grow, and thrive in competitive markets.
             </p>
 
             <div className="space-y-4 sm:space-y-6 text-muted-foreground font-light leading-relaxed mb-6 sm:mb-8 md:mb-10 text-sm sm:text-base">
               <p>
-                With years of experience across diverse industries, we specialize in creating intelligent 
-                automation solutions and custom software that help businesses operate more efficiently 
-                and grow sustainably.
+                With expertise across business architecture, web design, and growth strategy, 
+                we help you build the right foundation and position your business for long-term success.
               </p>
 
               <p>
-                Our approach combines strategic thinking with technical expertise to deliver 
-                solutions that not only solve immediate challenges but create lasting value. We 
-                believe that great technology should simplify complexity, not add to it.
+                Our approach combines strategic thinking with practical implementation to deliver 
+                solutions that structure your business correctly, reach your target market effectively, 
+                and drive sustainable growth.
               </p>
             </div>
 

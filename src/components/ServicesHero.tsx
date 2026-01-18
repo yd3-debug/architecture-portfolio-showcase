@@ -4,18 +4,18 @@ const ServicesHero = () => {
   const services = [
     {
       icon: Workflow,
-      title: "Business Automation",
-      description: "Streamline operations and eliminate repetitive tasks with intelligent workflow solutions designed for your unique processes."
+      title: "Business Architecture",
+      description: "Structure your business for success with strategic frameworks, process optimization, and operational excellence tailored to your market."
     },
     {
       icon: Code2,
-      title: "Custom Applications",
-      description: "Bespoke software solutions built with precision to solve specific business challenges and drive measurable results."
+      title: "Web Design & Development",
+      description: "Professional websites that represent your brand, engage your audience, and convert visitors into loyal customers."
     },
     {
       icon: Palette,
-      title: "Digital Experiences",
-      description: "Elegant websites and interfaces that capture attention, communicate value, and convert visitors into customers."
+      title: "Growth Strategy",
+      description: "Strategic guidance to position your business correctly in your market, identify opportunities, and drive sustainable growth."
     }
   ];
 
