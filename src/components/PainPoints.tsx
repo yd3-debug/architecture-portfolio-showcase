@@ -1,32 +1,40 @@
-import { AlertCircle, CheckCircle2 } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowRight } from 'lucide-react';
 
 const PainPoints = () => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   const painPoints = [
     {
       pain: "Overwhelmed running your business?",
-      solution: "We bring structure and clarity to your operations"
+      solution: "We bring structure and clarity to your operations",
+      dark: true
     },
     {
       pain: "Online presence not converting?",
-      solution: "Professional web design that builds trust and drives results"
+      solution: "Professional web design that builds trust and drives results",
+      dark: false
     },
     {
       pain: "Unsure how to compete in your market?",
-      solution: "Strategic positioning that sets you apart"
+      solution: "Strategic positioning that sets you apart",
+      dark: false
     },
     {
       pain: "Growth has stalled?",
-      solution: "Actionable strategies to unlock your next phase"
+      solution: "Actionable strategies to unlock your next phase",
+      dark: true
     },
     {
       pain: "Doing everything yourself?",
-      solution: "A strategic partner who works alongside you"
+      solution: "A strategic partner who works alongside you",
+      dark: false
     }
   ];
 
   return (
-    <section className="py-16 sm:py-20 md:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-soft-gray">
-      <div className="container-professional max-w-5xl">
+    <section className="py-16 sm:py-20 md:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-white">
+      <div className="container-professional max-w-6xl">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-charcoal">
@@ -37,34 +45,97 @@ const PainPoints = () => {
           </p>
         </div>
 
-        {/* Pain Points Grid */}
-        <div className="space-y-4 sm:space-y-6">
-          {painPoints.map((item, index) => (
-            <div 
-              key={index} 
-              className="bg-white p-5 sm:p-6 md:p-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 transition-all hover:shadow-md"
-            >
-              {/* Pain */}
-              <div className="flex items-start sm:items-center gap-3 sm:flex-1">
-                <AlertCircle className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5 sm:mt-0" />
-                <p className="text-charcoal font-medium text-sm sm:text-base md:text-lg">
-                  {item.pain}
-                </p>
-              </div>
+        {/* Pain Points - Offset Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+          {/* Left Column */}
+          <div className="space-y-4 sm:space-y-6">
+            {painPoints.filter((_, i) => i % 2 === 0).map((item, idx) => {
+              const originalIndex = idx * 2;
+              return (
+                <div
+                  key={originalIndex}
+                  className={`relative p-6 sm:p-8 md:p-10 transition-all duration-500 cursor-pointer overflow-hidden group ${
+                    item.dark ? 'bg-charcoal text-white' : 'bg-soft-gray text-charcoal'
+                  }`}
+                  onMouseEnter={() => setHoveredIndex(originalIndex)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  {/* Pain Point */}
+                  <h3 className={`font-serif text-lg sm:text-xl md:text-2xl leading-tight mb-4 transition-all duration-300 ${
+                    hoveredIndex === originalIndex ? 'opacity-60' : ''
+                  }`}>
+                    {item.pain}
+                  </h3>
 
-              {/* Arrow/Divider */}
-              <div className="hidden sm:block w-px h-8 bg-border mx-2" />
-              <div className="sm:hidden h-px w-full bg-border" />
+                  {/* Solution - Reveals on hover */}
+                  <div className={`flex items-start gap-3 transition-all duration-500 ${
+                    hoveredIndex === originalIndex 
+                      ? 'opacity-100 translate-y-0' 
+                      : 'opacity-0 translate-y-2'
+                  }`}>
+                    <ArrowRight className={`w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 ${
+                      item.dark ? 'text-accent' : 'text-accent'
+                    }`} />
+                    <p className={`text-sm sm:text-base font-light ${
+                      item.dark ? 'text-white/80' : 'text-muted-foreground'
+                    }`}>
+                      {item.solution}
+                    </p>
+                  </div>
 
-              {/* Solution */}
-              <div className="flex items-start sm:items-center gap-3 sm:flex-1">
-                <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5 sm:mt-0" />
-                <p className="text-muted-foreground font-light text-sm sm:text-base">
-                  {item.solution}
-                </p>
-              </div>
-            </div>
-          ))}
+                  {/* Hover indicator line */}
+                  <div className={`absolute bottom-0 left-0 h-1 bg-accent transition-all duration-500 ${
+                    hoveredIndex === originalIndex ? 'w-full' : 'w-0'
+                  }`} />
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Right Column - Offset */}
+          <div className="space-y-4 sm:space-y-6 md:mt-12">
+            {painPoints.filter((_, i) => i % 2 === 1).map((item, idx) => {
+              const originalIndex = idx * 2 + 1;
+              return (
+                <div
+                  key={originalIndex}
+                  className={`relative p-6 sm:p-8 md:p-10 transition-all duration-500 cursor-pointer overflow-hidden group ${
+                    item.dark ? 'bg-charcoal text-white' : 'bg-soft-gray text-charcoal'
+                  }`}
+                  onMouseEnter={() => setHoveredIndex(originalIndex)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  {/* Pain Point */}
+                  <h3 className={`font-serif text-lg sm:text-xl md:text-2xl leading-tight mb-4 transition-all duration-300 ${
+                    hoveredIndex === originalIndex ? 'opacity-60' : ''
+                  }`}>
+                    {item.pain}
+                  </h3>
+
+                  {/* Solution - Reveals on hover */}
+                  <div className={`flex items-start gap-3 transition-all duration-500 ${
+                    hoveredIndex === originalIndex 
+                      ? 'opacity-100 translate-y-0' 
+                      : 'opacity-0 translate-y-2'
+                  }`}>
+                    <ArrowRight className={`w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5 ${
+                      item.dark ? 'text-accent' : 'text-accent'
+                    }`} />
+                    <p className={`text-sm sm:text-base font-light ${
+                      item.dark ? 'text-white/80' : 'text-muted-foreground'
+                    }`}>
+                      {item.solution}
+                    </p>
+                  </div>
+
+                  {/* Hover indicator line */}
+                  <div className={`absolute bottom-0 left-0 h-1 bg-accent transition-all duration-500 ${
+                    hoveredIndex === originalIndex ? 'w-full' : 'w-0'
+                  }`} />
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         {/* CTA */}

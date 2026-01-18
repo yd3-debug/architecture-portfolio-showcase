@@ -25,13 +25,14 @@ const Studio = () => {
     <section id="studio" className="py-16 sm:py-20 md:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-white">
       <div className="container-professional max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 xl:gap-24 items-center">
-          {/* Image */}
+          {/* Image - Optimized for mobile */}
           <div className="order-2 lg:order-1">
-            <div className="relative aspect-square sm:aspect-[4/3] overflow-hidden -mx-4 sm:mx-0">
+            <div className="relative aspect-[3/4] sm:aspect-square lg:aspect-[4/3] overflow-hidden -mx-4 sm:mx-0">
               <img
                 src={studioWorkspace}
                 alt="Organized professional workspace representing clarity and structure"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
+                loading="lazy"
               />
             </div>
           </div>

@@ -3,15 +3,16 @@ import heroConsultation from '../assets/hero-consultation.jpg';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Full Background Image */}
+    <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Full Background Image - Optimized for mobile */}
       <div className="absolute inset-0 z-0">
         <img 
           src={heroConsultation} 
           alt="Strategic business consultation between partners" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
+          loading="eager"
         />
-        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 bg-black/50 sm:bg-black/40"></div>
       </div>
 
       <div className="container-professional relative z-10 max-w-4xl text-center px-4">
