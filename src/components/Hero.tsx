@@ -1,13 +1,25 @@
 import { ArrowRight } from 'lucide-react';
-import heroWorkspace from '@/assets/hero-workspace-new.jpg';
+import heroDesktop from '@/assets/hero-desktop.jpg';
+import heroMobile from '@/assets/hero-mobile.jpg';
 
 const Hero = () => {
   return (
     <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Full Background Image - Optimized for mobile */}
-      <div className="absolute inset-0 z-0">
+      {/* Desktop Background Image */}
+      <div className="absolute inset-0 z-0 hidden lg:block">
         <img 
-          src={heroWorkspace} 
+          src={heroDesktop} 
+          alt="Professional workspace with strategic planning elements" 
+          className="w-full h-full object-cover object-center"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-charcoal/60"></div>
+      </div>
+
+      {/* Mobile Background Image */}
+      <div className="absolute inset-0 z-0 block lg:hidden">
+        <img 
+          src={heroMobile} 
           alt="Professional workspace with strategic planning elements" 
           className="w-full h-full object-cover object-center"
           loading="eager"

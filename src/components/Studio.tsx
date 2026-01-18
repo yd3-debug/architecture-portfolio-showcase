@@ -1,4 +1,6 @@
-import studioWorkspace from '../assets/studio-workspace.jpg';
+import studioPrimary from '../assets/studio-primary.jpg';
+import studioSecondary from '../assets/studio-secondary.jpg';
+import studioMobile from '../assets/studio-mobile.jpg';
 import { Handshake, Eye, Rocket, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 
@@ -25,12 +27,36 @@ const Studio = () => {
     <section id="studio" className="py-16 sm:py-20 md:py-28 lg:py-32 px-4 sm:px-6 lg:px-12 bg-white">
       <div className="container-professional max-w-6xl">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 xl:gap-24 items-center">
-          {/* Image - Optimized for mobile with rounded corners */}
-          <div className="order-2 lg:order-1">
-            <div className="relative aspect-[3/4] sm:aspect-square lg:aspect-[4/3] overflow-hidden rounded-xl">
+          {/* Desktop: Two overlapping images */}
+          <div className="order-2 lg:order-1 hidden lg:block">
+            <div className="relative">
+              {/* Primary image */}
+              <div className="relative z-10 aspect-[4/5] overflow-hidden rounded-xl shadow-2xl">
+                <img
+                  src={studioPrimary}
+                  alt="Professional partnership and collaboration"
+                  className="w-full h-full object-cover object-center"
+                  loading="lazy"
+                />
+              </div>
+              {/* Secondary image - offset and smaller */}
+              <div className="absolute -bottom-8 -right-8 xl:-right-12 w-2/3 aspect-[4/3] overflow-hidden rounded-xl shadow-xl z-20 border-4 border-white">
+                <img
+                  src={studioSecondary}
+                  alt="Organized workspace details"
+                  className="w-full h-full object-cover object-center"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile: Single image */}
+          <div className="order-2 lg:hidden">
+            <div className="relative aspect-[3/4] sm:aspect-square overflow-hidden rounded-xl">
               <img
-                src={studioWorkspace}
-                alt="Organized professional workspace representing clarity and structure"
+                src={studioMobile}
+                alt="Professional partnership moment"
                 className="w-full h-full object-cover object-center"
                 loading="lazy"
               />
