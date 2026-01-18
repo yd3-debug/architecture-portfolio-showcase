@@ -1,5 +1,4 @@
 import studioPrimary from '../assets/studio-primary.jpg';
-import studioSecondary from '../assets/studio-secondary.jpg';
 import studioMobile from '../assets/studio-mobile.jpg';
 import { Handshake, Eye, Rocket, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
@@ -35,15 +34,6 @@ const Studio = () => {
                 <img
                   src={studioPrimary}
                   alt="Professional partnership and collaboration"
-                  className="w-full h-full object-cover object-top"
-                  loading="lazy"
-                />
-              </div>
-              {/* Secondary image - offset and smaller */}
-              <div className="absolute -bottom-8 -right-8 xl:-right-12 w-2/3 aspect-[4/3] overflow-hidden rounded-xl shadow-xl z-20 border-4 border-white">
-                <img
-                  src={studioSecondary}
-                  alt="Organized workspace details"
                   className="w-full h-full object-cover object-center"
                   loading="lazy"
                 />
@@ -57,7 +47,7 @@ const Studio = () => {
               <img
                 src={studioMobile}
                 alt="Professional partnership moment"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-center"
                 loading="lazy"
               />
             </div>
