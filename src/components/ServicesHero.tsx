@@ -4,10 +4,10 @@ const ServicesHero = () => {
   const services = [
     {
       icon: Workflow,
-      pain: "Stuck working IN your business instead of ON it?",
+      pain: "Great product but still a hidden gem?",
       title: "Business Architecture",
-      outcome: "Systems that let your business run without you",
-      description: "We help you build SOPs, team structures, and automated workflows—so you can stop firefighting and start scaling."
+      outcome: "Visibility that attracts the clients who need you",
+      description: "We help established businesses move beyond word of mouth—building systems, online presence, and positioning to get found by bigger clients."
     },
     {
       icon: Settings,
