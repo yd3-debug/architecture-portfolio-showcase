@@ -22,10 +22,10 @@ const Contact = () => {
             </div>
             <h3 className="font-serif text-base sm:text-lg md:text-xl mb-2 sm:mb-3 text-charcoal">Email</h3>
             <a
-              href="mailto:contact@maintivo.com"
+              href="mailto:info@yektad.com"
               className="text-xs sm:text-sm md:text-base text-muted-foreground hover:text-accent font-light transition-colors break-all"
             >
-              contact@maintivo.com
+              info@yektad.com
             </a>
           </div>
 
@@ -44,7 +44,7 @@ const Contact = () => {
 
         {/* CTA */}
         <div className="text-center pt-8 sm:pt-10 md:pt-12 border-t border-border">
-          <a href="mailto:contact@maintivo.com">
+          <a href="mailto:info@yektad.com">
             <button className="px-6 py-3 sm:px-8 sm:py-3.5 md:px-10 md:py-4 text-xs sm:text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300">
               Get in Touch
             </button>
