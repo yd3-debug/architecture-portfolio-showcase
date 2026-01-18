@@ -57,8 +57,8 @@ const Footer = () => {
               <div className="space-y-2 sm:space-y-3">
                 <div className="flex items-start gap-2 sm:gap-3">
                   <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <a href="mailto:info@yektad.com" className="text-white/70 hover:text-accent transition-colors text-xs sm:text-sm break-all">
-                    info@yektad.com
+                  <a href="mailto:contact@yektad.com" className="text-white/70 hover:text-accent transition-colors text-xs sm:text-sm break-all">
+                    contact@yektad.com
                   </a>
                 </div>
                 <div className="flex items-start gap-2 sm:gap-3">
