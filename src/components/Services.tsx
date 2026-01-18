@@ -4,27 +4,27 @@ const Services = () => {
   const services = [
     {
       icon: Zap,
-      title: "Work Automation Solutions",
-      description: "Streamline repetitive tasks and workflows to save time and reduce manual errors in your business operations.",
-      features: ["Process Automation", "Workflow Optimization", "Task Management", "Data Integration"]
-    },
-    {
-      icon: Code,
-      title: "Micro SaaS Development", 
-      description: "Build custom software solutions and rapid prototypes tailored to your specific business needs and market opportunities.",
-      features: ["Custom Applications", "API Development", "MVP Creation", "Scalable Architecture"]
+      title: "Business Architecture",
+      description: "Design the foundation of your business with strategic frameworks that align operations, processes, and goals for maximum efficiency.",
+      features: ["Market Positioning", "Process Design", "Operational Structure", "Strategic Planning"]
     },
     {
       icon: Globe,
-      title: "Website Design & Optimization",
-      description: "Create modern, responsive websites that drive engagement and convert visitors into customers.",
-      features: ["Responsive Design", "User Experience", "Performance Optimization", "SEO Implementation"]
+      title: "Web Design & Development", 
+      description: "Create stunning, responsive websites that capture your brand essence and drive meaningful engagement with your target audience.",
+      features: ["Responsive Design", "Brand Identity", "User Experience", "Conversion Optimization"]
     },
     {
       icon: TrendingUp,
-      title: "Business Architecture Guidance",
-      description: "Get expert guidance on process improvement and strategic direction when you're unsure what needs optimization.",
-      features: ["Process Analysis", "Strategic Planning", "Efficiency Consulting", "Growth Roadmaps"]
+      title: "Business Growth Strategy",
+      description: "Develop actionable growth strategies that position your business correctly in your market and create sustainable competitive advantages.",
+      features: ["Market Analysis", "Competitive Positioning", "Growth Roadmaps", "Revenue Strategy"]
+    },
+    {
+      icon: Code,
+      title: "Digital Transformation",
+      description: "Modernize your business operations with smart automation and digital tools that increase efficiency and reduce operational overhead.",
+      features: ["Process Automation", "Workflow Optimization", "Digital Tools", "System Integration"]
     }
   ];
 

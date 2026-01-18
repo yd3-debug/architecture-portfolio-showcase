@@ -51,12 +51,12 @@ const TermsOfService = () => {
                   We provide comprehensive business solutions and services, including but not limited to:
                 </p>
                 <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-                  <li>Work automation and process optimization</li>
-                  <li>Custom SaaS and application development</li>
-                  <li>Website design and development</li>
-                  <li>Digital transformation strategy and implementation</li>
-                  <li>Business architecture and process consulting</li>
-                  <li>Ongoing support and maintenance</li>
+                  <li>Business architecture and strategic consulting</li>
+                  <li>Web design and development</li>
+                  <li>Business growth strategy and market positioning</li>
+                  <li>Digital transformation and process optimization</li>
+                  <li>Brand development and market structuring</li>
+                  <li>Ongoing strategic partnership and support</li>
                 </ul>
               </div>
 
@@ -130,7 +130,7 @@ const TermsOfService = () => {
                 </p>
                 <div className="bg-muted p-4 rounded-lg mt-4">
                   <p className="text-muted-foreground">
-                    <strong>Email:</strong> contact@maintivo.com
+                    <strong>Email:</strong> contact@yektad.com
                   </p>
                 </div>
               </div>

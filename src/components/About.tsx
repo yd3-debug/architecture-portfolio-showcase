@@ -38,24 +38,24 @@ const About = () => {
           {/* Content */}
           <div>
             <h2 className="heading-section mb-6">
-              Delivering Results Through Smart Automation
+              Strategic Business Architecture & Growth
             </h2>
             
             <div className="space-y-6 text-professional">
               <p>
-                Specializing in work automation, micro SaaS development, and business optimization 
-                to help companies streamline operations and accelerate growth through technology.
+                Specializing in business architecture, web design, and strategic growth consulting 
+                to help companies structure themselves correctly and succeed in their markets.
               </p>
               
               <p>
-                The approach combines practical automation solutions with custom software development 
-                to create scalable systems that reduce manual work and improve business efficiency.
+                The approach combines strategic business thinking with digital expertise to create 
+                frameworks that position your business for sustainable growth and competitive advantage.
               </p>
               
               <p>
-                From process automation tools to full-stack applications, the focus is on delivering 
-                measurable results that save time, reduce costs, and enable businesses to scale 
-                their operations effectively.
+                From business structure design to professional web presence, the focus is on delivering 
+                strategic value that helps you understand your market, reach your customers, and grow 
+                your business effectively.
               </p>
             </div>
 

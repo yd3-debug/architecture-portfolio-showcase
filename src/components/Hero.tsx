@@ -17,12 +17,12 @@ const Hero = () => {
       <div className="container-professional relative z-10 max-w-7xl text-center px-4">
         {/* Dramatic Serif Headline */}
         <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-light text-white mb-4 sm:mb-6 md:mb-8 leading-[0.95] tracking-tighter">
-          Transform Your Business
+          Your Strategic Business Partner
         </h1>
 
         {/* Minimal Subheading */}
         <p className="text-xs sm:text-sm md:text-base text-white/70 mb-8 sm:mb-12 md:mb-16 leading-relaxed font-light max-w-xl mx-auto">
-          Strategic solutions for modern business
+          Business architecture, growth strategy & digital solutions
         </p>
 
         {/* Minimal CTA */}
