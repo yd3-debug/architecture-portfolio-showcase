@@ -73,7 +73,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-16 bg-background/98 backdrop-blur-lg z-40">
+          <div className="md:hidden fixed inset-0 top-16 bg-background z-40">
             <div className="flex flex-col p-6 space-y-4">
               {navItems.map((item) => (
                 <a
