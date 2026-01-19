@@ -82,32 +82,32 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             />
 
-            {/* Slide-in panel from right - half width */}
-            <div className="md:hidden fixed top-0 right-0 bottom-0 w-1/2 bg-background z-50 shadow-2xl animate-menu-slide-in">
+            {/* Slide-in panel from right - two-thirds width */}
+            <div className="md:hidden fixed top-0 right-0 bottom-0 w-2/3 bg-background z-50 shadow-2xl animate-menu-slide-in">
               {/* Close button */}
-              <div className="flex justify-end p-4">
+              <div className="flex justify-end p-6">
                 <button
                   className="p-2 rounded-lg text-foreground hover:bg-secondary transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-6 h-6" />
                 </button>
               </div>
               
               {/* Menu Items */}
-              <div className="flex flex-col px-6 space-y-1">
+              <div className="flex flex-col px-8 space-y-2 mt-4">
                 {navItems.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-base font-medium text-foreground hover:text-accent transition-colors duration-200 py-3"
+                    className="text-lg font-medium text-foreground hover:text-accent transition-colors duration-200 py-4"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
                   </a>
                 ))}
-                <a href="#contact" onClick={() => setIsMenuOpen(false)} className="pt-4">
-                  <button className="w-full px-6 py-3 text-sm font-medium text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg">
+                <a href="#contact" onClick={() => setIsMenuOpen(false)} className="pt-6">
+                  <button className="w-full px-6 py-4 text-base font-medium text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg">
                     Get Started
                   </button>
                 </a>
