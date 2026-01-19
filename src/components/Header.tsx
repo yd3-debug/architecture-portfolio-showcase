@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-background/95 backdrop-blur-md shadow-lg border-b border-border/50' 
+        ? 'bg-background shadow-lg border-b border-border/50' 
         : 'bg-transparent'
     }`}>
       <nav className="container-professional">
@@ -61,32 +61,52 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className={`md:hidden p-2 rounded-lg transition-colors duration-200 z-50 ${
-              isScrolled ? 'text-foreground hover:bg-secondary' : 'text-white hover:bg-white/10'
-            }`}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {!isMenuOpen && (
+            <button
+              className={`md:hidden p-2 rounded-lg transition-colors duration-200 z-50 ${
+                isScrolled ? 'text-foreground hover:bg-secondary' : 'text-white hover:bg-white/10'
+              }`}
+              onClick={() => setIsMenuOpen(true)}
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+          )}
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-16 bg-background z-40">
-            <div className="flex flex-col p-6 space-y-4">
+          <div className="md:hidden fixed inset-0 top-0 bg-background z-40">
+            {/* Mobile Menu Header with Logo */}
+            <div className="flex items-center justify-between h-16 px-6 border-b border-border/50">
+              <Link to="/" onClick={() => setIsMenuOpen(false)}>
+                <img 
+                  src="/LOGOYD.png" 
+                  alt="Company Logo" 
+                  className="h-9 w-auto"
+                />
+              </Link>
+              <button
+                className="p-2 rounded-lg text-foreground hover:bg-secondary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            
+            {/* Menu Items */}
+            <div className="flex flex-col p-6 space-y-2">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-base font-medium text-foreground hover:text-accent transition-colors duration-200 py-2.5 border-b border-border/50"
+                  className="text-lg font-medium text-foreground hover:text-accent transition-colors duration-200 py-3 border-b border-border/30"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
-              <a href="#contact" onClick={() => setIsMenuOpen(false)}>
-                <button className="w-full mt-4 px-6 py-2.5 text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg">
+              <a href="#contact" onClick={() => setIsMenuOpen(false)} className="pt-4">
+                <button className="w-full px-6 py-3 text-sm font-medium text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg">
                   Get Started
                 </button>
               </a>
