@@ -1,4 +1,4 @@
-import { Users, Building2, TrendingUp } from 'lucide-react';
+import { Gem, Building2, TrendingUp } from 'lucide-react';
 
 const TrustStrip = () => {
   return (
@@ -8,11 +8,11 @@ const TrustStrip = () => {
           {/* Stat 1 */}
           <div className="flex items-center gap-3 text-center sm:text-left">
             <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-              <Users className="w-5 h-5 text-primary" />
+              <Gem className="w-5 h-5 text-primary" />
             </div>
             <div>
-              <p className="text-xl sm:text-2xl font-serif font-medium text-foreground">50+</p>
-              <p className="text-xs sm:text-sm text-muted-foreground">Businesses Transformed</p>
+              <p className="text-xl sm:text-2xl font-serif font-medium text-foreground">Hidden Gems</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Proven by Word-of-Mouth</p>
             </div>
           </div>
 
