@@ -34,7 +34,7 @@ const PrivacyPolicy = () => {
         <div className="container-professional max-w-4xl">
           <div className="prose prose-sm sm:prose-base md:prose-lg max-w-none">
             <div className="mb-8 text-sm text-muted-foreground">
-              <strong>Effective Date:</strong> January 1, 2024 | <strong>Last Updated:</strong> January 1, 2024
+              <strong>Effective Date:</strong> January 1, 2025 | <strong>Last Updated:</strong> January 20, 2025
             </div>
             
             <div className="space-y-8">
@@ -115,7 +115,7 @@ const PrivacyPolicy = () => {
                 </p>
                 <div className="bg-muted p-4 rounded-lg mt-4">
                   <p className="text-muted-foreground">
-                    <strong>Email:</strong> contact@maintivo.com
+                    <strong>Email:</strong> contact@yektad.com
                   </p>
                 </div>
               </div>
