@@ -20,6 +20,12 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+User-agent: GoogleOther
+Allow: /
+
+User-agent: google-speakr
+Allow: /
+
 User-agent: CCBot
 Allow: /
 
