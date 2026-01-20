@@ -1,13 +1,20 @@
+import { HelmetProvider } from 'react-helmet-async';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEOHead from '../../components/SEOHead';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 const CookiePolicy = () => {
   return (
-    <div className="min-h-screen">
-      <Header />
-      
+    <HelmetProvider>
+      <div className="min-h-screen">
+        <SEOHead 
+          title="Cookie Policy | YektaD"
+          description="Learn about how YektaD uses cookies to enhance your browsing experience and how you can manage your preferences."
+          canonicalPath="/legal/cookie-policy"
+        />
+        <Header />
       {/* Hero Section */}
       <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 bg-gradient-to-br from-primary via-primary-light to-primary-soft">
         <div className="container-professional">
@@ -172,7 +179,8 @@ const CookiePolicy = () => {
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </HelmetProvider>
   );
 };
 

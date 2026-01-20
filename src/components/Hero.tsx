@@ -34,21 +34,26 @@ const Hero = () => {
         </h1>
 
         {/* Client-focused Subheading */}
-        <p className="text-sm sm:text-base md:text-lg text-white/80 mb-8 sm:mb-12 md:mb-14 leading-relaxed font-light max-w-2xl mx-auto">
-          We help proven businesses move beyond word of mouth and get visible to the clients who need them
+        <p className="text-sm sm:text-base md:text-lg text-white/80 mb-4 sm:mb-6 leading-relaxed font-light max-w-2xl mx-auto">
+          We help service businesses and consultancies get found by enterprise clients—without relying on referrals alone
         </p>
 
-        {/* Dual CTAs */}
+        {/* Proof Point */}
+        <p className="text-xs sm:text-sm text-white/60 mb-8 sm:mb-12 md:mb-14">
+          Trusted by 50+ businesses to increase visibility and close bigger deals
+        </p>
+
+        {/* CTAs - Primary Focus */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <a 
             href="#contact"
-            className="px-6 py-3 sm:px-8 sm:py-3.5 text-sm font-light text-charcoal bg-white hover:bg-white/90 transition-all duration-300 rounded-lg"
+            className="px-8 py-3.5 sm:px-10 sm:py-4 text-sm font-medium text-charcoal bg-white hover:bg-white/90 transition-all duration-300 rounded-lg shadow-lg"
           >
-            Let's Talk
+            Book a Discovery Call
           </a>
           <a 
             href="#services"
-            className="inline-flex items-center gap-2 text-white/90 hover:text-white text-sm font-light border-b border-white/30 hover:border-white/60 transition-all pb-1"
+            className="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm font-light transition-all"
           >
             See How We Help
             <ArrowRight className="w-4 h-4" />

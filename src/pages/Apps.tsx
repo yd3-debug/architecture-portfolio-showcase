@@ -1,5 +1,7 @@
+import { HelmetProvider } from 'react-helmet-async';
 import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import appsHeroBg from '@/assets/apps-hero-bg.jpg';
@@ -19,9 +21,14 @@ const Apps = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      
+    <HelmetProvider>
+      <div className="min-h-screen">
+        <SEOHead 
+          title="BusyBees Parenting App — Screen-Free Activities for Kids | YektaD"
+          description="Discover BusyBees, the parenting app with 12,000+ age-appropriate activities to keep your kids happy without screens. Built by parents, for parents."
+          canonicalPath="/apps"
+        />
+        <Header />
       {/* Hero Section */}
       <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 relative overflow-hidden">
         <div 
@@ -125,7 +132,8 @@ const Apps = () => {
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </HelmetProvider>
   );
 };
 
