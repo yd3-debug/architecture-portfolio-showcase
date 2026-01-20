@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-import heroDesktop from '@/assets/hero-desktop.jpg';
+import heroDesktop from '@/assets/hero-desktop-new.jpg';
 import heroMobile from '@/assets/hero-mobile.jpg';
 
 const Hero = () => {
