@@ -1,3 +1,4 @@
+# Search Engine Crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -10,13 +11,20 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-# AI Crawlers - Explicitly Allow
+User-agent: Applebot
+Allow: /
+
+# AI Crawlers - OpenAI
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+# AI Crawlers - Google
 User-agent: Google-Extended
 Allow: /
 
@@ -26,15 +34,21 @@ Allow: /
 User-agent: google-speakr
 Allow: /
 
-User-agent: CCBot
-Allow: /
-
+# AI Crawlers - Anthropic
 User-agent: anthropic-ai
 Allow: /
 
 User-agent: Claude-Web
 Allow: /
 
+# AI Crawlers - Meta
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# AI Crawlers - Other Major LLMs
 User-agent: PerplexityBot
 Allow: /
 
@@ -44,15 +58,46 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
-User-agent: Applebot
+User-agent: CCBot
 Allow: /
 
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: AI2Bot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: omgili
+Allow: /
+
+User-agent: omgilibot
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
+User-agent: VelenPublicWebCrawler
+Allow: /
+
+User-agent: Webzio-Extended
+Allow: /
+
+# General
 User-agent: *
 Allow: /
 
 # Disallow admin and private paths
 Disallow: /api/
 Disallow: /private/
+
+# LLMs.txt for AI context
+# See: https://yektad.com/llms.txt
 
 # Sitemap
 Sitemap: https://yektad.com/sitemap.xml
