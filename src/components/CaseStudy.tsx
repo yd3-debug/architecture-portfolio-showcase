@@ -21,19 +21,21 @@ const CaseStudy = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-20 md:py-28 lg:py-36 bg-soft-gray/30 overflow-hidden">
-      <div className="max-w-[1600px] mx-auto">
-        {/* Left-bleeding hero image */}
-        <div className="relative h-[350px] md:h-[450px] lg:h-[500px] mb-12 md:mb-20">
-          <div className="absolute inset-0 right-4 sm:right-8 md:right-12 lg:right-16 -left-4 sm:-left-8 md:-left-12 lg:-left-[100vw]">
-            <img 
-              src={saasImage} 
-              alt="Strategic operations" 
-              className="w-full h-full object-cover rounded-r-2xl"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-soft-gray/50 rounded-r-2xl" />
-          </div>
+    <section className="bg-soft-gray/30 overflow-hidden">
+      {/* Left-bleeding hero image - breaks out of container */}
+      <div className="relative h-[400px] md:h-[500px] lg:h-[550px] -mx-4 sm:-mx-6 lg:mx-0">
+        <div className="absolute inset-0 lg:right-[10%] lg:left-0 lg:-ml-[50vw]">
+          <img 
+            src={saasImage} 
+            alt="Strategic operations" 
+            className="w-full h-full object-cover lg:rounded-r-2xl"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-soft-gray/60 lg:rounded-r-2xl" />
         </div>
+      </div>
+
+      <div className="py-16 sm:py-20 md:py-28 lg:py-20">
+      <div className="max-w-[1600px] mx-auto">
 
         <div className="px-4 sm:px-6 lg:px-12">
           <div className="max-w-6xl mx-auto">
@@ -107,6 +109,7 @@ const CaseStudy = () => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

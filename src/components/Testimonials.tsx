@@ -62,15 +62,15 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Right-bleeding hero image divider */}
-        <div className="relative h-[350px] md:h-[450px] lg:h-[500px] my-12 md:my-20">
-          <div className="absolute inset-0 left-4 sm:left-8 md:left-12 lg:left-16 -right-4 sm:-right-8 md:-right-12 lg:-right-[100vw]">
+        {/* Right-bleeding hero image divider - breaks out of container */}
+        <div className="relative h-[400px] md:h-[500px] lg:h-[550px] my-12 md:my-20 -mx-4 sm:-mx-6 lg:mx-0">
+          <div className="absolute inset-0 lg:left-[10%] lg:right-0 lg:-mr-[50vw]">
             <img 
               src={studioImage} 
               alt="Creative workspace" 
-              className="w-full h-full object-cover rounded-l-2xl"
+              className="w-full h-full object-cover lg:rounded-l-2xl"
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-soft-gray/50 rounded-l-2xl" />
+            <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-soft-gray/60 lg:rounded-l-2xl" />
           </div>
         </div>
 
