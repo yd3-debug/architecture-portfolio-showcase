@@ -4,8 +4,8 @@ const CaseStudy = () => {
   const deliverables = [
     {
       icon: Building2,
-      title: "Market Entry",
-      description: "Secured entry into Tier-1 luxury marketplaces (1stDibs, The Oblist), transforming sales from DM-based to structured B2B pipeline"
+      title: "Commercial Roadmap",
+      description: "Provided the commercial roadmap for market entry and B2B channel acquisition (1stDibs, The Oblist), while the client retained full autonomy over Brand Identity and Social Media execution to preserve the founder's aesthetic vision"
     },
     {
       icon: Truck,
