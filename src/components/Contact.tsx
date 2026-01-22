@@ -1,7 +1,12 @@
-import { Mail, MapPin, Users } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
+import { Mail, MapPin, Users, Handshake, Eye, Rocket } from 'lucide-react';
 
 const Contact = () => {
+  const values = [
+    { icon: Handshake, title: "Partnership First" },
+    { icon: Eye, title: "Clarity Over Complexity" },
+    { icon: Rocket, title: "Action-Oriented" }
+  ];
+
   return (
     <section id="contact" className="py-12 sm:py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-12 bg-white">
       <div className="container-professional max-w-4xl">
@@ -13,11 +18,23 @@ const Contact = () => {
             We engage as strategic partners, not project vendors. Every engagement is scope-dependent and built around your specific growth objectives.
           </p>
           {/* Scarcity Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-charcoal/5 rounded-full">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-charcoal/5 rounded-full mb-8 sm:mb-10">
             <Users className="w-4 h-4 text-charcoal" />
             <span className="text-xs sm:text-sm font-medium text-charcoal">
               Currently accepting 2 new partners for Q1 2026
             </span>
+          </div>
+
+          {/* How We Work Values */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 md:gap-12">
+            {values.map((value, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
+                  <value.icon className="w-4 h-4 text-accent" />
+                </div>
+                <span className="text-sm font-medium text-charcoal">{value.title}</span>
+              </div>
+            ))}
           </div>
         </div>
 
