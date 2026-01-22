@@ -14,8 +14,8 @@ const SEOHead = ({
   title = "YektaD — Business Architect & Strategic Partner",
   description = "We help established service businesses and consultancies get found by enterprise clients. From strategy to execution—websites, automation, and growth systems that work.",
   canonicalPath = "",
-  ogImage = "/og-image.jpg",
-  ogImageSquare = "/og-image-square.jpg",
+  ogImage = "/og-image.jpg?v=2",
+  ogImageSquare = "/og-image-square.jpg?v=2",
   ogType = "website",
   noIndex = false,
 }: SEOHeadProps) => {
