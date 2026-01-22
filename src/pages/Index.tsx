@@ -6,11 +6,9 @@ import TrustStrip from '../components/TrustStrip';
 import PainPoints from '../components/PainPoints';
 import WhoWeHelp from '../components/WhoWeHelp';
 import ServicesHero from '../components/ServicesHero';
-import Studio from '../components/Studio';
 import Testimonials from '../components/Testimonials';
 import CaseStudy from '../components/CaseStudy';
 import FAQ from '../components/FAQ';
-import Process from '../components/Process';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
@@ -29,11 +27,9 @@ const Index = () => {
         <PainPoints />
         <WhoWeHelp />
         <ServicesHero />
-        <Studio />
         <Testimonials />
         <CaseStudy />
         <FAQ />
-        <Process />
         <Contact />
         <Footer />
       </div>
