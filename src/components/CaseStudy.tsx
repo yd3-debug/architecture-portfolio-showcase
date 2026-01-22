@@ -8,7 +8,7 @@ const CaseStudy = () => {
       title: "Commercial Roadmap",
       description: (
         <>
-          Provided the commercial roadmap for <span className="text-charcoal font-medium">market entry</span> and <span className="text-charcoal font-medium">B2B channel acquisition</span> (1stDibs, The Oblist), while the client retained full autonomy over Brand Identity and Social Media execution
+          Provided the commercial roadmap for <span className="text-charcoal font-medium">market entry</span> and <span className="text-charcoal font-medium">B2B channel acquisition</span> (<span className="text-charcoal font-medium">1stDibs</span>, <span className="text-charcoal font-medium">The Oblist</span>), while the client retained full autonomy over Brand Identity and Social Media execution
         </>
       )
     },
