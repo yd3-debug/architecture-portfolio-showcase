@@ -26,7 +26,7 @@ const CaseStudy = () => {
       <div className="w-full h-[350px] md:h-[450px] lg:h-[550px]">
         <img 
           src={heroImage} 
-          alt="Italian artisan leather workshop with premium craftsmanship tools" 
+          alt="Artisan furniture workshop with handcrafted wooden chairs and scattered design sketches, soft morning light, hidden potential waiting to be discovered" 
           className="w-full h-full object-cover"
         />
       </div>
