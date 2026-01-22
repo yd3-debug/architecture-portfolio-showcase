@@ -1,5 +1,5 @@
 import { Building2, Truck, Shield, ArrowRight } from 'lucide-react';
-import saasImage from '@/assets/saas-service.jpg';
+import heroImage from '@/assets/business-hero-bg.jpg';
 
 const CaseStudy = () => {
   const deliverables = [
@@ -25,7 +25,7 @@ const CaseStudy = () => {
       {/* FULL WIDTH HERO IMAGE - TRUE EDGE TO EDGE */}
       <div className="w-full h-[350px] md:h-[450px] lg:h-[550px]">
         <img 
-          src={saasImage} 
+          src={heroImage} 
           alt="Strategic operations" 
           className="w-full h-full object-cover"
         />

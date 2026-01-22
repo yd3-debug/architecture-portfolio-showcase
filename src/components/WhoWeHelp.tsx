@@ -1,5 +1,5 @@
 import { Gem, Building2, Users } from 'lucide-react';
-import businessImage from '@/assets/business-service.jpg';
+import heroImage from '@/assets/hero-consultation.jpg';
 
 const clientProfiles = [
   {
@@ -25,7 +25,7 @@ const WhoWeHelp = () => {
       {/* FULL WIDTH HERO IMAGE - TRUE EDGE TO EDGE */}
       <div className="w-full h-[350px] md:h-[450px] lg:h-[550px]">
         <img 
-          src={businessImage} 
+          src={heroImage} 
           alt="Strategic business consultation" 
           className="w-full h-full object-cover"
         />
