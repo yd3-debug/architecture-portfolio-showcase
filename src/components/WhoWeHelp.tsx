@@ -24,15 +24,15 @@ const WhoWeHelp = () => {
     <section className="py-20 md:py-28 bg-secondary/30 overflow-hidden">
       <div className="max-w-[1600px] mx-auto">
         <div className="grid lg:grid-cols-2 gap-0 items-center">
-          {/* Left-bleeding image */}
-          <div className="relative h-[300px] md:h-[500px] lg:h-[700px] order-2 lg:order-1">
-            <div className="absolute inset-0 lg:-left-24 xl:-left-32">
+          {/* Left-bleeding hero image */}
+          <div className="relative h-[350px] md:h-[550px] lg:h-[750px] order-2 lg:order-1">
+            <div className="absolute inset-0 right-4 sm:right-8 md:right-12 lg:right-16 -left-4 sm:-left-8 md:-left-12 lg:-left-[100vw]">
               <img 
                 src={businessImage} 
                 alt="Strategic business consultation" 
-                className="w-full h-full object-cover rounded-r-2xl lg:rounded-l-none"
+                className="w-full h-full object-cover rounded-r-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-secondary/30 lg:rounded-l-none rounded-r-2xl" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-secondary/50 rounded-r-2xl" />
             </div>
           </div>
 

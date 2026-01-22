@@ -23,9 +23,9 @@ const CaseStudy = () => {
   return (
     <section className="py-16 sm:py-20 md:py-28 lg:py-36 bg-soft-gray/30 overflow-hidden">
       <div className="max-w-[1600px] mx-auto">
-        {/* Left-bleeding accent image */}
-        <div className="relative h-[200px] md:h-[300px] mb-12 md:mb-20">
-          <div className="absolute inset-0 right-8 sm:right-16 md:right-32 lg:right-48 xl:right-64 left-0">
+        {/* Left-bleeding hero image */}
+        <div className="relative h-[350px] md:h-[450px] lg:h-[500px] mb-12 md:mb-20">
+          <div className="absolute inset-0 right-4 sm:right-8 md:right-12 lg:right-16 -left-4 sm:-left-8 md:-left-12 lg:-left-[100vw]">
             <img 
               src={saasImage} 
               alt="Strategic operations" 
