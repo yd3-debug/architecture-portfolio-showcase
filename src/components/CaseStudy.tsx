@@ -21,23 +21,19 @@ const CaseStudy = () => {
   ];
 
   return (
-    <section className="bg-soft-gray/30 overflow-hidden">
-      {/* Left-bleeding hero image - breaks out of container */}
-      <div className="relative h-[400px] md:h-[500px] lg:h-[550px] -mx-4 sm:-mx-6 lg:mx-0">
-        <div className="absolute inset-0 lg:right-[10%] lg:left-0 lg:-ml-[50vw]">
-          <img 
-            src={saasImage} 
-            alt="Strategic operations" 
-            className="w-full h-full object-cover lg:rounded-r-2xl"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-soft-gray/60 lg:rounded-r-2xl" />
-        </div>
+    <section className="bg-soft-gray/30">
+      {/* FULL WIDTH HERO IMAGE - TRUE EDGE TO EDGE */}
+      <div className="w-full h-[350px] md:h-[450px] lg:h-[550px]">
+        <img 
+          src={saasImage} 
+          alt="Strategic operations" 
+          className="w-full h-full object-cover"
+        />
       </div>
 
-      <div className="py-16 sm:py-20 md:py-28 lg:py-20">
-      <div className="max-w-[1600px] mx-auto">
-
-        <div className="px-4 sm:px-6 lg:px-12">
+      {/* CONTENT BELOW */}
+      <div className="py-16 sm:py-20 md:py-24">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="max-w-6xl mx-auto">
             {/* Section Label */}
             <div className="text-center mb-8 sm:mb-12">
@@ -109,7 +105,6 @@ const CaseStudy = () => {
             </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
   );
