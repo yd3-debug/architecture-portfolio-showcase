@@ -1,5 +1,5 @@
 import { Building2, Truck, Shield, ArrowRight } from 'lucide-react';
-import heroImage from '@/assets/business-hero-bg.jpg';
+import heroImage from '@/assets/casestudy-hero.jpg';
 
 const CaseStudy = () => {
   const deliverables = [
@@ -26,7 +26,7 @@ const CaseStudy = () => {
       <div className="w-full h-[350px] md:h-[450px] lg:h-[550px]">
         <img 
           src={heroImage} 
-          alt="Strategic operations" 
+          alt="Italian artisan leather workshop with premium craftsmanship tools" 
           className="w-full h-full object-cover"
         />
       </div>

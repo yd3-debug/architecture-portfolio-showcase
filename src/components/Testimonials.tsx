@@ -1,5 +1,5 @@
 import { Quote } from 'lucide-react';
-import heroImage from '@/assets/studio-primary.jpg';
+import heroImage from '@/assets/testimonials-hero.jpg';
 
 const Testimonials = () => {
   const testimonials = [
@@ -36,7 +36,7 @@ const Testimonials = () => {
       <div className="w-full h-[350px] md:h-[450px] lg:h-[550px]">
         <img 
           src={heroImage} 
-          alt="Creative workspace" 
+          alt="Luxury executive boardroom with city skyline view at golden hour" 
           className="w-full h-full object-cover"
         />
       </div>

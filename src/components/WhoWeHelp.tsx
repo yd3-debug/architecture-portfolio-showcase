@@ -1,5 +1,5 @@
 import { Gem, Building2, Users } from 'lucide-react';
-import heroImage from '@/assets/hero-consultation.jpg';
+import heroImage from '@/assets/who-we-help-hero.jpg';
 
 const clientProfiles = [
   {
@@ -26,7 +26,7 @@ const WhoWeHelp = () => {
       <div className="w-full h-[350px] md:h-[450px] lg:h-[550px]">
         <img 
           src={heroImage} 
-          alt="Strategic business consultation" 
+          alt="Rough diamond next to polished gems representing hidden business potential" 
           className="w-full h-full object-cover"
         />
       </div>
