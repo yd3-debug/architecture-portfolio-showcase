@@ -1,0 +1,98 @@
+import { Building2, Truck, Shield, ArrowRight } from 'lucide-react';
+
+const CaseStudy = () => {
+  const deliverables = [
+    {
+      icon: Building2,
+      title: "Market Entry",
+      description: "Secured entry into Tier-1 luxury marketplaces (1stDibs, The Oblist), transforming sales from DM-based to structured B2B pipeline"
+    },
+    {
+      icon: Truck,
+      title: "Global Logistics",
+      description: "Built end-to-end supply chain with manufacturing in Italy and freight lanes to US (New York) and France (Paris)"
+    },
+    {
+      icon: Shield,
+      title: "Risk Mitigation",
+      description: "Professionalized financial and legal framework with robust contracts, insurance recovery, and automated invoicing"
+    }
+  ];
+
+  return (
+    <section className="py-16 sm:py-20 md:py-28 lg:py-36 px-4 sm:px-6 lg:px-12 bg-soft-gray/30">
+      <div className="container-professional max-w-6xl">
+        {/* Section Label */}
+        <div className="text-center mb-8 sm:mb-12">
+          <span className="inline-block px-4 py-1.5 text-xs font-medium tracking-wider uppercase text-muted-foreground border border-border rounded-full mb-6">
+            Featured Case Study
+          </span>
+        </div>
+
+        {/* Main Headline */}
+        <div className="text-center mb-12 sm:mb-16 md:mb-20">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-charcoal leading-tight max-w-4xl mx-auto">
+            VandaVee: Engineering the Commercial & Operational Infrastructure for a Luxury Brand
+          </h2>
+        </div>
+
+        {/* Three Column Layout: Challenge → Architecture → Result */}
+        <div className="grid md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 md:mb-20">
+          {/* The Challenge */}
+          <div className="bg-white rounded-xl p-6 sm:p-8 border border-border">
+            <h3 className="font-serif text-lg sm:text-xl mb-4 text-charcoal">The Challenge</h3>
+            <p className="text-sm sm:text-base text-muted-foreground font-light leading-relaxed">
+              VandaVee possessed a high-value aesthetic and product but lacked the operational "engine" required to scale. The business relied on ad-hoc social media sales, undefined logistics, and a founder-centric workflow that was unscalable and high-risk.
+            </p>
+          </div>
+
+          {/* The Architecture */}
+          <div className="bg-white rounded-xl p-6 sm:p-8 border border-border relative">
+            {/* Arrow indicators for desktop */}
+            <div className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-charcoal rounded-full items-center justify-center">
+              <ArrowRight className="w-4 h-4 text-white" />
+            </div>
+            <h3 className="font-serif text-lg sm:text-xl mb-4 text-charcoal">The Architecture</h3>
+            <p className="text-sm sm:text-base text-muted-foreground font-light leading-relaxed">
+              Operating as <span className="text-charcoal font-medium">Director of Operations & Growth</span>, I engineered the business backend from the ground up to support global expansion—focusing on Commercial Visibility and Supply Chain Resilience.
+            </p>
+          </div>
+
+          {/* The Result */}
+          <div className="bg-charcoal rounded-xl p-6 sm:p-8 text-white relative">
+            {/* Arrow indicator for desktop */}
+            <div className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-accent rounded-full items-center justify-center">
+              <ArrowRight className="w-4 h-4 text-white" />
+            </div>
+            <h3 className="font-serif text-lg sm:text-xl mb-4">The Result</h3>
+            <p className="text-sm sm:text-base font-light leading-relaxed opacity-90">
+              A fully operationalized luxury brand with secured access to the US and EU markets, functioning <span className="font-medium text-white">independent of the founder's daily oversight</span>.
+            </p>
+          </div>
+        </div>
+
+        {/* Key Deliverables */}
+        <div className="border-t border-border pt-10 sm:pt-14 md:pt-16">
+          <h4 className="text-center text-sm font-medium tracking-wider uppercase text-muted-foreground mb-8 sm:mb-10 md:mb-12">
+            Key Deliverables
+          </h4>
+          <div className="grid sm:grid-cols-3 gap-6 sm:gap-8">
+            {deliverables.map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="w-12 h-12 rounded-xl border border-charcoal/10 flex items-center justify-center mb-4 mx-auto bg-white">
+                  <item.icon className="w-5 h-5 text-charcoal" />
+                </div>
+                <h5 className="font-serif text-base sm:text-lg mb-2 text-charcoal">{item.title}</h5>
+                <p className="text-xs sm:text-sm text-muted-foreground font-light leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default CaseStudy;

@@ -1,4 +1,5 @@
-import { Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin, Users } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 const Contact = () => {
   return (
@@ -8,9 +9,16 @@ const Contact = () => {
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 sm:mb-4 md:mb-6 text-charcoal">
             Start a Conversation
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto">
-            Let's discuss how we can help transform your business operations
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto mb-6">
+            We engage as strategic partners, not project vendors. Every engagement is scope-dependent and built around your specific growth objectives.
           </p>
+          {/* Scarcity Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-charcoal/5 rounded-full">
+            <Users className="w-4 h-4 text-charcoal" />
+            <span className="text-xs sm:text-sm font-medium text-charcoal">
+              Currently accepting 2 new partners for Q1 2026
+            </span>
+          </div>
         </div>
 
         {/* Contact Grid */}

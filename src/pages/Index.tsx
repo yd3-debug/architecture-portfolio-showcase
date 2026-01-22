@@ -8,6 +8,7 @@ import WhoWeHelp from '../components/WhoWeHelp';
 import ServicesHero from '../components/ServicesHero';
 import Studio from '../components/Studio';
 import Testimonials from '../components/Testimonials';
+import CaseStudy from '../components/CaseStudy';
 import FAQ from '../components/FAQ';
 import Process from '../components/Process';
 import Contact from '../components/Contact';
@@ -30,6 +31,7 @@ const Index = () => {
         <ServicesHero />
         <Studio />
         <Testimonials />
+        <CaseStudy />
         <FAQ />
         <Process />
         <Contact />
