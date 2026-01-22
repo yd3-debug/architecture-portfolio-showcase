@@ -16,7 +16,7 @@ const Portfolio = () => {
       image: saasService
     },
     {
-      title: "E-commerce Transformation",
+      title: "Luxury Brand Architecture",
       category: "Digital Experience",
       image: websiteService
     },
