@@ -6,17 +6,29 @@ const CaseStudy = () => {
     {
       icon: Building2,
       title: "Commercial Roadmap",
-      description: "Provided the commercial roadmap for market entry and B2B channel acquisition (1stDibs, The Oblist), while the client retained full autonomy over Brand Identity and Social Media execution to preserve the founder's aesthetic vision"
+      description: (
+        <>
+          Provided the commercial roadmap for <span className="text-charcoal font-medium">market entry</span> and <span className="text-charcoal font-medium">B2B channel acquisition</span> (1stDibs, The Oblist), while the client retained full autonomy over Brand Identity and Social Media execution
+        </>
+      )
     },
     {
       icon: Truck,
       title: "Global Logistics",
-      description: "Built end-to-end supply chain with manufacturing in Italy and freight lanes to US (New York) and France (Paris)"
+      description: (
+        <>
+          Built <span className="text-charcoal font-medium">end-to-end supply chain</span> with manufacturing in <span className="text-charcoal font-medium">Italy</span> and freight lanes to <span className="text-charcoal font-medium">US (New York)</span> and <span className="text-charcoal font-medium">France (Paris)</span>
+        </>
+      )
     },
     {
       icon: Shield,
       title: "Risk Mitigation",
-      description: "Professionalized financial and legal framework with robust contracts, insurance recovery, and automated invoicing"
+      description: (
+        <>
+          Professionalized financial and legal framework with <span className="text-charcoal font-medium">robust contracts</span>, <span className="text-charcoal font-medium">insurance recovery</span>, and <span className="text-charcoal font-medium">automated invoicing</span>
+        </>
+      )
     }
   ];
 
