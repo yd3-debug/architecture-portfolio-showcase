@@ -5,6 +5,7 @@ interface SEOHeadProps {
   description?: string;
   canonicalPath?: string;
   ogImage?: string;
+  ogImageSquare?: string;
   ogType?: 'website' | 'article';
   noIndex?: boolean;
 }
@@ -14,12 +15,14 @@ const SEOHead = ({
   description = "We help established service businesses and consultancies get found by enterprise clients. From strategy to execution—websites, automation, and growth systems that work.",
   canonicalPath = "",
   ogImage = "/og-image.jpg",
+  ogImageSquare = "/og-image-square.jpg",
   ogType = "website",
   noIndex = false,
 }: SEOHeadProps) => {
   const baseUrl = "https://yektad.com";
   const fullUrl = `${baseUrl}${canonicalPath}`;
   const fullImageUrl = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
+  const fullSquareImageUrl = ogImageSquare.startsWith('http') ? ogImageSquare : `${baseUrl}${ogImageSquare}`;
 
   return (
     <Helmet>
@@ -37,6 +40,11 @@ const SEOHead = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={fullImageUrl} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image" content={fullSquareImageUrl} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="1200" />
       <meta property="og:site_name" content="YektaD" />
       
       {/* Twitter */}
