@@ -4,21 +4,6 @@ import heroImage from '@/assets/testimonials-hero.jpg';
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "The automation solution transformed our operations completely. We've eliminated 80% of manual tasks and our team now focuses on what truly matters.",
-      name: "Sarah Mitchell",
-      title: "CEO, Northwind Solutions"
-    },
-    {
-      quote: "Outstanding work on our custom application. The attention to detail and commitment to delivering exactly what we needed was impressive.",
-      name: "Marcus Rivera",
-      title: "Operations Director, Cascade Industries"
-    },
-    {
-      quote: "Professional, efficient, and remarkably effective. The results exceeded our expectations in every way.",
-      name: "Emma Laurent",
-      title: "Founder, Silverline Consulting"
-    },
-    {
       quote: "They completely transformed our booking system and online presence. Our clients love the seamless experience, and we've seen a significant increase in appointments.",
       name: "Sahar",
       title: "Owner, Studio Solena — Ealing, London"
