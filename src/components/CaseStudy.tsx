@@ -67,7 +67,7 @@ const CaseStudy = () => {
               <div className="bg-white rounded-xl p-6 sm:p-8 border border-border">
                 <h3 className="font-serif text-lg sm:text-xl mb-4 text-charcoal">The Challenge</h3>
                 <p className="text-sm sm:text-base text-muted-foreground font-light leading-relaxed">
-                  VandaVee possessed a high-value aesthetic and product but lacked the operational "engine" required to scale. The business relied on ad-hoc social media sales, undefined logistics, and a founder-centric workflow that was unscalable and high-risk.
+                  VandaVee possessed a high-value aesthetic and product but lacked the operational "engine" required to scale. The business relied on <span className="text-charcoal font-medium">ad-hoc social media sales</span>, <span className="text-charcoal font-medium">undefined logistics</span>, and a founder-centric workflow that was <span className="text-charcoal font-medium">unscalable and high-risk</span>.
                 </p>
               </div>
 
@@ -79,7 +79,7 @@ const CaseStudy = () => {
                 </div>
                 <h3 className="font-serif text-lg sm:text-xl mb-4 text-charcoal">The Architecture</h3>
                 <p className="text-sm sm:text-base text-muted-foreground font-light leading-relaxed">
-                  Operating as <span className="text-charcoal font-medium">Director of Operations & Growth</span>, I engineered the business backend from the ground up to support global expansion—focusing on Commercial Visibility and Supply Chain Resilience.
+                  Operating as <span className="text-charcoal font-medium">Director of Operations & Growth</span>, I engineered the business backend from the ground up to support <span className="text-charcoal font-medium">global expansion</span>—focusing on <span className="text-charcoal font-medium">Commercial Visibility</span> and <span className="text-charcoal font-medium">Supply Chain Resilience</span>.
                 </p>
               </div>
 
@@ -91,7 +91,7 @@ const CaseStudy = () => {
                 </div>
                 <h3 className="font-serif text-lg sm:text-xl mb-4">The Result</h3>
                 <p className="text-sm sm:text-base font-light leading-relaxed opacity-90">
-                  A fully operationalized luxury brand with secured access to the US and EU markets, functioning <span className="font-medium text-white">independent of the founder's daily oversight</span>.
+                  A <span className="font-medium text-white">fully operationalized luxury brand</span> with secured access to the <span className="font-medium text-white">US and EU markets</span>, functioning <span className="font-medium text-white">independent of the founder's daily oversight</span>.
                 </p>
               </div>
             </div>
