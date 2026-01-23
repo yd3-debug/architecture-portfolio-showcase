@@ -17,7 +17,7 @@ const Portfolio = () => {
     },
     {
       title: "Luxury Brand Architecture",
-      category: "Digital Experience",
+      category: "Digital Transformation",
       image: websiteService
     },
     {

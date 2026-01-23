@@ -33,7 +33,7 @@ const Footer = () => {
             <div>
               <h4 className="text-sm sm:text-base md:text-lg font-bold mb-3 sm:mb-4 md:mb-6">Services</h4>
               <ul className="space-y-2 sm:space-y-3">
-                {['Business Architecture', 'Operations Management', 'Web Design', 'Growth Strategy'].map((service) => (
+                {['Business Architecture', 'Operations Management', 'Digital Infrastructure', 'Growth Strategy'].map((service) => (
                   <li key={service}>
                     <a href="#services" className="text-white/70 hover:text-accent transition-colors duration-200 flex items-center gap-2 group text-xs sm:text-sm">
                       <span className="w-0 h-0.5 bg-accent group-hover:w-4 transition-all duration-200"></span>
