@@ -21,7 +21,7 @@ const ServicesHero = () => {
       pain: "Losing customers to competitors with better websites?",
       title: "Web Design & Development",
       outcome: "A website that converts visitors into paying customers",
-      description: "Modern, fast-loading websites designed to rank on Google and turn browsers into buyers. Custom designs—no templates."
+      description: "Enterprise-grade digital infrastructure and customer-facing platforms that drive commercial performance."
     },
     {
       icon: TrendingUp,
