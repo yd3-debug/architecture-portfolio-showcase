@@ -13,6 +13,11 @@ const CookiePolicy = () => {
           title="Cookie Policy | YektaD"
           description="Learn about how YektaD uses cookies to enhance your browsing experience and how you can manage your preferences."
           canonicalPath="/legal/cookie-policy"
+          noIndex={true}
+          breadcrumbs={[
+            { name: "Home", path: "/" },
+            { name: "Cookie Policy", path: "/legal/cookie-policy" }
+          ]}
         />
         <Header />
       {/* Hero Section */}

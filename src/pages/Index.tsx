@@ -17,9 +17,10 @@ const Index = () => {
     <HelmetProvider>
       <div className="min-h-screen">
         <SEOHead 
-          title="YektaD — Business Architect & Strategic Partner"
-          description="We help service businesses and consultancies get found by enterprise clients. From strategy to execution—websites, automation, and growth systems that work."
+          title="YektaD — From Word-of-Mouth to Enterprise Clients in 90 Days | Business Visibility Consulting"
+          description="We've helped 12+ service businesses land 6-figure enterprise contracts. Stop relying on referrals—get found by the clients who need you. Book a free strategy call."
           canonicalPath="/"
+          breadcrumbs={[{ name: "Home", path: "/" }]}
         />
         <Header />
         <Hero />

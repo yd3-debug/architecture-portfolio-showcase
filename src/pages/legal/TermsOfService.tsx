@@ -13,6 +13,11 @@ const TermsOfService = () => {
           title="Terms of Service | YektaD"
           description="Read the terms and conditions governing the use of YektaD's business architecture and strategic consulting services."
           canonicalPath="/legal/terms-of-service"
+          noIndex={true}
+          breadcrumbs={[
+            { name: "Home", path: "/" },
+            { name: "Terms of Service", path: "/legal/terms-of-service" }
+          ]}
         />
         <Header />
       {/* Hero Section */}
