@@ -1,86 +1,153 @@
 
+# Lead Magnet Download Form Implementation
 
-## Revise VandaVee Case Study: Authentic Positioning
-
-### The Problem
-
-Current metrics section uses claims that don't accurately reflect the work:
-- "15+ Hours/Week Freed" — not verified
-- "6-Figure Contracts Secured" — too aggressive
-
-More importantly, the framing is slightly off. You weren't an external consultant who "helped" VandaVee—you **were** the operational leader who built their infrastructure from the inside.
+## Overview
+Transform the "Get the Free Playbook" button into a proper lead capture system where users must provide their contact details before downloading the PDF.
 
 ---
 
-## Proposed New Angle: "Operational Leadership"
+## What We're Building
 
-Reframe the case study to emphasize **what you built as the Director of Operations & Growth**, showcasing the type of work you can bring to other businesses. This is more authentic and positions you as someone who has "done it from the inside."
-
----
-
-## New Metrics (Accurate & Verifiable)
-
-Replace current metrics with infrastructure-focused achievements:
-
-| Current | New Replacement |
-|---------|-----------------|
-| "3 Countries Expanded To" | **"2 Premium Platforms"** — Secured listings on 1stDibs & The Oblist |
-| "15+ Hours/Week Freed" | **"3 Markets"** — Italy, US (New York), France (Paris) |
-| "6-Figure Contracts Secured" | **"End-to-End Ops"** — Supply chain, legal, finance professionalized |
-
-**Alternative option for third metric:**
-- **"Founder Freedom"** — Business runs without daily founder involvement
+A modal dialog that:
+1. Opens when clicking "Get the Free Playbook"
+2. Collects user information with validation
+3. Triggers PDF download after successful submission
+4. Shows a success message
 
 ---
 
-## Updated Copy
+## Form Fields
 
-### "The Architecture" Section
-
-**Current:**
-> Operating as Director of Operations & Growth, I engineered the business backend from the ground up...
-
-**New (first-person ownership):**
-> As Director of Operations & Growth, I built the commercial and operational infrastructure that took VandaVee from founder-dependent to market-ready—establishing the systems, partnerships, and supply chains needed for international expansion.
-
-### Headline Options
-
-**Current:** "VandaVee: From Founder-Dependent to Global Luxury Brand"
-
-**Option A (keep similar):** "VandaVee: Building the Engine Behind a Luxury Brand"
-
-**Option B (operational focus):** "VandaVee: How I Built the Backend for Global Expansion"
+| Field | Required | Validation |
+|-------|----------|------------|
+| Email | Yes | Valid email format |
+| First Name | Yes | Non-empty, max 50 chars |
+| Last Name | Yes | Non-empty, max 50 chars |
+| Company Name | No | Max 100 chars |
+| Website | No | Valid URL format if provided |
 
 ---
 
-## Files to Modify
+## Files to Modify/Create
 
-| File | Changes |
-|------|---------|
-| `src/components/CaseStudy.tsx` | Update metrics array (lines 35-39), refine copy in Architecture section |
-
----
-
-## Implementation Details
-
+### 1. Copy PDF to Public Folder
 ```text
-// New metrics array
-const metrics = [
-  { icon: Building2, value: "2", label: "Premium Platforms" },
-  { icon: Globe, value: "3", label: "International Markets" },
-  { icon: Shield, value: "Full", label: "Operational Autonomy" }
-];
+Copy: user-uploads://From-Invisible-to-Unstoppable.pdf
+To: public/downloads/From-Invisible-to-Unstoppable.pdf
 ```
 
-The third metric emphasizes the outcome (founder can step back) without claiming unverified financial figures.
+### 2. Create New Component
+**File**: `src/components/PlaybookDownloadForm.tsx`
+
+A new component containing:
+- Form state management with react-hook-form
+- Zod schema for validation
+- Dialog wrapper with styled form
+- Download trigger after submission
+- Toast notification for success
+
+### 3. Update Contact Section
+**File**: `src/components/Contact.tsx`
+
+Changes:
+- Import the new PlaybookDownloadForm component
+- Replace the mailto: button with the dialog trigger
+- Update the button text and behavior
 
 ---
 
-## Summary
+## Technical Details
 
-This reframe:
-1. Positions you as the **builder**, not an external consultant
-2. Uses **verifiable achievements** (platforms, markets, systems)
-3. Avoids inflated claims while still being impressive
-4. Shows prospective clients what you can do **inside** their business
+### Form Validation Schema (Zod)
+```text
+- email: required, valid email format
+- firstName: required, 1-50 characters
+- lastName: required, 1-50 characters  
+- companyName: optional, max 100 characters
+- website: optional, valid URL if provided
+```
 
+### Download Mechanism
+After form submission:
+1. Create a temporary anchor element
+2. Set href to the PDF path in public folder
+3. Trigger click to start download
+4. Remove temporary element
+
+### Lead Data Handling
+Since no backend is currently configured, options include:
+- **Option A**: Log to console (for testing)
+- **Option B**: Send via mailto: with form data
+- **Option C**: Add Supabase later to store leads
+
+For now, we'll implement Option B - sends an email with the lead data while triggering the download immediately.
+
+---
+
+## User Flow
+
+```text
+1. User clicks "Get the Free Playbook"
+     |
+     v
+2. Modal opens with form
+     |
+     v
+3. User fills required fields (Email, First Name, Last Name)
+     |
+     v
+4. User clicks "Download Playbook"
+     |
+     v
+5. Form validates
+     |
+     +--> Invalid: Show error messages
+     |
+     +--> Valid: 
+           - Trigger PDF download
+           - Open mailto: with lead data (for your records)
+           - Show success toast
+           - Close modal
+```
+
+---
+
+## Component Structure
+
+```text
+PlaybookDownloadForm.tsx
+|
++-- Dialog (from ui/dialog)
+|   +-- DialogTrigger (the button)
+|   +-- DialogContent
+|       +-- DialogHeader
+|       |   +-- DialogTitle: "Download Your Free Playbook"
+|       |   +-- DialogDescription
+|       +-- Form (react-hook-form)
+|           +-- FormField (Email) *required
+|           +-- FormField (First Name) *required
+|           +-- FormField (Last Name) *required
+|           +-- FormField (Company Name) optional
+|           +-- FormField (Website) optional
+|           +-- Submit Button
+```
+
+---
+
+## Styling Notes
+
+The form will match the existing design system:
+- Soft gray background for the optional fields section
+- Charcoal primary buttons
+- Clean, professional typography
+- Responsive layout for mobile
+
+---
+
+## Implementation Summary
+
+| Task | File |
+|------|------|
+| Copy PDF to public folder | `public/downloads/From-Invisible-to-Unstoppable.pdf` |
+| Create download form component | `src/components/PlaybookDownloadForm.tsx` |
+| Update Contact section | `src/components/Contact.tsx` |
