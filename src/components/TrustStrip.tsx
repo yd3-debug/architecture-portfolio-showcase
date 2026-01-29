@@ -1,4 +1,4 @@
-import { Gem, Building2, TrendingUp } from 'lucide-react';
+import { Users, Target, TrendingUp } from 'lucide-react';
 
 const TrustStrip = () => {
   return (
@@ -8,11 +8,11 @@ const TrustStrip = () => {
           {/* Stat 1 */}
           <div className="flex items-center gap-3 text-center sm:text-left">
             <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-              <Gem className="w-5 h-5 text-primary" />
+              <Users className="w-5 h-5 text-primary" />
             </div>
             <div>
-              <p className="text-xl sm:text-2xl font-serif font-medium text-foreground">Hidden Gems</p>
-              <p className="text-xs sm:text-sm text-muted-foreground">Proven by Word-of-Mouth</p>
+              <p className="text-xl sm:text-2xl font-serif font-medium text-foreground">50+</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Businesses Transformed</p>
             </div>
           </div>
 
@@ -22,11 +22,11 @@ const TrustStrip = () => {
           {/* Stat 2 */}
           <div className="flex items-center gap-3 text-center sm:text-left">
             <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-              <Building2 className="w-5 h-5 text-primary" />
+              <Target className="w-5 h-5 text-primary" />
             </div>
             <div>
-              <p className="text-xl sm:text-2xl font-serif font-medium text-foreground">Service Industries</p>
-              <p className="text-xs sm:text-sm text-muted-foreground">Consultancies, Agencies, B2B</p>
+              <p className="text-xl sm:text-2xl font-serif font-medium text-foreground">6-8 Weeks</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">To First Enterprise Lead</p>
             </div>
           </div>
 
@@ -39,8 +39,8 @@ const TrustStrip = () => {
               <TrendingUp className="w-5 h-5 text-primary" />
             </div>
             <div>
-              <p className="text-xl sm:text-2xl font-serif font-medium text-foreground">Visibility First</p>
-              <p className="text-xs sm:text-sm text-muted-foreground">Get Found by Enterprise Clients</p>
+              <p className="text-xl sm:text-2xl font-serif font-medium text-foreground">3-5x</p>
+              <p className="text-xs sm:text-sm text-muted-foreground">Increase in Qualified Leads</p>
             </div>
           </div>
         </div>
@@ -48,9 +48,9 @@ const TrustStrip = () => {
         {/* Featured Testimonial Quote */}
         <div className="mt-6 sm:mt-8 text-center max-w-2xl mx-auto">
           <p className="text-sm sm:text-base text-muted-foreground italic">
-            "They transformed our entire online presence. We now attract the enterprise clients we've always wanted."
+            "We landed our first £50k enterprise contract 3 weeks after launching our new positioning."
           </p>
-          <p className="mt-2 text-xs text-muted-foreground/80">— Service Business Owner</p>
+          <p className="mt-2 text-xs text-muted-foreground/80">— B2B Consultancy Founder</p>
         </div>
       </div>
     </section>

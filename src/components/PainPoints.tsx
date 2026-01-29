@@ -23,8 +23,8 @@ const PainPoints = () => {
       solution: "Positioning that makes you the obvious choice",
     },
     {
-      pain: "Revenue stuck at the same level for months?",
-      solution: "Growth strategies that have worked for 50+ businesses",
+      pain: "Enterprise clients can't find you?",
+      solution: "We've helped 12+ businesses land 6-figure contracts",
     },
     {
       pain: "Can't afford to hire but can't do it alone?",
@@ -52,7 +52,7 @@ const PainPoints = () => {
             Sound Familiar?
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-            These are the challenges business owners face every day. We help you overcome them.
+            These are the challenges business owners face every day. We've solved them for 50+ businesses.
           </p>
         </div>
 
@@ -185,7 +185,7 @@ const PainPoints = () => {
         <div className="text-center mt-12 sm:mt-16">
           <a href="#contact">
             <button className="px-6 py-2.5 sm:px-8 sm:py-3 text-xs sm:text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg">
-              Let's Solve This Together
+              Book a Strategy Call
             </button>
           </a>
         </div>

@@ -1,4 +1,4 @@
-import { Workflow, Code2, TrendingUp, Settings, AlertCircle, ArrowRight } from 'lucide-react';
+import { Workflow, Code2, TrendingUp, Settings, AlertCircle, ArrowRight, Star } from 'lucide-react';
 
 const ServicesHero = () => {
   const services = [
@@ -7,28 +7,32 @@ const ServicesHero = () => {
       pain: "Great product but still a hidden gem?",
       title: "Business Architecture",
       outcome: "Visibility that attracts the clients who need you",
-      description: "We help established businesses move beyond word of mouth—building systems, online presence, and positioning to get found by bigger clients."
+      description: "We help established businesses move beyond word of mouth—building systems, online presence, and positioning to get found by bigger clients.",
+      result: "Client landed first enterprise contract within 6 weeks"
     },
     {
       icon: Settings,
       pain: "Drowning in logistics, vendors, and daily fires?",
       title: "Operations Management",
       outcome: "Operations that run smoothly without your constant attention",
-      description: "We handle supplier negotiations, inventory management, shipping logistics, and vendor relationships. You focus on sales and growth."
+      description: "We handle supplier negotiations, inventory management, shipping logistics, and vendor relationships. You focus on sales and growth.",
+      result: "Saved 15 hours/week for a luxury furniture brand"
     },
     {
       icon: Code2,
       pain: "Losing customers to competitors with better websites?",
       title: "Web Design & Development",
       outcome: "A website that converts visitors into paying customers",
-      description: "Enterprise-grade digital infrastructure and customer-facing platforms that drive commercial performance."
+      description: "Enterprise-grade digital infrastructure and customer-facing platforms that drive commercial performance.",
+      result: "65% increase in bookings for a London beauty studio"
     },
     {
       icon: TrendingUp,
       pain: "Know you could grow, but don't know where to start?",
       title: "Growth Strategy",
       outcome: "A clear action plan to get more customers",
-      description: "We show you who to target, where to find them, what to say, and how to stand out in a crowded market."
+      description: "We show you who to target, where to find them, what to say, and how to stand out in a crowded market.",
+      result: "3x qualified leads for a B2B consultancy"
     }
   ];
 
@@ -41,7 +45,7 @@ const ServicesHero = () => {
             How We Help You Succeed
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed">
-            Every service is designed around solving real business challenges
+            Every service is designed around solving real business challenges—with real results to prove it
           </p>
         </div>
 
@@ -73,6 +77,14 @@ const ServicesHero = () => {
                 {service.description}
               </p>
 
+              {/* Real Result Badge */}
+              <div className="flex items-start gap-2 mb-4 sm:mb-6 p-3 bg-white/50 group-hover:bg-white/10 rounded-lg transition-colors">
+                <Star className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                <span className="text-xs sm:text-sm font-medium text-charcoal group-hover:text-white/90 transition-colors">
+                  {service.result}
+                </span>
+              </div>
+
               {/* Outcome */}
               <div className="pt-4 sm:pt-6 border-t border-border group-hover:border-white/20 transition-colors">
                 <div className="flex items-center gap-2">
@@ -90,7 +102,7 @@ const ServicesHero = () => {
         <div className="text-center mt-12 sm:mt-16 md:mt-20">
           <a href="#contact">
             <button className="px-6 py-2.5 sm:px-8 sm:py-3 text-xs sm:text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg">
-              Discuss Your Challenges
+              Book a Strategy Call
             </button>
           </a>
         </div>
