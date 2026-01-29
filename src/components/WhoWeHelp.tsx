@@ -1,25 +1,46 @@
-import { Gem, Building2, Users } from 'lucide-react';
+import { useState } from 'react';
+import { Gem, Building2, Users, CheckSquare, Square, ArrowRight } from 'lucide-react';
 import heroImage from '@/assets/who-we-help-hero.jpg';
+
+const qualificationChecklist = [
+  "You've grown primarily through referrals and word-of-mouth",
+  "You have a proven product/service that clients love",
+  "You're invisible online but competitors rank above you",
+  "You're ready to invest in sustainable growth (not quick fixes)",
+  "You want enterprise clients but don't know how to reach them"
+];
 
 const clientProfiles = [
   {
     icon: Gem,
     title: "The Hidden Expert",
-    description: "You're the best-kept secret in your industry. Referrals keep you busy, but you're missing out on clients who are searching online for exactly what you offer."
+    description: "You're the best-kept secret in your industry. Referrals keep you busy, but enterprise clients searching online can't find you."
   },
   {
     icon: Building2,
     title: "The Ready-to-Scale",
-    description: "Your product is proven. Your customers love you. But you don't know how to reach enterprise clients, bigger markets, or get in front of established businesses."
+    description: "Your product is proven. Your customers love you. But you're stuck—unable to break into bigger markets or land larger contracts."
   },
   {
     icon: Users,
     title: "The Word-of-Mouth Warrior",
-    description: "You've never needed marketing because your work markets itself. But you know there's a ceiling on referral-only growth—and you're hitting it."
+    description: "You've never needed marketing because your work markets itself. But you're hitting the ceiling on referral-only growth."
   }
 ];
 
 const WhoWeHelp = () => {
+  const [checkedItems, setCheckedItems] = useState<number[]>([]);
+
+  const toggleItem = (index: number) => {
+    setCheckedItems(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
+  const checkedCount = checkedItems.length;
+
   return (
     <section className="bg-secondary/30">
       {/* FULL WIDTH HERO IMAGE - TRUE EDGE TO EDGE */}
@@ -41,8 +62,49 @@ const WhoWeHelp = () => {
         </h2>
         <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-3xl">
           You've grown through word of mouth. Your product speaks for itself. 
-          But you're invisible online—and the clients who need you can't find you.
+          But you're invisible online—and the enterprise clients who need you can't find you.
         </p>
+
+        {/* Self-Qualification Checklist */}
+        <div className="bg-background rounded-xl p-6 sm:p-8 border border-border mb-10 max-w-2xl">
+          <h3 className="font-serif text-lg sm:text-xl mb-4 text-foreground">Does this sound like you?</h3>
+          <div className="space-y-3">
+            {qualificationChecklist.map((item, index) => (
+              <button
+                key={index}
+                onClick={() => toggleItem(index)}
+                className="flex items-start gap-3 w-full text-left group"
+              >
+                {checkedItems.includes(index) ? (
+                  <CheckSquare className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                ) : (
+                  <Square className="w-5 h-5 text-muted-foreground/50 mt-0.5 flex-shrink-0 group-hover:text-muted-foreground transition-colors" />
+                )}
+                <span className={`text-sm sm:text-base leading-relaxed ${
+                  checkedItems.includes(index) ? 'text-foreground' : 'text-muted-foreground'
+                }`}>
+                  {item}
+                </span>
+              </button>
+            ))}
+          </div>
+          
+          {/* Dynamic CTA based on checked count */}
+          {checkedCount >= 3 && (
+            <div className="mt-6 pt-6 border-t border-border">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-accent font-medium text-sm">✓ {checkedCount} out of 5</span>
+              </div>
+              <a 
+                href="#contact"
+                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg"
+              >
+                We should talk
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          )}
+        </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {clientProfiles.map((profile, index) => (
@@ -72,7 +134,7 @@ const WhoWeHelp = () => {
             Sound familiar?
           </p>
           <p className="text-muted-foreground">
-            We help hidden gems get found by the clients who need them most.
+            We help hidden gems get found by the enterprise clients who need them most.
           </p>
         </div>
       </div>

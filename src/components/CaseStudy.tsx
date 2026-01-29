@@ -1,4 +1,4 @@
-import { Building2, Truck, Shield, ArrowRight } from 'lucide-react';
+import { Building2, Truck, Shield, ArrowRight, Globe, Clock, DollarSign } from 'lucide-react';
 import heroImage from '@/assets/casestudy-hero.jpg';
 
 const CaseStudy = () => {
@@ -32,8 +32,14 @@ const CaseStudy = () => {
     }
   ];
 
+  const metrics = [
+    { icon: Globe, value: "3", label: "Countries Expanded To" },
+    { icon: Clock, value: "15+", label: "Hours/Week Freed" },
+    { icon: DollarSign, value: "6-Figure", label: "Contracts Secured" }
+  ];
+
   return (
-    <section className="bg-soft-gray/30">
+    <section id="case-study" className="bg-soft-gray/30">
       {/* FULL WIDTH HERO IMAGE - TRUE EDGE TO EDGE */}
       <div className="w-full h-[350px] md:h-[450px] lg:h-[550px]">
         <img 
@@ -57,8 +63,24 @@ const CaseStudy = () => {
             {/* Main Headline */}
             <div className="text-center mb-12 sm:mb-16 md:mb-20">
               <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-charcoal leading-tight max-w-4xl mx-auto">
-                VandaVee: Engineering the Commercial & Operational Infrastructure for a Luxury Brand
+                VandaVee: From Founder-Dependent to Global Luxury Brand
               </h2>
+              <p className="text-sm sm:text-base text-muted-foreground font-light max-w-2xl mx-auto">
+                How we engineered the commercial and operational infrastructure to transform a hidden gem into an internationally recognized furniture brand
+              </p>
+            </div>
+
+            {/* Results in Numbers */}
+            <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 sm:mb-16 md:mb-20 max-w-3xl mx-auto">
+              {metrics.map((metric, index) => (
+                <div key={index} className="text-center bg-white rounded-xl p-4 sm:p-6 border border-border">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-3">
+                    <metric.icon className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
+                  </div>
+                  <p className="font-serif text-xl sm:text-2xl md:text-3xl text-charcoal mb-1">{metric.value}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground font-light">{metric.label}</p>
+                </div>
+              ))}
             </div>
 
             {/* Three Column Layout: Challenge → Architecture → Result */}

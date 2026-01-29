@@ -8,28 +8,32 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: "What types of businesses do you work with?",
-      answer: "We work with a range of businesses—from entrepreneurs ready to scale to established companies that are the 'diamonds in the rough.' These are organizations that have done exceptional work but haven't been noticed due to lack of proper positioning, branding, or strategic direction. We help them shine."
+      question: "What's the investment range?",
+      answer: "Our engagements are scope-dependent. Foundation packages (website + positioning) start at £5k-8k. Growth partnerships (full visibility system) range £10k-15k. Enterprise-level strategic partnerships are £20k+ and custom-scoped. During our discovery call, we'll identify exactly what you need—no more, no less."
     },
     {
-      question: "How long do engagements typically take?",
-      answer: "It really depends on the scope and what we'd like to achieve together. Some projects wrap up in a few weeks, while others evolve into ongoing partnerships. We'll define clear milestones and timelines during our initial planning."
+      question: "What results can I realistically expect?",
+      answer: "Based on our track record: clients typically see their first enterprise lead within 6-8 weeks of launch. Most experience a 3-5x increase in qualified inbound inquiries within 90 days. We've helped 12+ service businesses land 6-figure contracts. Results vary by industry and starting point—we'll give you honest projections on our call."
     },
     {
-      question: "Do you work remotely or on-site?",
-      answer: "Both. We're flexible and adapt to what works best for your business. Many clients prefer remote collaboration for efficiency, while others benefit from periodic on-site sessions for deeper strategic work."
+      question: "How much time do I need to commit?",
+      answer: "Week 1-2: 3-4 hours for strategy sessions and discovery. Week 3-6: 1-2 hours weekly for reviews and feedback. After launch: 30 minutes weekly check-ins. We do the heavy lifting. You provide the expertise and input that only you can provide."
     },
     {
-      question: "How is pricing structured?",
-      answer: "Pricing depends on the scope of work, your company's specific needs, and the services required. Every business is different, so we provide tailored proposals after our initial conversation. No hidden fees—just transparent pricing that matches your goals."
+      question: "How do I know if we're a good fit?",
+      answer: "You're a great fit if: You have a proven service/product (customers love what you do). You're growing via referrals but want more. You're ready to invest in long-term visibility, not quick fixes. You're not a good fit if: You're looking for the cheapest option. You need results in 2 weeks. You want a 'set and forget' solution."
     },
     {
-      question: "What's the first step to working together?",
-      answer: "Simply reach out via email or the contact form. We'll schedule a discovery call to understand your challenges, goals, and see if we're the right fit. There's no obligation—just an honest conversation about how we might help."
+      question: "What happens after I book a call?",
+      answer: "Within 24 hours, you'll receive a brief questionnaire (5 minutes). On the call, we'll diagnose your visibility gaps together. Within 48 hours after the call, you'll get a custom proposal with clear deliverables, timeline, and investment. No pressure—just clarity on what we can achieve together."
     },
     {
-      question: "What does 'Operations Management' include?",
-      answer: "Our Operations Management service acts as your outsourced Director of Operations. This includes international logistics coordination, vendor and supplier negotiations, supply chain optimization, process standardization, and day-to-day operational oversight—freeing you to focus on growth and strategy."
+      question: "What if I'm not happy with the work?",
+      answer: "We offer a 50% refund if you're unsatisfied after the first month. But honestly? This has never been used. We're selective about who we work with precisely because we want every engagement to succeed. Our reputation depends on your results."
+    },
+    {
+      question: "Why not just hire a marketing agency?",
+      answer: "Most agencies sell tactics—ads, SEO, content. We build business architecture. The difference: agencies optimize what exists; we build what's missing. We act as your strategic partner, not a vendor churning deliverables. You get a Director-level perspective, not just execution."
     }
   ];
 
@@ -39,10 +43,10 @@ const FAQ = () => {
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-charcoal">
-            Common Questions
+            Real Questions, Honest Answers
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-            Everything you need to know about working with us
+            No vague corporate speak. Here's exactly what you need to know before reaching out.
           </p>
         </div>
 
@@ -57,7 +61,7 @@ const FAQ = () => {
               <AccordionTrigger className="text-left text-sm sm:text-base md:text-lg font-medium text-charcoal hover:no-underline py-4 sm:py-5 md:py-6">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-sm sm:text-base text-muted-foreground font-light leading-relaxed pb-4 sm:pb-5 md:pb-6">
+              <AccordionContent className="text-sm sm:text-base text-muted-foreground font-light leading-relaxed pb-4 sm:pb-5 md:pb-6 whitespace-pre-line">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
@@ -67,11 +71,11 @@ const FAQ = () => {
         {/* CTA */}
         <div className="text-center mt-12 sm:mt-16">
           <p className="text-sm sm:text-base text-muted-foreground font-light mb-4 sm:mb-6">
-            Still have questions?
+            Still have questions? Let's talk.
           </p>
           <a href="#contact">
             <button className="px-6 py-2.5 sm:px-8 sm:py-3 text-xs sm:text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg">
-              Get in Touch
+              Book a Strategy Call
             </button>
           </a>
         </div>

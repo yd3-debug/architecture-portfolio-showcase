@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Calendar } from 'lucide-react';
 import heroDesktop from '@/assets/hero-desktop-new.jpg';
 import heroMobile from '@/assets/hero-mobile.jpg';
 
@@ -28,34 +28,35 @@ const Hero = () => {
       </div>
 
       <div className="container-professional relative z-10 max-w-4xl text-center px-4">
-        {/* Transformation-focused Headline */}
+        {/* Results-First Headline */}
         <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white mb-4 sm:mb-6 md:mb-8 leading-[1.1] tracking-tight">
-          From Overwhelmed<br className="hidden sm:block" /> to Organised
+          From Word-of-Mouth to<br className="hidden sm:block" /> Enterprise Clients in 90 Days
         </h1>
 
-        {/* Client-focused Subheading */}
+        {/* Specific Proof Point */}
         <p className="text-sm sm:text-base md:text-lg text-white/80 mb-4 sm:mb-6 leading-relaxed font-light max-w-2xl mx-auto">
-          We help service businesses and consultancies get found by enterprise clients—without relying on referrals alone
+          We've helped 12+ service businesses land 6-figure contracts—without relying on referrals alone
         </p>
 
-        {/* Proof Point */}
+        {/* Trust Signal */}
         <p className="text-xs sm:text-sm text-white/60 mb-8 sm:mb-12 md:mb-14">
-          Trusted by 50+ businesses to increase visibility and close bigger deals
+          Average client sees first enterprise lead within 6-8 weeks
         </p>
 
         {/* CTAs - Primary Focus */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <a 
             href="#contact"
-            className="px-8 py-3.5 sm:px-10 sm:py-4 text-sm font-medium text-charcoal bg-white hover:bg-white/90 transition-all duration-300 rounded-lg shadow-lg"
+            className="inline-flex items-center gap-2 px-8 py-3.5 sm:px-10 sm:py-4 text-sm font-medium text-charcoal bg-white hover:bg-white/90 transition-all duration-300 rounded-lg shadow-lg"
           >
-            Book a Discovery Call
+            <Calendar className="w-4 h-4" />
+            Book Strategy Call
           </a>
           <a 
-            href="#services"
+            href="#case-study"
             className="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm font-light transition-all"
           >
-            See How We Help
+            See How We Did It
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
