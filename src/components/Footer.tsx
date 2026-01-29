@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="col-span-2">
               <img 
                 src="/LOGOYD.png" 
-                alt="YektaD Logo" 
+                alt="YektaD Business Architecture Logo" 
                 className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto mb-4 sm:mb-6 brightness-0 invert"
               />
               <p className="text-white/80 mb-6 sm:mb-8 leading-relaxed max-w-md text-sm sm:text-base">
