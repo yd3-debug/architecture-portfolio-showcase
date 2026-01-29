@@ -26,7 +26,7 @@ const WhoWeHelp = () => {
       <div className="w-full h-[350px] md:h-[450px] lg:h-[550px]">
         <img 
           src={heroImage} 
-          alt="Rough diamond next to polished gems representing hidden business potential" 
+          alt="Uncut diamond beside polished gems symbolizing hidden business potential ready for transformation" 
           className="w-full h-full object-cover"
         />
       </div>

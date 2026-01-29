@@ -31,7 +31,7 @@ const Header = () => {
           <Link to="/" className="flex items-center z-50">
             <img 
               src="/LOGOYD.png" 
-              alt="Company Logo" 
+              alt="YektaD Business Architecture Logo" 
               className="h-9 sm:h-10 md:h-12 w-auto"
             />
           </Link>

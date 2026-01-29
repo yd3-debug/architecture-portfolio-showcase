@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 hidden lg:block">
         <img 
           src={heroDesktop} 
-          alt="Professional workspace with strategic planning elements" 
+          alt="Strategic business planning workspace with documents and professional tools"
           className="w-full h-full object-cover object-center"
           loading="eager"
         />
@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0 block lg:hidden">
         <img 
           src={heroMobile} 
-          alt="Professional workspace with strategic planning elements" 
+          alt="Strategic business planning workspace with documents and professional tools" 
           className="w-full h-full object-cover object-center"
           loading="eager"
         />
