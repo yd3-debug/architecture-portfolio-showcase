@@ -21,7 +21,7 @@ const Testimonials = () => {
       <div className="w-full h-[350px] md:h-[450px] lg:h-[550px]">
         <img 
           src={heroImage} 
-          alt="Premium business workspace with leather portfolio, gold pen, and espresso representing client success and sophistication" 
+          alt="Business growth symbols with thriving plant, upward graph, and bronze handshake sculpture representing prosperity and trusted partnerships" 
           className="w-full h-full object-cover"
         />
       </div>
