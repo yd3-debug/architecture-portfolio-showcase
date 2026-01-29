@@ -1,4 +1,5 @@
-import { Mail, MapPin, Users, Calendar, FileText, ArrowRight, CheckCircle } from 'lucide-react';
+import { Mail, MapPin, Users, Calendar, ArrowRight, CheckCircle } from 'lucide-react';
+import PlaybookDownloadForm from './PlaybookDownloadForm';
 
 const Contact = () => {
   const nextSteps = [
@@ -62,7 +63,7 @@ const Contact = () => {
           {/* Low Intent: Learn More */}
           <div className="bg-soft-gray rounded-2xl p-6 sm:p-8">
             <div className="w-12 h-12 rounded-xl bg-white border border-border flex items-center justify-center mb-6">
-              <FileText className="w-6 h-6 text-charcoal" />
+              <ArrowRight className="w-6 h-6 text-charcoal" />
             </div>
             <h3 className="font-serif text-xl sm:text-2xl mb-3 text-charcoal">Not Ready Yet?</h3>
             <p className="text-sm sm:text-base text-muted-foreground font-light mb-6 leading-relaxed">
@@ -84,13 +85,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <a 
-              href="mailto:contact@yektad.com?subject=Send%20me%20the%20Enterprise%20Visibility%20Playbook"
-              className="inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 text-sm font-medium text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg"
-            >
-              <FileText className="w-4 h-4" />
-              Get the Free Playbook
-            </a>
+            <PlaybookDownloadForm />
           </div>
         </div>
 
