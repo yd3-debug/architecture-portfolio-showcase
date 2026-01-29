@@ -13,6 +13,11 @@ const PrivacyPolicy = () => {
           title="Privacy Policy | YektaD"
           description="Learn how YektaD collects, uses, and protects your personal information. Your privacy is important to us."
           canonicalPath="/legal/privacy-policy"
+          noIndex={true}
+          breadcrumbs={[
+            { name: "Home", path: "/" },
+            { name: "Privacy Policy", path: "/legal/privacy-policy" }
+          ]}
         />
         <Header />
       {/* Hero Section */}
