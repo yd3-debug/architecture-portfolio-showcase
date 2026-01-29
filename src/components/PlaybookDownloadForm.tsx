@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { FileText, Download } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
 import {
   Dialog,
   DialogContent,
@@ -77,30 +78,30 @@ const PlaybookDownloadForm = () => {
     document.body.removeChild(link);
   };
 
-  const sendLeadNotification = (data: FormData) => {
-    const subject = encodeURIComponent('New Playbook Download Lead');
-    const body = encodeURIComponent(
-      `New lead from Enterprise Visibility Playbook download:\n\n` +
-      `Name: ${data.firstName} ${data.lastName}\n` +
-      `Email: ${data.email}\n` +
-      `Company: ${data.companyName || 'Not provided'}\n` +
-      `Website: ${data.website || 'Not provided'}\n\n` +
-      `Captured: ${new Date().toLocaleString()}`
-    );
+  const saveLeadToDatabase = async (data: FormData) => {
+    const { error } = await supabase.from('playbook_leads').insert({
+      email: data.email,
+      first_name: data.firstName,
+      last_name: data.lastName,
+      company_name: data.companyName || null,
+      website: data.website || null,
+    });
     
-    // Open mailto in background (will open email client)
-    window.open(`mailto:contact@yektad.com?subject=${subject}&body=${body}`, '_blank');
+    if (error) {
+      console.error('Failed to save lead:', error);
+      throw error;
+    }
   };
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     
     try {
-      // Trigger download immediately
-      triggerDownload();
+      // Save lead to database
+      await saveLeadToDatabase(data);
       
-      // Send lead notification via mailto
-      sendLeadNotification(data);
+      // Trigger download
+      triggerDownload();
       
       // Show success toast
       toast({
