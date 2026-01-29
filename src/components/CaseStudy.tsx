@@ -1,4 +1,4 @@
-import { Building2, Truck, Shield, ArrowRight, Globe, Clock, DollarSign } from 'lucide-react';
+import { Building2, Truck, Shield, ArrowRight, Globe } from 'lucide-react';
 import heroImage from '@/assets/casestudy-hero.jpg';
 
 const CaseStudy = () => {
@@ -33,9 +33,9 @@ const CaseStudy = () => {
   ];
 
   const metrics = [
-    { icon: Globe, value: "3", label: "Countries Expanded To" },
-    { icon: Clock, value: "15+", label: "Hours/Week Freed" },
-    { icon: DollarSign, value: "6-Figure", label: "Contracts Secured" }
+    { icon: Building2, value: "2", label: "Premium Platforms" },
+    { icon: Globe, value: "3", label: "International Markets" },
+    { icon: Shield, value: "Full", label: "Operational Autonomy" }
   ];
 
   return (
@@ -101,7 +101,7 @@ const CaseStudy = () => {
                 </div>
                 <h3 className="font-serif text-lg sm:text-xl mb-4 text-charcoal">The Architecture</h3>
                 <p className="text-sm sm:text-base text-muted-foreground font-light leading-relaxed">
-                  Operating as <span className="text-charcoal font-medium">Director of Operations & Growth</span>, I engineered the business backend from the ground up to support <span className="text-charcoal font-medium">global expansion</span>—focusing on <span className="text-charcoal font-medium">Commercial Visibility</span> and <span className="text-charcoal font-medium">Supply Chain Resilience</span>.
+                  As <span className="text-charcoal font-medium">Director of Operations & Growth</span>, I built the commercial and operational infrastructure that took VandaVee from founder-dependent to market-ready—establishing the <span className="text-charcoal font-medium">systems</span>, <span className="text-charcoal font-medium">partnerships</span>, and <span className="text-charcoal font-medium">supply chains</span> needed for international expansion.
                 </p>
               </div>
 
