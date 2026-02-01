@@ -1,59 +1,218 @@
 
-
-# Replace Testimonials Hero Image
+# Footer Update, New Hero Image & Scroll Effects Implementation
 
 ## Overview
 
-Generate a new AI image for the Testimonials section that represents build, growth, and trust—without any text or writing in the image.
+This plan addresses three key improvements:
+1. Fix the Footer to remove "Portfolio" and align with actual business messaging
+2. Add a striking hero image to the PainPoints ("Sound Familiar?") section
+3. Implement scroll-over effects with a fixed hero on mobile
 
 ---
 
-## Current Issue
+## 1. Footer Updates
 
-The existing image contains AI-generated gibberish text on the paper ("PROED FRORATY") which looks unprofessional and doesn't convey the intended message clearly.
+### Current Issues
+- Contains a "Portfolio" link that points to `#portfolio` (section doesn't exist on homepage)
+- Company description says "strategic architecture, process optimization, and innovative technology solutions" - too generic
+- Services list doesn't match the actual 4 services offered
 
----
+### Changes
 
-## New Image Concept
+**Remove Portfolio Link:**
+```
+Before: Portfolio, Privacy Policy, Terms of Service, Cookie Policy
+After: Privacy Policy, Terms of Service, Cookie Policy
+```
 
-A warm, editorial-style flat-lay photograph featuring:
+**Update Company Description:**
+```
+Before: "Transforming businesses through strategic architecture, process optimization, and innovative technology solutions."
 
-- **Growth**: A thriving green potted plant with lush leaves (represents organic business growth)
-- **Build/Foundation**: Stacked wooden building blocks or a solid foundation element (represents building something lasting)
-- **Trust**: A bronze handshake sculpture (represents trusted partnerships)
-- **Progress**: Gold coins in ascending stacks (represents increasing prosperity)
-- **Direction**: A brass compass (represents strategic guidance)
+After: "We help established businesses move beyond word of mouth—building the visibility systems that attract enterprise clients. 12+ businesses. 6-figure contracts."
+```
 
-**Critical Requirements**:
-- **No text, labels, or writing** anywhere in the image
-- No paper documents with charts or graphs that might contain text
-- Warm, natural lighting from the side
-- Rich wooden desk surface for luxurious, professional feel
-- Clean, uncluttered composition
-- Landscape orientation (wide format for the hero banner)
+**Update Services List to Match Actual Services:**
+```
+Before: Business Architecture, Operations Management, Digital Infrastructure, Growth Strategy
 
----
-
-## Technical Implementation
-
-| Step | Action |
-|------|--------|
-| 1 | Generate new image using AI image generation (Gemini) |
-| 2 | Save to `src/assets/testimonials-hero.jpg` (replace existing) |
-| 3 | Update alt text in `Testimonials.tsx` to match new content |
+After: Business Architecture, Operations Management, Web Design & Development, Growth Strategy
+```
+(Replaces "Digital Infrastructure" with "Web Design & Development" to match ServicesHero.tsx)
 
 ---
 
-## File Changes
+## 2. New Hero Image: PainPoints Section
 
-| File | Change |
-|------|--------|
-| `src/assets/testimonials-hero.jpg` | Replace with new generated image |
-| `src/components/Testimonials.tsx` | Update alt text to describe new image accurately |
+### Placement
+Add a full-width hero image at the TOP of the PainPoints section (before "Sound Familiar?" heading), following the established "Stacked Hero" visual pattern used in WhoWeHelp, Testimonials, and CaseStudy sections.
+
+### Image Concept
+**Theme:** Overwhelm transforming into clarity - a business owner's desk transitioning from chaos to order
+
+**Visual Description:**
+An editorial flat-lay photograph on a warm wood desk showing a split composition:
+- Left side: slightly messy/overwhelming (scattered papers, multiple devices, sticky notes)
+- Right side: clean, organized (neat notebook, single pen, clear space)
+- Symbolizing the transformation from "working 60+ hours" to "systems that run smoothly"
+
+**Critical Requirements:**
+- No text, labels, or writing visible in the image
+- Warm, natural lighting
+- Landscape orientation (16:9)
+- Professional, editorial aesthetic matching existing images
+
+### Code Changes
+- Create new image: `src/assets/painpoints-hero.jpg`
+- Update `PainPoints.tsx` to include the hero image section
 
 ---
 
-## Prompt for Image Generation
+## 3. Scroll Effects Implementation
 
-"Editorial product photography, warm luxury flat-lay on rich mahogany wooden desk surface. Composition includes: a thriving green potted jade plant in a ceramic pot representing organic growth, a bronze handshake sculpture representing trust and partnership, ascending stacks of gold coins representing prosperity, a brass nautical compass representing direction, and smooth wooden building blocks stacked in a tower representing foundation and building. Soft natural side lighting from window, warm golden hour tones, professional business aesthetic. Absolutely no text, no labels, no writing, no documents, no charts, no paper anywhere in the image. Clean minimalist styling. High-end editorial look. 16:9 landscape aspect ratio."
+### Mobile: Fixed Hero with Content Scroll-Over
 
+**How It Works:**
+On mobile, the hero section's background image becomes fixed (`position: fixed`), and subsequent content scrolls over it with a slight overlap, creating a "parallax reveal" effect.
+
+**Technical Approach:**
+1. On mobile (< 1024px), the hero background uses `fixed` positioning
+2. Content after the hero starts slightly higher (using negative margin or transform) to create the scroll-over effect
+3. Content has a solid background to cover the fixed hero as user scrolls
+
+### Desktop: Subtle Parallax & Fade Effects
+
+**Scroll-Triggered Animations:**
+- Sections fade in and slide up as they enter the viewport
+- Hero content fades slightly as user scrolls down (scroll-linked opacity)
+- Section images have subtle parallax movement (slower scroll than content)
+
+**Technical Approach:**
+- Use CSS `scroll-behavior` and intersection observer patterns
+- Add custom animation classes in Tailwind config
+- Apply animation classes to section wrappers
+
+---
+
+## Files to Modify
+
+| File | Changes |
+|------|---------|
+| `src/components/Footer.tsx` | Remove Portfolio link, update description and services list |
+| `src/components/PainPoints.tsx` | Add hero image section at top |
+| `src/assets/painpoints-hero.jpg` | NEW - Generate AI image |
+| `src/components/Hero.tsx` | Add mobile fixed positioning and scroll-linked fade |
+| `src/pages/Index.tsx` | Add scroll-over wrapper for content sections |
+| `tailwind.config.ts` | Add scroll animation keyframes (if needed) |
+| `src/index.css` | Add scroll-related utility classes |
+
+---
+
+## Technical Details
+
+### Hero Fixed Background (Mobile)
+```css
+/* Mobile hero background - fixed positioning */
+@media (max-width: 1023px) {
+  .hero-fixed-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 85vh;
+    z-index: 0;
+  }
+  
+  /* Content wrapper scrolls over */
+  .scroll-over-content {
+    position: relative;
+    z-index: 10;
+    margin-top: 85vh;
+    background: white;
+    border-radius: 24px 24px 0 0;
+  }
+}
+```
+
+### Scroll-Reveal Animation
+```javascript
+// Using Intersection Observer for scroll-triggered animations
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in-up');
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+  );
+  
+  // Observe all sections
+  document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+  
+  return () => observer.disconnect();
+}, []);
+```
+
+### PainPoints Hero Image Integration
+```tsx
+// Add hero image at the top of PainPoints section
+<section className="bg-white">
+  {/* Full-width hero image */}
+  <div className="w-full h-[350px] md:h-[450px] lg:h-[550px]">
+    <img 
+      src={heroImage} 
+      alt="Desk transformation from overwhelming chaos to organized clarity representing business efficiency" 
+      className="w-full h-full object-cover"
+    />
+  </div>
+  
+  {/* Existing content below */}
+  <div className="py-16 sm:py-20 md:py-28 lg:py-32 px-4 sm:px-6 lg:px-12">
+    {/* ... existing PainPoints content ... */}
+  </div>
+</section>
+```
+
+---
+
+## Visual Flow After Changes
+
+```text
+HERO (Fixed on Mobile)
+    ↓ Content scrolls over ↓
+┌─────────────────────────────────────┐
+│  TRUST STRIP                        │ (Rounded top corners on mobile)
+├─────────────────────────────────────┤
+│  [NEW IMAGE] - Chaos to Order       │
+│  PAIN POINTS - "Sound Familiar?"    │
+├─────────────────────────────────────┤
+│  [IMAGE] - Hidden Gem Diamonds      │
+│  WHO WE HELP                        │
+├─────────────────────────────────────┤
+│  SERVICES (no image - text-focused) │
+├─────────────────────────────────────┤
+│  [IMAGE] - Growth & Trust           │
+│  TESTIMONIALS                       │
+├─────────────────────────────────────┤
+│  [IMAGE] - Artisan Workshop         │
+│  CASE STUDY                         │
+├─────────────────────────────────────┤
+│  FAQ (no image - text-focused)      │
+├─────────────────────────────────────┤
+│  CONTACT (no image - conversion)    │
+├─────────────────────────────────────┤
+│  FOOTER                             │
+└─────────────────────────────────────┘
+```
+
+---
+
+## Implementation Summary
+
+1. **Footer**: Remove Portfolio link, update description to match value proposition, fix services list
+2. **PainPoints Image**: Generate "chaos to clarity" desk scene, add as hero banner above section
+3. **Mobile Scroll Effect**: Fixed hero background with rounded content scrolling over it
+4. **Desktop Scroll Effect**: Intersection Observer-based fade-in animations for sections
