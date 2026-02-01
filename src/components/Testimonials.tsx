@@ -23,7 +23,7 @@ const Testimonials = () => {
       <div className="w-full h-[350px] md:h-[450px] lg:h-[550px]">
         <img 
           src={heroImage} 
-          alt="Business growth symbols with thriving plant, upward graph, and bronze handshake sculpture representing prosperity and trusted partnerships" 
+          alt="Luxury flat-lay with jade plant, bronze handshake sculpture, gold coins, brass compass, and wooden building blocks on mahogany desk representing growth, trust, and building foundations" 
           className="w-full h-full object-cover"
         />
       </div>
