@@ -16,8 +16,8 @@ const Hero = () => {
         <div className="absolute inset-0 bg-charcoal/60"></div>
       </div>
 
-      {/* Mobile Background Image */}
-      <div className="absolute inset-0 z-0 block lg:hidden">
+      {/* Mobile Background Image - Fixed for scroll-over effect */}
+      <div className="absolute inset-0 z-0 block lg:hidden hero-mobile-fixed">
         <img 
           src={heroMobile} 
           alt="Strategic business planning workspace with documents and professional tools" 
