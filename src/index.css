@@ -293,4 +293,40 @@
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* Mobile Hero Fixed Background - Content scrolls over */
+  @media (max-width: 1023px) {
+    .hero-mobile-fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 85vh;
+      z-index: 0;
+    }
+    
+    .scroll-over-content {
+      position: relative;
+      z-index: 10;
+      margin-top: 85vh;
+      background: hsl(var(--background));
+      border-radius: 24px 24px 0 0;
+      box-shadow: 0 -8px 30px hsl(0 0% 0% / 0.15);
+    }
+  }
+
+  /* Desktop: Normal flow */
+  @media (min-width: 1024px) {
+    .hero-mobile-fixed {
+      position: absolute;
+    }
+    
+    .scroll-over-content {
+      position: relative;
+      z-index: 1;
+      margin-top: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
 }

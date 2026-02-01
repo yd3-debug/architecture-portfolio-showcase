@@ -24,8 +24,8 @@ const Footer = () => {
                 className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto mb-4 sm:mb-6 brightness-0 invert"
               />
               <p className="text-white/80 mb-6 sm:mb-8 leading-relaxed max-w-md text-sm sm:text-base">
-                Transforming businesses through strategic architecture, process optimization, 
-                and innovative technology solutions.
+                We help established businesses move beyond word of mouth—building the visibility 
+                systems that attract enterprise clients. 12+ businesses. 6-figure contracts.
               </p>
             </div>
 
@@ -33,7 +33,7 @@ const Footer = () => {
             <div>
               <h4 className="text-sm sm:text-base md:text-lg font-bold mb-3 sm:mb-4 md:mb-6">Services</h4>
               <ul className="space-y-2 sm:space-y-3">
-                {['Business Architecture', 'Operations Management', 'Digital Infrastructure', 'Growth Strategy'].map((service) => (
+                {['Business Architecture', 'Operations Management', 'Web Design & Development', 'Growth Strategy'].map((service) => (
                   <li key={service}>
                     <a href="#services" className="text-white/70 hover:text-accent transition-colors duration-200 flex items-center gap-2 group text-xs sm:text-sm">
                       <span className="w-0 h-0.5 bg-accent group-hover:w-4 transition-all duration-200"></span>
@@ -48,7 +48,6 @@ const Footer = () => {
             <div>
               <h4 className="text-sm sm:text-base md:text-lg font-bold mb-3 sm:mb-4 md:mb-6">Company</h4>
               <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6 text-xs sm:text-sm">
-                <li><a href="#portfolio" className="text-white/70 hover:text-accent transition-colors duration-200">Portfolio</a></li>
                 <li><Link to="/legal/privacy-policy" className="text-white/70 hover:text-accent transition-colors duration-200">Privacy Policy</Link></li>
                 <li><Link to="/legal/terms-of-service" className="text-white/70 hover:text-accent transition-colors duration-200">Terms of Service</Link></li>
                 <li><Link to="/legal/cookie-policy" className="text-white/70 hover:text-accent transition-colors duration-200">Cookie Policy</Link></li>

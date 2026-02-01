@@ -24,15 +24,19 @@ const Index = () => {
         />
         <Header />
         <Hero />
-        <TrustStrip />
-        <PainPoints />
-        <WhoWeHelp />
-        <ServicesHero />
-        <Testimonials />
-        <CaseStudy />
-        <FAQ />
-        <Contact />
-        <Footer />
+        
+        {/* Content that scrolls over hero on mobile */}
+        <div className="scroll-over-content">
+          <TrustStrip />
+          <PainPoints />
+          <WhoWeHelp />
+          <ServicesHero />
+          <Testimonials />
+          <CaseStudy />
+          <FAQ />
+          <Contact />
+          <Footer />
+        </div>
       </div>
     </HelmetProvider>
   );
