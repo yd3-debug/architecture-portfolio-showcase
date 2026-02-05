@@ -308,7 +308,7 @@
     .scroll-over-content {
       position: relative;
       z-index: 10;
-      margin-top: 85vh;
+      margin-top: -24px; /* Slight overlap for rounded corner effect - Hero section provides the 85vh space */
       background: hsl(var(--background));
       border-radius: 24px 24px 0 0;
       box-shadow: 0 -8px 30px hsl(0 0% 0% / 0.15);
