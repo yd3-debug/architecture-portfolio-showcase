@@ -4,7 +4,7 @@ import heroMobile from '@/assets/hero-mobile.jpg';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-[85vh] lg:min-h-screen flex items-center justify-center overflow-hidden">
       {/* Desktop Background Image */}
       <div className="absolute inset-0 z-0 hidden lg:block">
         <img 
