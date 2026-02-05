@@ -1,120 +1,53 @@
 
-# Footer Update, New Hero Image & Scroll Effects Implementation
+# Fix Mobile White Gap Issue
 
-## Overview
+## Problem Identified
 
-This plan addresses three key improvements:
-1. Fix the Footer to remove "Portfolio" and align with actual business messaging
-2. Add a striking hero image to the PainPoints ("Sound Familiar?") section
-3. Implement scroll-over effects with a fixed hero on mobile
+The white gap appears because of a layout conflict between:
+1. The Hero `<section>` which participates in document flow with `min-h-[85vh]`
+2. The fixed background image at exactly `85vh`
+3. The scroll-over content with `margin-top: 85vh`
 
----
-
-## 1. Footer Updates
-
-### Current Issues
-- Contains a "Portfolio" link that points to `#portfolio` (section doesn't exist on homepage)
-- Company description says "strategic architecture, process optimization, and innovative technology solutions" - too generic
-- Services list doesn't match the actual 4 services offered
-
-### Changes
-
-**Remove Portfolio Link:**
-```
-Before: Portfolio, Privacy Policy, Terms of Service, Cookie Policy
-After: Privacy Policy, Terms of Service, Cookie Policy
-```
-
-**Update Company Description:**
-```
-Before: "Transforming businesses through strategic architecture, process optimization, and innovative technology solutions."
-
-After: "We help established businesses move beyond word of mouth—building the visibility systems that attract enterprise clients. 12+ businesses. 6-figure contracts."
-```
-
-**Update Services List to Match Actual Services:**
-```
-Before: Business Architecture, Operations Management, Digital Infrastructure, Growth Strategy
-
-After: Business Architecture, Operations Management, Web Design & Development, Growth Strategy
-```
-(Replaces "Digital Infrastructure" with "Web Design & Development" to match ServicesHero.tsx)
+When the Hero's content (text, buttons, scroll indicator) extends the section beyond 85vh, the scroll-over content starts too low, creating a gap.
 
 ---
 
-## 2. New Hero Image: PainPoints Section
+## Solution
 
-### Placement
-Add a full-width hero image at the TOP of the PainPoints section (before "Sound Familiar?" heading), following the established "Stacked Hero" visual pattern used in WhoWeHelp, Testimonials, and CaseStudy sections.
+### Approach: Make Hero Section Non-Participating in Flow (Mobile Only)
 
-### Image Concept
-**Theme:** Overwhelm transforming into clarity - a business owner's desk transitioning from chaos to order
-
-**Visual Description:**
-An editorial flat-lay photograph on a warm wood desk showing a split composition:
-- Left side: slightly messy/overwhelming (scattered papers, multiple devices, sticky notes)
-- Right side: clean, organized (neat notebook, single pen, clear space)
-- Symbolizing the transformation from "working 60+ hours" to "systems that run smoothly"
-
-**Critical Requirements:**
-- No text, labels, or writing visible in the image
-- Warm, natural lighting
-- Landscape orientation (16:9)
-- Professional, editorial aesthetic matching existing images
-
-### Code Changes
-- Create new image: `src/assets/painpoints-hero.jpg`
-- Update `PainPoints.tsx` to include the hero image section
+On mobile, the Hero section should not affect layout—it should be purely for positioning the fixed background and content overlay. The scroll-over content should start immediately after the visible hero area.
 
 ---
 
-## 3. Scroll Effects Implementation
+## Code Changes
 
-### Mobile: Fixed Hero with Content Scroll-Over
+### 1. Update Hero Component (`src/components/Hero.tsx`)
 
-**How It Works:**
-On mobile, the hero section's background image becomes fixed (`position: fixed`), and subsequent content scrolls over it with a slight overlap, creating a "parallax reveal" effect.
+Add a mobile-specific class to make the Hero section take exactly `85vh` and handle overflow properly:
 
-**Technical Approach:**
-1. On mobile (< 1024px), the hero background uses `fixed` positioning
-2. Content after the hero starts slightly higher (using negative margin or transform) to create the scroll-over effect
-3. Content has a solid background to cover the fixed hero as user scrolls
+```tsx
+<section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center overflow-hidden lg:relative">
+```
 
-### Desktop: Subtle Parallax & Fade Effects
+Change to:
 
-**Scroll-Triggered Animations:**
-- Sections fade in and slide up as they enter the viewport
-- Hero content fades slightly as user scrolls down (scroll-linked opacity)
-- Section images have subtle parallax movement (slower scroll than content)
+```tsx
+<section className="relative h-[85vh] lg:min-h-screen flex items-center justify-center overflow-hidden">
+```
 
-**Technical Approach:**
-- Use CSS `scroll-behavior` and intersection observer patterns
-- Add custom animation classes in Tailwind config
-- Apply animation classes to section wrappers
+On mobile: Fixed height of `85vh` (matches the fixed background and margin-top)
+On desktop: `min-h-screen` for full viewport height
 
 ---
 
-## Files to Modify
+### 2. Update CSS (`src/index.css`)
 
-| File | Changes |
-|------|---------|
-| `src/components/Footer.tsx` | Remove Portfolio link, update description and services list |
-| `src/components/PainPoints.tsx` | Add hero image section at top |
-| `src/assets/painpoints-hero.jpg` | NEW - Generate AI image |
-| `src/components/Hero.tsx` | Add mobile fixed positioning and scroll-linked fade |
-| `src/pages/Index.tsx` | Add scroll-over wrapper for content sections |
-| `tailwind.config.ts` | Add scroll animation keyframes (if needed) |
-| `src/index.css` | Add scroll-related utility classes |
+Ensure the Hero section itself is properly positioned on mobile:
 
----
-
-## Technical Details
-
-### Hero Fixed Background (Mobile)
 ```css
-/* Mobile hero background - fixed positioning */
 @media (max-width: 1023px) {
-  .hero-fixed-bg {
+  .hero-mobile-fixed {
     position: fixed;
     top: 0;
     left: 0;
@@ -123,96 +56,81 @@ On mobile, the hero section's background image becomes fixed (`position: fixed`)
     z-index: 0;
   }
   
-  /* Content wrapper scrolls over */
   .scroll-over-content {
     position: relative;
     z-index: 10;
     margin-top: 85vh;
-    background: white;
+    background: hsl(var(--background));
     border-radius: 24px 24px 0 0;
+    box-shadow: 0 -8px 30px hsl(0 0% 0% / 0.15);
   }
 }
 ```
 
-### Scroll-Reveal Animation
-```javascript
-// Using Intersection Observer for scroll-triggered animations
-useEffect(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fade-in-up');
-        }
-      });
-    },
-    { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
-  );
-  
-  // Observe all sections
-  document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
-  
-  return () => observer.disconnect();
-}, []);
-```
-
-### PainPoints Hero Image Integration
-```tsx
-// Add hero image at the top of PainPoints section
-<section className="bg-white">
-  {/* Full-width hero image */}
-  <div className="w-full h-[350px] md:h-[450px] lg:h-[550px]">
-    <img 
-      src={heroImage} 
-      alt="Desk transformation from overwhelming chaos to organized clarity representing business efficiency" 
-      className="w-full h-full object-cover"
-    />
-  </div>
-  
-  {/* Existing content below */}
-  <div className="py-16 sm:py-20 md:py-28 lg:py-32 px-4 sm:px-6 lg:px-12">
-    {/* ... existing PainPoints content ... */}
-  </div>
-</section>
-```
+No changes needed here—the CSS is correct.
 
 ---
 
-## Visual Flow After Changes
+### 3. Alternative Fix: Adjust Index.tsx Layout
+
+Wrap Hero in a container that handles the mobile fixed-height behavior:
+
+```tsx
+{/* Hero wrapper - fixed height on mobile for scroll-over effect */}
+<div className="h-[85vh] lg:h-auto">
+  <Hero />
+</div>
+
+{/* Content that scrolls over hero on mobile */}
+<div className="scroll-over-content">
+  ...
+</div>
+```
+
+This ensures the Hero container is exactly `85vh` on mobile, matching the `margin-top` of the scroll-over content.
+
+---
+
+## Files to Modify
+
+| File | Change |
+|------|--------|
+| `src/components/Hero.tsx` | Change `min-h-[85vh]` to `h-[85vh]` for mobile, keep `lg:min-h-screen` for desktop |
+
+---
+
+## Visual Explanation
 
 ```text
-HERO (Fixed on Mobile)
-    ↓ Content scrolls over ↓
-┌─────────────────────────────────────┐
-│  TRUST STRIP                        │ (Rounded top corners on mobile)
-├─────────────────────────────────────┤
-│  [NEW IMAGE] - Chaos to Order       │
-│  PAIN POINTS - "Sound Familiar?"    │
-├─────────────────────────────────────┤
-│  [IMAGE] - Hidden Gem Diamonds      │
-│  WHO WE HELP                        │
-├─────────────────────────────────────┤
-│  SERVICES (no image - text-focused) │
-├─────────────────────────────────────┤
-│  [IMAGE] - Growth & Trust           │
-│  TESTIMONIALS                       │
-├─────────────────────────────────────┤
-│  [IMAGE] - Artisan Workshop         │
-│  CASE STUDY                         │
-├─────────────────────────────────────┤
-│  FAQ (no image - text-focused)      │
-├─────────────────────────────────────┤
-│  CONTACT (no image - conversion)    │
-├─────────────────────────────────────┤
-│  FOOTER                             │
-└─────────────────────────────────────┘
+BEFORE (Bug):
+┌──────────────────────────┐
+│ Hero Section (min-h-85vh)│  ← Can extend beyond 85vh
+│ - Content                │
+│ - Buttons                │
+│ - Scroll indicator       │  ← Pushes section beyond 85vh
+└──────────────────────────┘
+        ↓ GAP ↓             ← White space here!
+┌──────────────────────────┐
+│ scroll-over-content      │  ← margin-top: 85vh
+│ (TrustStrip...)          │
+└──────────────────────────┘
+
+AFTER (Fixed):
+┌──────────────────────────┐
+│ Hero Section (h-85vh)    │  ← Fixed at exactly 85vh
+│ - Content                │
+│ - overflow: hidden       │
+└──────────────────────────┘ ← No gap
+┌──────────────────────────┐
+│ scroll-over-content      │  ← margin-top: 85vh aligns perfectly
+│ (TrustStrip...)          │
+└──────────────────────────┘
 ```
 
 ---
 
 ## Implementation Summary
 
-1. **Footer**: Remove Portfolio link, update description to match value proposition, fix services list
-2. **PainPoints Image**: Generate "chaos to clarity" desk scene, add as hero banner above section
-3. **Mobile Scroll Effect**: Fixed hero background with rounded content scrolling over it
-4. **Desktop Scroll Effect**: Intersection Observer-based fade-in animations for sections
+1. Change Hero section from `min-h-[85vh]` to `h-[85vh] lg:min-h-screen`
+2. This ensures exact height match between Hero, fixed background, and scroll-over margin
+3. Desktop behavior unchanged (uses `lg:min-h-screen`)
