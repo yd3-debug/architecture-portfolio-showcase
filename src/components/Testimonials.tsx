@@ -4,19 +4,13 @@ import heroImage from '@/assets/testimonials-hero.jpg';
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "YektaD didn't merely revamp our online presence; they engineered a comprehensive, seamless client acquisition ecosystem. The 65% increase in appointments within three months is a direct testament to their strategic foresight and flawless execution.",
+      quote: "YektaD didn't merely revamp our online presence; they engineered a comprehensive, seamless client acquisition ecosystem. The 65% increase in appointments within three months is a direct testament to their strategic foresight and flawless execution. Our clients now experience a truly frictionless and professional engagement journey.",
       name: "Sahar",
       title: "Owner, Studio Solena — Ealing, London",
       metric: "+65% bookings"
     },
     {
-      quote: "From our website to our ordering system, everything works perfectly. We tripled our online orders within 6 weeks of launching.",
-      name: "Carlo",
-      title: "Owner, Pizza Fly — Milan, Italy",
-      metric: "3x online orders"
-    },
-    {
-      quote: "From foundational brand identity to advanced website functionality, YektaD delivered an integrated solution that instantaneously amplified our market perception. We are now unequivocally recognized as the established, credible maintenance partner we always aspired to be.",
+      quote: "From foundational brand identity to advanced website functionality, YektaD delivered an integrated solution that instantaneously amplified our market perception. We are now unequivocally recognized as the established, credible maintenance partner we always aspired to be, attracting a consistently higher caliber of inquiries.",
       name: "Petru",
       title: "Founder, Mainteniq — London, UK",
       metric: "Brand & Web"
@@ -39,10 +33,10 @@ const Testimonials = () => {
         <div className="max-w-[1600px] mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 md:mb-20 px-4 sm:px-6">
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 sm:mb-4 md:mb-6 text-charcoal">
-              Real Results from Real Clients
+              Executive Endorsements
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light">
-              Don't take our word for it—here's what our clients say
+              Validated impact from our enterprise partners
             </p>
           </div>
 

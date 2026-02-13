@@ -3,9 +3,9 @@ import PlaybookDownloadForm from './PlaybookDownloadForm';
 
 const Contact = () => {
   const nextSteps = [
-    "Confidential Strategic Brief (5 min) to understand your situation",
-    "30-min Executive Discovery Session to diagnose visibility gaps",
-    "Customized Growth Blueprint within 48 hours—no obligation"
+    "Confidential Strategic Brief (5 min) to comprehensively understand your business context and growth aspirations",
+    "30-min Executive Discovery Session to diagnose core impediments and explore bespoke solutions",
+    "Customized Growth Blueprint within 48 hours—a no-obligation, meticulously crafted strategic proposal"
   ];
 
   return (
@@ -13,10 +13,10 @@ const Contact = () => {
       <div className="container-professional max-w-5xl">
         <div className="text-center mb-10 sm:mb-14 md:mb-20">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 sm:mb-4 md:mb-6 text-charcoal">
-            Ready to Get Found by Enterprise Clients?
+            Engage for Unrivaled Enterprise Dominance
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto mb-6">
-            We engage as strategic partners, not project vendors. Every engagement is scope-dependent and built around your specific growth objectives.
+            We are dedicated to forging deep, transformative partnerships, not merely executing transactional projects. To ensure unparalleled focus, we selectively engage with a limited cohort of businesses.
           </p>
           {/* Scarcity Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-charcoal/5 rounded-full">
@@ -34,9 +34,9 @@ const Contact = () => {
             <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-6">
               <Calendar className="w-6 h-6 text-white" />
             </div>
-            <h3 className="font-serif text-xl sm:text-2xl mb-3">Ready to Talk?</h3>
+            <h3 className="font-serif text-xl sm:text-2xl mb-3">Initiate Your Strategic Dialogue</h3>
             <p className="text-sm sm:text-base text-white/70 font-light mb-6 leading-relaxed">
-              Book a 30-minute strategy call. We'll diagnose your visibility gaps and show you exactly what's possible.
+              More than a consultation—a rigorous strategic assessment to pinpoint your unique market visibility gaps and delineate an actionable trajectory toward enterprise market leadership.
             </p>
             
             {/* What happens next */}
@@ -56,7 +56,7 @@ const Contact = () => {
               className="inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 text-sm font-medium text-charcoal bg-white hover:bg-white/90 transition-all duration-300 rounded-lg"
             >
               <Calendar className="w-4 h-4" />
-              Book Strategy Call
+              Secure Your Executive Discovery Session
             </a>
           </div>
 
@@ -65,23 +65,23 @@ const Contact = () => {
             <div className="w-12 h-12 rounded-xl bg-white border border-border flex items-center justify-center mb-6">
               <ArrowRight className="w-6 h-6 text-charcoal" />
             </div>
-            <h3 className="font-serif text-xl sm:text-2xl mb-3 text-charcoal">Not Ready Yet?</h3>
+            <h3 className="font-serif text-xl sm:text-2xl mb-3 text-charcoal">Strategic Insights First?</h3>
             <p className="text-sm sm:text-base text-muted-foreground font-light mb-6 leading-relaxed">
-              Get our free Enterprise Visibility Playbook—the exact framework we use with clients to land bigger contracts.
+              Access our complimentary Enterprise Visibility Playbook—the proprietary framework utilized in our client engagements to secure significant enterprise contracts.
             </p>
             
             <div className="space-y-3 mb-8">
               <div className="flex items-start gap-3">
                 <ArrowRight className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground font-light">5 critical positioning mistakes that keep you invisible to enterprise buyers</span>
+                <span className="text-sm text-muted-foreground font-light">The 5 pervasive positioning errors that render even exceptional businesses invisible to discerning enterprise buyers</span>
               </div>
               <div className="flex items-start gap-3">
                 <ArrowRight className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground font-light">The "enterprise-ready" digital presence checklist</span>
+                <span className="text-sm text-muted-foreground font-light">The definitive "enterprise-ready" website checklist, engineered for optimal conversion</span>
               </div>
               <div className="flex items-start gap-3">
                 <ArrowRight className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground font-light">Strategic pricing frameworks for corporate buyers</span>
+                <span className="text-sm text-muted-foreground font-light">Mastering pricing strategies tailored for sophisticated corporate procurement processes</span>
               </div>
             </div>
 
@@ -103,7 +103,7 @@ const Contact = () => {
             >
               contact@yektad.com
             </a>
-            <p className="text-xs text-muted-foreground/70 mt-2 italic">I read every email personally — Yekta</p>
+            <p className="text-xs text-muted-foreground/70 mt-2 italic">Direct correspondence from Yekta ensures every inquiry receives personalized, executive-level attention</p>
           </div>
 
           {/* Location */}
@@ -122,7 +122,7 @@ const Contact = () => {
         {/* Cost of Waiting */}
         <div className="text-center pt-8 sm:pt-10 md:pt-12 border-t border-border">
           <p className="text-sm sm:text-base text-muted-foreground font-light mb-2">
-            Each month without a defined enterprise strategy represents a tangible loss. Competitors are winning the contracts that should be yours.
+            Each month without a defined enterprise strategy represents a tangible loss, as competitors invariably capture opportunities that are rightfully yours.
           </p>
           <p className="text-xs text-muted-foreground/70">
             Estimated value of a single missed enterprise contract: £10k-50k.

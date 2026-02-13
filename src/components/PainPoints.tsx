@@ -9,15 +9,15 @@ const PainPoints = () => {
   const painPoints = [
     {
       pain: "The Referral Dependency Trap",
-      solution: "Exceptional service fosters organic growth, but this model lacks predictability and caps expansion. We build systems that generate enterprise leads on demand.",
+      solution: "While your exceptional service fosters organic growth, this model inherently lacks predictability and caps your capacity for exponential expansion. We build systems for enterprise-scale lead generation.",
     },
     {
       pain: "Digital Footprint Disparity",
-      solution: "Your expertise isn't reflected online, ceding ground to competitors with superior digital visibility. We make your digital presence match your reputation.",
+      solution: "Your deep expertise and proven track record are not adequately reflected in your online presence, ceding ground to competitors who may lack your substance but possess superior digital visibility.",
     },
     {
       pain: "Scaling Momentum Stalled",
-      solution: "You have an effective offering but the mechanisms to penetrate larger markets remain elusive. We engineer the path to enterprise-level clients.",
+      solution: "You command a highly effective, client-validated service offering, yet the mechanisms to penetrate larger markets and attract the sophisticated enterprise clientele you aspire to serve remain elusive.",
     }
   ];
 
@@ -50,10 +50,10 @@ const PainPoints = () => {
           {/* Section Header */}
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-charcoal">
-              The Hidden Gem Dilemma
+              The Unseen Barriers to Enterprise Scale
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-              You're excellent at what you do. Clients love you. But enterprise buyers can't find you.
+              Even highly proficient service organizations encounter a ceiling imposed by over-reliance on organic referrals. Does this resonate with your strategic growth objectives?
             </p>
           </div>
 
@@ -186,7 +186,7 @@ const PainPoints = () => {
           <div className="text-center mt-12 sm:mt-16">
             <a href="#contact">
               <button className="px-6 py-2.5 sm:px-8 sm:py-3 text-xs sm:text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg">
-                Book a Strategy Call
+                Schedule Discovery Session
               </button>
             </a>
           </div>

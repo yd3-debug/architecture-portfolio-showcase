@@ -30,17 +30,17 @@ const Hero = () => {
       <div className="container-professional relative z-10 max-w-4xl text-center px-4">
         {/* Results-First Headline */}
         <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white mb-4 sm:mb-6 md:mb-8 leading-[1.1] tracking-tight">
-          From Word-of-Mouth to<br className="hidden sm:block" /> Enterprise Clients in 90 Days
+          Elevating Service Firms to<br className="hidden sm:block" /> Enterprise Market Leadership
         </h1>
 
         {/* Specific Proof Point */}
         <p className="text-sm sm:text-base md:text-lg text-white/80 mb-4 sm:mb-6 leading-relaxed font-light max-w-2xl mx-auto">
-          We've helped 12+ service businesses land 6-figure contracts—without relying on referrals alone
+          Bespoke strategies that secure high-value, 6-figure contracts and establish enduring market leadership for established service businesses
         </p>
 
         {/* Trust Signal */}
         <p className="text-xs sm:text-sm text-white/60 mb-8 sm:mb-12 md:mb-14">
-          Average client sees first enterprise lead within 6-8 weeks
+          Clients consistently engage their first qualified enterprise lead within 6-8 weeks
         </p>
 
         {/* CTAs - Primary Focus */}
@@ -50,7 +50,7 @@ const Hero = () => {
             className="inline-flex items-center gap-2 px-8 py-3.5 sm:px-10 sm:py-4 text-sm font-medium text-charcoal bg-white hover:bg-white/90 transition-all duration-300 rounded-lg shadow-lg"
           >
             <Calendar className="w-4 h-4" />
-            Book Strategy Call
+            Schedule Discovery Session
           </a>
           <a 
             href="#case-study"

@@ -17,8 +17,8 @@ const Index = () => {
     <HelmetProvider>
       <div className="min-h-screen">
         <SEOHead 
-          title="YektaD — From Word-of-Mouth to Enterprise Clients in 90 Days | Business Visibility Consulting"
-          description="We've helped 12+ service businesses land 6-figure enterprise contracts. Stop relying on referrals—get found by the clients who need you. Book a free strategy call."
+          title="YektaD — Strategic Growth for Enterprise Service Businesses | Enterprise Market Leadership"
+          description="Bespoke strategies that secure high-value, 6-figure contracts for established service businesses. Clients engage their first qualified enterprise lead within 6-8 weeks."
           canonicalPath="/"
           breadcrumbs={[{ name: "Home", path: "/" }]}
         />
