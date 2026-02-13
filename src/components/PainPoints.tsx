@@ -8,28 +8,16 @@ const PainPoints = () => {
 
   const painPoints = [
     {
-      pain: "Working 60+ hours but still behind?",
-      solution: "We build systems so your business runs in 20 hours, not 60",
+      pain: "The Referral Dependency Trap",
+      solution: "Exceptional service fosters organic growth, but this model lacks predictability and caps expansion. We build systems that generate enterprise leads on demand.",
     },
     {
-      pain: "Great reputation but invisible online?",
-      solution: "We put hidden gems in front of the right buyers",
+      pain: "Digital Footprint Disparity",
+      solution: "Your expertise isn't reflected online, ceding ground to competitors with superior digital visibility. We make your digital presence match your reputation.",
     },
     {
-      pain: "Getting website traffic but no sales?",
-      solution: "Websites optimized to turn browsers into buyers",
-    },
-    {
-      pain: "Competitors stealing your customers?",
-      solution: "Positioning that makes you the obvious choice",
-    },
-    {
-      pain: "Enterprise clients can't find you?",
-      solution: "We've helped 12+ businesses land 6-figure contracts",
-    },
-    {
-      pain: "Can't afford to hire but can't do it alone?",
-      solution: "Fractional support—expert help without full-time cost",
+      pain: "Scaling Momentum Stalled",
+      solution: "You have an effective offering but the mechanisms to penetrate larger markets remain elusive. We engineer the path to enterprise-level clients.",
     }
   ];
 
@@ -62,10 +50,10 @@ const PainPoints = () => {
           {/* Section Header */}
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-charcoal">
-              Sound Familiar?
+              The Hidden Gem Dilemma
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-              These are the challenges business owners face every day. We've solved them for 50+ businesses.
+              You're excellent at what you do. Clients love you. But enterprise buyers can't find you.
             </p>
           </div>
 

@@ -4,7 +4,7 @@ import heroImage from '@/assets/testimonials-hero.jpg';
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "They completely transformed our booking system and online presence. Our clients love the seamless experience, and we've seen a 65% increase in appointments within 3 months.",
+      quote: "YektaD didn't merely revamp our online presence; they engineered a comprehensive, seamless client acquisition ecosystem. The 65% increase in appointments within three months is a direct testament to their strategic foresight and flawless execution.",
       name: "Sahar",
       title: "Owner, Studio Solena — Ealing, London",
       metric: "+65% bookings"
@@ -16,7 +16,7 @@ const Testimonials = () => {
       metric: "3x online orders"
     },
     {
-      quote: "YektaD designed our website and created our brand identity from scratch. The professional image gave us instant credibility—clients now see us as the established maintenance company we are.",
+      quote: "From foundational brand identity to advanced website functionality, YektaD delivered an integrated solution that instantaneously amplified our market perception. We are now unequivocally recognized as the established, credible maintenance partner we always aspired to be.",
       name: "Petru",
       title: "Founder, Mainteniq — London, UK",
       metric: "Brand & Web"

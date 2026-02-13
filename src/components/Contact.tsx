@@ -3,9 +3,9 @@ import PlaybookDownloadForm from './PlaybookDownloadForm';
 
 const Contact = () => {
   const nextSteps = [
-    "Quick questionnaire (5 min) to understand your situation",
-    "30-min strategy call to diagnose your visibility gaps",
-    "Custom proposal within 48 hours—no obligation"
+    "Confidential Strategic Brief (5 min) to understand your situation",
+    "30-min Executive Discovery Session to diagnose visibility gaps",
+    "Customized Growth Blueprint within 48 hours—no obligation"
   ];
 
   return (
@@ -22,7 +22,7 @@ const Contact = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-charcoal/5 rounded-full">
             <Users className="w-4 h-4 text-charcoal" />
             <span className="text-xs sm:text-sm font-medium text-charcoal">
-              Currently accepting 2 new partners for Q1 2026 • Typical wait: 4-6 weeks
+              Currently accepting 2 new strategic partners for Q1 2026 • Typical wait: 4-6 weeks
             </span>
           </div>
         </div>
@@ -73,15 +73,15 @@ const Contact = () => {
             <div className="space-y-3 mb-8">
               <div className="flex items-start gap-3">
                 <ArrowRight className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground font-light">5 positioning mistakes that keep you invisible</span>
+                <span className="text-sm text-muted-foreground font-light">5 critical positioning mistakes that keep you invisible to enterprise buyers</span>
               </div>
               <div className="flex items-start gap-3">
                 <ArrowRight className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground font-light">The "enterprise-ready" website checklist</span>
+                <span className="text-sm text-muted-foreground font-light">The "enterprise-ready" digital presence checklist</span>
               </div>
               <div className="flex items-start gap-3">
                 <ArrowRight className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground font-light">How to price for corporate buyers</span>
+                <span className="text-sm text-muted-foreground font-light">Strategic pricing frameworks for corporate buyers</span>
               </div>
             </div>
 
@@ -122,10 +122,10 @@ const Contact = () => {
         {/* Cost of Waiting */}
         <div className="text-center pt-8 sm:pt-10 md:pt-12 border-t border-border">
           <p className="text-sm sm:text-base text-muted-foreground font-light mb-2">
-            Every month you stay invisible, competitors win the contracts that should be yours.
+            Each month without a defined enterprise strategy represents a tangible loss. Competitors are winning the contracts that should be yours.
           </p>
           <p className="text-xs text-muted-foreground/70">
-            The average enterprise contract you're missing? £10k-50k.
+            Estimated value of a single missed enterprise contract: £10k-50k.
           </p>
         </div>
       </div>
