@@ -8,28 +8,36 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: "What's the investment range?",
-      answer: "Our engagements are scope-dependent. Foundation packages (website + positioning) start at £5k-8k. Growth partnerships (full visibility system) range £10k-15k. Enterprise-level strategic partnerships are £20k+ and custom-scoped. During our discovery call, we'll identify exactly what you need—no more, no less."
+      question: "What distinguishes YektaD from traditional marketing or consulting agencies?",
+      answer: "YektaD operates as a strategic growth architect, not merely a service vendor. Unlike traditional agencies that often focus on isolated marketing tactics or general consulting, we specialize in end-to-end enterprise acquisition for established service businesses. Our methodology integrates business architecture, high-performance digital infrastructure, and precision growth strategies to deliver measurable 6-figure contracts, rather than just leads or advice. We are partners in your strategic evolution, focused on systemic growth and market leadership."
     },
     {
-      question: "What results can I realistically expect?",
-      answer: "Based on our track record: clients typically see their first enterprise lead within 6-8 weeks of launch. Most experience a 3-5x increase in qualified inbound inquiries within 90 days. We've helped 12+ service businesses land 6-figure contracts. Results vary by industry and starting point—we'll give you honest projections on our call."
+      question: "What is the typical investment range for YektaD's services?",
+      answer: "Our engagements are bespoke and scope-dependent, reflecting the unique strategic objectives and complexities of each enterprise client. While we do not offer standardized packages, our partnerships are structured to deliver significant ROI, typically targeting 6-figure contract acquisition. We prioritize value creation over cost, and a detailed investment proposal is provided after our Executive Discovery Session, tailored to your specific growth blueprint."
     },
     {
-      question: "How much time do I need to commit?",
-      answer: "Week 1-2: 3-4 hours for strategy sessions and discovery. Week 3-6: 1-2 hours weekly for reviews and feedback. After launch: 30 minutes weekly check-ins. We do the heavy lifting. You provide the expertise and input that only you can provide."
+      question: "What results can I realistically expect, and how quickly?",
+      answer: "Our clients consistently experience tangible results, with the first qualified enterprise lead typically engaged within 6-8 weeks of initiating our strategic partnership. Beyond lead generation, our focus is on securing high-value, 6-figure contracts and establishing sustainable growth ecosystems. Specific outcomes are defined and measured against the Customized Growth Blueprint developed during our initial engagement, ensuring alignment with your strategic KPIs."
     },
     {
-      question: "How do I know if we're a good fit?",
-      answer: "You're a great fit if: You have a proven service/product (customers love what you do). You're growing via referrals but want more. You're ready to invest in long-term visibility, not quick fixes. You're not a good fit if: You're looking for the cheapest option. You need results in 2 weeks. You want a 'set and forget' solution."
+      question: "How much time commitment is required from my executive team?",
+      answer: "We understand the demands on executive time. Our process is designed for maximum efficiency and minimal disruption. The Confidential Strategic Brief takes approximately 5 minutes, followed by a 30-minute Executive Discovery Session. Post-engagement, we provide clear communication channels and concise updates, ensuring your team remains informed and strategically engaged without being burdened by day-to-day oversight."
     },
     {
-      question: "What happens after I book a call?",
-      answer: "Within 24 hours, you'll receive a brief questionnaire (5 minutes). On the call, we'll diagnose your visibility gaps together. Within 48 hours after the call, you'll get a custom proposal with clear deliverables, timeline, and investment. No pressure—just clarity on what we can achieve together."
+      question: "How do I know if YektaD is the right strategic partner for my business?",
+      answer: "YektaD is ideally suited for established service businesses that have achieved success through referrals but are now seeking to strategically scale into the enterprise market. You have a proven service, a desire for 6-figure contracts, and a readiness to invest in a transformative growth strategy. Our Executive Discovery Session is specifically designed to assess mutual fit, diagnose your unique challenges, and determine if our specialized expertise aligns with your ambitious growth objectives."
     },
     {
-      question: "Why not just hire a marketing agency?",
-      answer: "Most agencies sell tactics—ads, SEO, content. We build business architecture. The difference: agencies optimize what exists; we build what's missing. We act as your strategic partner, not a vendor churning deliverables. You get a Director-level perspective, not just execution."
+      question: "What happens after I schedule an Executive Discovery Session?",
+      answer: "Upon scheduling, you will receive a brief Confidential Strategic Brief to complete, which helps us understand your business context. This is followed by a 30-minute Executive Discovery Session where we engage in an in-depth dialogue to diagnose your challenges and explore potential solutions. Within 48 hours of this session, you will receive a Customized Growth Blueprint—a no-obligation, strategic proposal outlining a bespoke plan to achieve your enterprise growth ambitions."
+    },
+    {
+      question: "What if I'm not satisfied with the partnership or results?",
+      answer: "Our commitment is to delivering measurable results and fostering long-term strategic partnerships. We establish clear KPIs and milestones within your Customized Growth Blueprint. Should any aspect of our engagement not meet the agreed-upon expectations, we prioritize open communication and proactive problem-solving. Our success is intrinsically linked to yours, and we are dedicated to ensuring your complete satisfaction."
+    },
+    {
+      question: "Why should we partner with YektaD instead of expanding our internal team?",
+      answer: "Expanding internal teams for specialized enterprise acquisition can be a lengthy, costly, and high-risk endeavor. YektaD provides immediate access to a highly specialized team with a proven framework and deep expertise in B2B enterprise growth, without the overheads of recruitment, training, and infrastructure development. We offer an agile, results-driven alternative, allowing your core team to focus on service delivery while we architect and execute your market expansion."
     }
   ];
 
@@ -39,10 +47,10 @@ const FAQ = () => {
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-charcoal">
-            Real Questions, Honest Answers
+            Strategic Clarity for Enterprise Leaders
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-            No vague corporate speak. Here's exactly what you need to know before reaching out.
+            We understand that engaging a strategic partner for enterprise growth is a significant decision. Here's the clarity you need.
           </p>
         </div>
 
