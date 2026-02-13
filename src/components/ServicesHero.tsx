@@ -1,38 +1,30 @@
-import { Workflow, Code2, TrendingUp, Settings, AlertCircle, ArrowRight, Star } from 'lucide-react';
+import { Workflow, Code2, TrendingUp, AlertCircle, ArrowRight, Star } from 'lucide-react';
 
 const ServicesHero = () => {
   const services = [
     {
       icon: Workflow,
-      pain: "Great product but still a hidden gem?",
+      pain: "Proven by referrals but invisible to enterprise buyers?",
       title: "Business Architecture",
-      outcome: "Visibility that attracts the clients who need you",
-      description: "We help established businesses move beyond word of mouth—building systems, online presence, and positioning to get found by bigger clients.",
-      result: "Client landed first enterprise contract within 6 weeks"
-    },
-    {
-      icon: Settings,
-      pain: "Drowning in logistics, vendors, and daily fires?",
-      title: "Operations Management",
-      outcome: "Operations that run smoothly without your constant attention",
-      description: "We handle supplier negotiations, inventory management, shipping logistics, and vendor relationships. You focus on sales and growth.",
-      result: "Saved 15 hours/week for a luxury furniture brand"
+      outcome: "A scalable growth ecosystem that attracts enterprise clients",
+      description: "Building scalable growth ecosystems—systems, digital presence, and market positioning engineered to move you from word-of-mouth to enterprise acquisition.",
+      result: "Client secured first enterprise contract within 6 weeks"
     },
     {
       icon: Code2,
-      pain: "Losing customers to competitors with better websites?",
+      pain: "Your digital presence doesn't reflect your expertise?",
       title: "Web Design & Development",
-      outcome: "A website that converts visitors into paying customers",
-      description: "Enterprise-grade digital infrastructure and customer-facing platforms that drive commercial performance.",
-      result: "65% increase in bookings for a London beauty studio"
+      outcome: "Enterprise-grade infrastructure that converts and builds trust",
+      description: "Enterprise-grade digital infrastructure optimized for conversion and trust. Platforms that communicate credibility and drive commercial performance.",
+      result: "65% surge in bookings for a London beauty studio"
     },
     {
       icon: TrendingUp,
-      pain: "Know you could grow, but don't know where to start?",
+      pain: "Ready to grow but unsure how to reach bigger clients?",
       title: "Growth Strategy",
-      outcome: "A clear action plan to get more customers",
-      description: "We show you who to target, where to find them, what to say, and how to stand out in a crowded market.",
-      result: "3x qualified leads for a B2B consultancy"
+      outcome: "Precision targeting for enterprise client acquisition",
+      description: "We identify who to target, where to find them, what to say, and how to position—precision targeting engineered for enterprise client acquisition.",
+      result: "3x increase in qualified leads for a B2B consultancy"
     }
   ];
 
@@ -42,10 +34,10 @@ const ServicesHero = () => {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-charcoal">
-            How We Help You Succeed
+            Strategic Imperatives
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed">
-            Every service is designed around solving real business challenges—with real results to prove it
+            Engineered for enterprise acquisition—every service delivers measurable, transformative outcomes
           </p>
         </div>
 
