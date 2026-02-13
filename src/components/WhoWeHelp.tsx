@@ -57,10 +57,10 @@ const WhoWeHelp = () => {
         <span className="text-primary font-medium tracking-wide uppercase text-sm mb-4 block">
           Who We Help
         </span>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-foreground mb-6">
           Built Something Great But Still a Hidden Gem?
         </h2>
-        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10 max-w-3xl">
+        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-light mb-10 max-w-3xl">
           You've grown through word of mouth. Your product speaks for itself. 
           But you're invisible online—and the enterprise clients who need you can't find you.
         </p>
@@ -117,10 +117,10 @@ const WhoWeHelp = () => {
                   <profile.icon className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">
+                  <h3 className="text-lg font-serif font-medium text-foreground mb-2">
                     {profile.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm">
+                  <p className="text-muted-foreground leading-relaxed text-sm font-light">
                     {profile.description}
                   </p>
                 </div>
@@ -130,7 +130,7 @@ const WhoWeHelp = () => {
         </div>
 
         <div className="mt-10 text-center">
-          <p className="text-lg text-foreground font-medium mb-1">
+          <p className="text-lg text-foreground font-serif font-medium mb-1">
             Sound familiar?
           </p>
           <p className="text-muted-foreground">
