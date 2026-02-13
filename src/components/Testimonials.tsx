@@ -14,6 +14,12 @@ const Testimonials = () => {
       name: "Carlo",
       title: "Owner, Pizza Fly — Milan, Italy",
       metric: "3x online orders"
+    },
+    {
+      quote: "YektaD designed our website and created our brand identity from scratch. The professional image gave us instant credibility—clients now see us as the established maintenance company we are.",
+      name: "Petru",
+      title: "Founder, Mainteniq — London, UK",
+      metric: "Brand & Web"
     }
   ];
 
