@@ -28,10 +28,6 @@ const FAQ = () => {
       answer: "Within 24 hours, you'll receive a brief questionnaire (5 minutes). On the call, we'll diagnose your visibility gaps together. Within 48 hours after the call, you'll get a custom proposal with clear deliverables, timeline, and investment. No pressure—just clarity on what we can achieve together."
     },
     {
-      question: "What if I'm not happy with the work?",
-      answer: "We offer a 50% refund if you're unsatisfied after the first month. But honestly? This has never been used. We're selective about who we work with precisely because we want every engagement to succeed. Our reputation depends on your results."
-    },
-    {
       question: "Why not just hire a marketing agency?",
       answer: "Most agencies sell tactics—ads, SEO, content. We build business architecture. The difference: agencies optimize what exists; we build what's missing. We act as your strategic partner, not a vendor churning deliverables. You get a Director-level perspective, not just execution."
     }
