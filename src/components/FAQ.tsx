@@ -75,11 +75,11 @@ const FAQ = () => {
         {/* CTA */}
         <div className="text-center mt-12 sm:mt-16">
           <p className="text-sm sm:text-base text-muted-foreground font-light mb-4 sm:mb-6">
-            Still have questions? Let's talk.
+            Still have questions? Let's engage in a strategic dialogue.
           </p>
           <a href="#contact">
             <button className="px-6 py-2.5 sm:px-8 sm:py-3 text-xs sm:text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg">
-              Book a Strategy Call
+              Schedule Discovery Session
             </button>
           </a>
         </div>
