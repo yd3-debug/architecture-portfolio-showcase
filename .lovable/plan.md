@@ -1,136 +1,52 @@
 
-# Fix Mobile White Gap Issue
 
-## Problem Identified
+# Add Petru / Mainteniq Testimonial
 
-The white gap appears because of a layout conflict between:
-1. The Hero `<section>` which participates in document flow with `min-h-[85vh]`
-2. The fixed background image at exactly `85vh`
-3. The scroll-over content with `margin-top: 85vh`
+## What We're Doing
 
-When the Hero's content (text, buttons, scroll indicator) extends the section beyond 85vh, the scroll-over content starts too low, creating a gap.
+Adding a new client testimonial for **Petru from Mainteniq.co.uk** to the "Real Results from Real Clients" section alongside Studio Solena and Pizza Fly.
 
 ---
 
-## Solution
+## Testimonial Content
 
-### Approach: Make Hero Section Non-Participating in Flow (Mobile Only)
+A new testimonial card highlighting:
+- **Name:** Petru
+- **Title:** Founder, Mainteniq — London, UK
+- **Metric badge:** "Brand & Web" (reflecting website design + branding delivered)
+- **Quote:** A short testimonial about how the website and branded logo/identity helped Mainteniq establish professional credibility and trust with potential clients
 
-On mobile, the Hero section should not affect layout—it should be purely for positioning the fixed background and content overlay. The scroll-over content should start immediately after the visible hero area.
+Since we don't have an exact quote from Petru, the placeholder quote will focus on the deliverables (website design, logo, brand identity) and the outcome (improved credibility and trust). You can refine the wording after.
 
----
-
-## Code Changes
-
-### 1. Update Hero Component (`src/components/Hero.tsx`)
-
-Add a mobile-specific class to make the Hero section take exactly `85vh` and handle overflow properly:
-
-```tsx
-<section className="relative min-h-[85vh] sm:min-h-screen flex items-center justify-center overflow-hidden lg:relative">
-```
-
-Change to:
-
-```tsx
-<section className="relative h-[85vh] lg:min-h-screen flex items-center justify-center overflow-hidden">
-```
-
-On mobile: Fixed height of `85vh` (matches the fixed background and margin-top)
-On desktop: `min-h-screen` for full viewport height
+**Draft quote:**
+"YektaD designed our website and created our brand identity from scratch. The professional image gave us instant credibility—clients now see us as the established maintenance company we are."
 
 ---
 
-### 2. Update CSS (`src/index.css`)
-
-Ensure the Hero section itself is properly positioned on mobile:
-
-```css
-@media (max-width: 1023px) {
-  .hero-mobile-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 85vh;
-    z-index: 0;
-  }
-  
-  .scroll-over-content {
-    position: relative;
-    z-index: 10;
-    margin-top: 85vh;
-    background: hsl(var(--background));
-    border-radius: 24px 24px 0 0;
-    box-shadow: 0 -8px 30px hsl(0 0% 0% / 0.15);
-  }
-}
-```
-
-No changes needed here—the CSS is correct.
-
----
-
-### 3. Alternative Fix: Adjust Index.tsx Layout
-
-Wrap Hero in a container that handles the mobile fixed-height behavior:
-
-```tsx
-{/* Hero wrapper - fixed height on mobile for scroll-over effect */}
-<div className="h-[85vh] lg:h-auto">
-  <Hero />
-</div>
-
-{/* Content that scrolls over hero on mobile */}
-<div className="scroll-over-content">
-  ...
-</div>
-```
-
-This ensures the Hero container is exactly `85vh` on mobile, matching the `margin-top` of the scroll-over content.
-
----
-
-## Files to Modify
+## File Changes
 
 | File | Change |
 |------|--------|
-| `src/components/Hero.tsx` | Change `min-h-[85vh]` to `h-[85vh]` for mobile, keep `lg:min-h-screen` for desktop |
+| `src/components/Testimonials.tsx` | Add a third testimonial object to the `testimonials` array |
 
----
+### Code Change
 
-## Visual Explanation
+Add this entry to the testimonials array:
 
-```text
-BEFORE (Bug):
-┌──────────────────────────┐
-│ Hero Section (min-h-85vh)│  ← Can extend beyond 85vh
-│ - Content                │
-│ - Buttons                │
-│ - Scroll indicator       │  ← Pushes section beyond 85vh
-└──────────────────────────┘
-        ↓ GAP ↓             ← White space here!
-┌──────────────────────────┐
-│ scroll-over-content      │  ← margin-top: 85vh
-│ (TrustStrip...)          │
-└──────────────────────────┘
-
-AFTER (Fixed):
-┌──────────────────────────┐
-│ Hero Section (h-85vh)    │  ← Fixed at exactly 85vh
-│ - Content                │
-│ - overflow: hidden       │
-└──────────────────────────┘ ← No gap
-┌──────────────────────────┐
-│ scroll-over-content      │  ← margin-top: 85vh aligns perfectly
-│ (TrustStrip...)          │
-└──────────────────────────┘
+```js
+{
+  quote: "YektaD designed our website and created our brand identity from scratch. The professional image gave us instant credibility—clients now see us as the established maintenance company we are.",
+  name: "Petru",
+  title: "Founder, Mainteniq — London, UK",
+  metric: "Brand & Web"
+}
 ```
 
+No other files need to change. The existing layout handles 3 testimonials with the same stacked card design.
+
 ---
 
-## Implementation Summary
+## Notes
 
-1. Change Hero section from `min-h-[85vh]` to `h-[85vh] lg:min-h-screen`
-2. This ensures exact height match between Hero, fixed background, and scroll-over margin
-3. Desktop behavior unchanged (uses `lg:min-h-screen`)
+- The `llms.txt` and sitemap files may also benefit from mentioning Mainteniq as a third client result, but that can be done separately.
+- If you'd like to adjust the quote text, just let me know after it's added.
