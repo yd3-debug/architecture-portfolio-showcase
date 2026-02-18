@@ -1,39 +1,47 @@
 
-# Update Terms of Service
+# Add Company Registration Details to the Footer
+
+## Why This Matters
+
+Under the Companies Act 2006, UK limited companies are legally required to display their registered company name, company number, and country of registration on their website. Beyond compliance, this is a powerful trust signal for enterprise clients — they can verify Y & A Design Ltd on Companies House instantly.
 
 ## What's Changing
 
-Three things need to be updated in `src/pages/legal/TermsOfService.tsx`:
+Two places in `src/components/Footer.tsx`:
 
-1. **Timestamps** — Update both "Effective Date" and "Last Updated" to today's date: **18 February 2026**
-2. **Governing Law (Section 9)** — Replace the placeholder `[State/Country]` with **England and Wales**, and update the dispute resolution language to reflect UK law (disputes resolved through UK courts, not "binding arbitration" which is US-style language)
-3. **Company identity (Section 10 / Contact)** — Add the company's full legal name and registration number to the contact block:
-   - **Y & A Design Ltd**
-   - **Company Number: 08931578**
+### 1. Company description block (under the logo)
+Add a small registration line beneath the existing description paragraph:
+
+```
+Y & A Design Ltd — Registered in England & Wales
+Company No. 08931578
+```
+
+This sits naturally under the tagline, subtle but visible.
+
+### 2. Bottom bar (copyright strip)
+Extend the copyright line to include the legal entity name:
+
+**Before:**
+```
+© 2026 YektaD. All rights reserved.
+```
+
+**After:**
+```
+© 2026 YektaD. All rights reserved. | Y & A Design Ltd — Co. No. 08931578 — Registered in England & Wales
+```
+
+This is where most UK companies place their legal registration notice — it's where visitors expect to find it, and it keeps the main footer clean.
 
 ## File
 
-| File | Changes |
-|------|---------|
-| `src/pages/legal/TermsOfService.tsx` | Update dates, Section 9 governing law, Section 10 contact details |
+| File | Change |
+|------|--------|
+| `src/components/Footer.tsx` | Add company registration details under logo description and in the bottom copyright bar |
 
-## Exact Changes
+## Styling
 
-**Line 49 — Dates:**
-```
-Effective Date: 18 February 2026 | Last Updated: 18 February 2026
-```
-
-**Lines 132–136 — Section 9 Governing Law:**
-```
-These terms shall be governed by and construed in accordance with the laws of England and Wales. Any disputes arising under or in connection with these terms shall be subject to the exclusive jurisdiction of the courts of England and Wales.
-```
-
-**Lines 143–147 — Section 10 Contact block:**
-```
-Y & A Design Ltd (Company Number: 08931578)
-Email: contact@yektad.com
-Trading as: YektaD
-```
-
-No structural or layout changes — content updates only.
+- Registration text will use `text-white/50` (slightly more muted than body text) so it doesn't compete visually but is clearly legible
+- Small `text-xs` size — professional and unobtrusive
+- No layout changes needed — fits within existing structure
