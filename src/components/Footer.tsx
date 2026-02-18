@@ -23,10 +23,14 @@ const Footer = () => {
                 alt="YektaD Business Architecture Logo" 
                 className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto mb-4 sm:mb-6 brightness-0 invert"
               />
-              <p className="text-white/80 mb-6 sm:mb-8 leading-relaxed max-w-md text-sm sm:text-base">
+              <p className="text-white/80 mb-4 sm:mb-6 leading-relaxed max-w-md text-sm sm:text-base">
                 We help established businesses move beyond word of mouth—building the visibility 
                 systems that attract enterprise clients. 12+ businesses. 6-figure contracts.
               </p>
+              <div className="text-white/50 text-xs space-y-0.5">
+                <p>Y &amp; A Design Ltd — Registered in England &amp; Wales</p>
+                <p>Company No. 08931578</p>
+              </div>
             </div>
 
             {/* Services */}
@@ -72,7 +76,7 @@ const Footer = () => {
           <div className="border-t border-white/10 pt-6 sm:pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
               <div className="text-white/60 text-xs sm:text-sm text-center md:text-left">
-                © {currentYear} YektaD. All rights reserved.
+                © {currentYear} YektaD. All rights reserved. | Y &amp; A Design Ltd — Co. No. 08931578 — Registered in England &amp; Wales
               </div>
               <div className="text-xs sm:text-sm text-white/60">
                 Built with ❤️ for business growth
