@@ -46,7 +46,7 @@ const TermsOfService = () => {
         <div className="container-professional max-w-4xl">
           <div className="prose prose-sm sm:prose-base md:prose-lg max-w-none">
             <div className="mb-8 text-sm text-muted-foreground">
-              <strong>Effective Date:</strong> 18 February 2026 | <strong>Last Updated:</strong> 18 February 2026
+              <strong>Effective Date:</strong> 5 May 2025 | <strong>Last Updated:</strong> 18 February 2026
             </div>
             
             <div className="space-y-8">
