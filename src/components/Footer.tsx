@@ -76,7 +76,7 @@ const Footer = () => {
           <div className="border-t border-white/10 pt-6 sm:pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
               <div className="text-white/60 text-xs sm:text-sm text-center md:text-left">
-                © {currentYear} YektaD. All rights reserved. | Y &amp; A Design Ltd — Co. No. 08931578 — Registered in England &amp; Wales
+                © {currentYear} YektaD. All rights reserved.
               </div>
               <div className="text-xs sm:text-sm text-white/60">
                 Built with ❤️ for business growth
