@@ -46,7 +46,7 @@ const TermsOfService = () => {
         <div className="container-professional max-w-4xl">
           <div className="prose prose-sm sm:prose-base md:prose-lg max-w-none">
             <div className="mb-8 text-sm text-muted-foreground">
-              <strong>Effective Date:</strong> January 1, 2025 | <strong>Last Updated:</strong> January 20, 2025
+              <strong>Effective Date:</strong> 18 February 2026 | <strong>Last Updated:</strong> 18 February 2026
             </div>
             
             <div className="space-y-8">
@@ -131,7 +131,7 @@ const TermsOfService = () => {
               <div>
                 <h2 className="text-2xl font-semibold mb-4">9. Governing Law</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  These terms shall be governed by and construed in accordance with the laws of [State/Country], and any disputes shall be resolved through binding arbitration.
+                  These terms shall be governed by and construed in accordance with the laws of England and Wales. Any disputes arising under or in connection with these terms shall be subject to the exclusive jurisdiction of the courts of England and Wales.
                 </p>
               </div>
 
@@ -140,10 +140,11 @@ const TermsOfService = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   For questions regarding these terms, please contact us at:
                 </p>
-                <div className="bg-muted p-4 rounded-lg mt-4">
-                  <p className="text-muted-foreground">
-                    <strong>Email:</strong> contact@yektad.com
-                  </p>
+                <div className="bg-muted p-4 rounded-lg mt-4 space-y-1">
+                  <p className="text-muted-foreground"><strong>Company:</strong> Y &amp; A Design Ltd</p>
+                  <p className="text-muted-foreground"><strong>Company Number:</strong> 08931578</p>
+                  <p className="text-muted-foreground"><strong>Trading as:</strong> YektaD</p>
+                  <p className="text-muted-foreground"><strong>Email:</strong> contact@yektad.com</p>
                 </div>
               </div>
             </div>
