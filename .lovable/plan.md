@@ -1,47 +1,52 @@
 
-# Add Company Registration Details to the Footer
+# Add Scarcity / FOMO Badge with Strikethrough
 
-## Why This Matters
+## The Concept
 
-Under the Companies Act 2006, UK limited companies are legally required to display their registered company name, company number, and country of registration on their website. Beyond compliance, this is a powerful trust signal for enterprise clients — they can verify Y & A Design Ltd on Companies House instantly.
+A small, eye-catching badge showing availability dropping from 4 to 1 spot, using a strikethrough on the old number. This creates urgency and fear of missing out.
 
-## What's Changing
-
-Two places in `src/components/Footer.tsx`:
-
-### 1. Company description block (under the logo)
-Add a small registration line beneath the existing description paragraph:
-
-```
-Y & A Design Ltd — Registered in England & Wales
-Company No. 08931578
+Visual example:
+```text
+[flame icon] ~~4~~ → 1 Spot Remaining for Q1 2026
 ```
 
-This sits naturally under the tagline, subtle but visible.
+## Where It Goes
 
-### 2. Bottom bar (copyright strip)
-Extend the copyright line to include the legal entity name:
+Two placements for maximum impact:
 
-**Before:**
-```
-© 2026 YektaD. All rights reserved.
-```
+### 1. Hero Section (first thing visitors see)
+Place a compact scarcity pill just below the CTAs. Styled with a semi-transparent dark background to sit naturally over the hero image — subtle but impossible to miss.
 
-**After:**
-```
-© 2026 YektaD. All rights reserved. | Y & A Design Ltd — Co. No. 08931578 — Registered in England & Wales
-```
+### 2. Contact Section (where they convert)
+Update the existing scarcity badge (currently says "accepting 2 new strategic partners") to match the new "4 crossed out, 1 remaining" format. This reinforces the urgency right at the decision point.
 
-This is where most UK companies place their legal registration notice — it's where visitors expect to find it, and it keeps the main footer clean.
-
-## File
+## File Changes
 
 | File | Change |
 |------|--------|
-| `src/components/Footer.tsx` | Add company registration details under logo description and in the bottom copyright bar |
+| `src/components/Hero.tsx` | Add scarcity badge below the CTA buttons |
+| `src/components/Contact.tsx` | Update existing scarcity badge with strikethrough format |
 
-## Styling
+## Design Details
 
-- Registration text will use `text-white/50` (slightly more muted than body text) so it doesn't compete visually but is clearly legible
-- Small `text-xs` size — professional and unobtrusive
-- No layout changes needed — fits within existing structure
+**Hero badge:**
+- Positioned between the CTAs and the scroll indicator
+- Semi-transparent background (`bg-white/10 backdrop-blur-sm`) with a subtle border
+- Small flame or alert circle icon for visual urgency
+- Text: `~~4~~ 1 Spot Remaining for Q1 2026`
+- The "4" gets a `line-through` style and muted opacity
+- The "1" is highlighted with slightly bolder weight or accent color
+
+**Contact badge (updating existing):**
+- Same strikethrough concept: `~~4~~ 1 partnership spot remaining for Q1 2026`
+- Keep the existing rounded-full pill style
+- Update from "Currently accepting 2 new strategic partners" to the new format
+
+## Technical Approach
+
+- Use a `<span className="line-through opacity-50">4</span>` for the crossed-out number
+- Use a `<span className="font-semibold text-accent">1</span>` (or white in the hero) for the remaining number
+- Add an arrow or right-arrow symbol between them for the "decreasing" visual
+- Import `AlertCircle` or `Flame` icon from lucide-react for the badge icon
+
+No new components needed — just updates to two existing files.
