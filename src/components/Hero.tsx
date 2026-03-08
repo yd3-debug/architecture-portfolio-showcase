@@ -65,7 +65,7 @@ const Hero = () => {
         <div className="mt-8 sm:mt-10 inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full">
           <Flame className="w-3.5 h-3.5 text-accent-light" />
           <span className="text-xs sm:text-sm text-white/90">
-            <span className="line-through opacity-50">4</span>
+            <span className="line-through opacity-50">3</span>
             <span className="mx-1">→</span>
             <span className="font-semibold">1</span> Spot Remaining for Q1 2026
           </span>
