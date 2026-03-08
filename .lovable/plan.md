@@ -1,52 +1,33 @@
 
-# Add Scarcity / FOMO Badge with Strikethrough
 
-## The Concept
+# TrustStrip Quote Fix + Quick Wins
 
-A small, eye-catching badge showing availability dropping from 4 to 1 spot, using a strikethrough on the old number. This creates urgency and fear of missing out.
+## 1. Fix the TrustStrip Testimonial Quote
 
-Visual example:
-```text
-[flame icon] ~~4~~ → 1 Spot Remaining for Q1 2026
-```
+The current quote — *"We landed our first £50k enterprise contract 3 weeks after launching our new positioning"* attributed to *"B2B Consultancy Founder"* — has two problems: the timeline is unrealistically fast, and the attribution is generic (no real person).
 
-## Where It Goes
+**Option A — Replace with a real client quote.** Use one of your actual testimonials (Sahar or Petru) with a shorter, punchier version. For example:
 
-Two placements for maximum impact:
+> "The 65% increase in appointments is a direct testament to their strategic foresight."
+> — Sahar, Studio Solena
 
-### 1. Hero Section (first thing visitors see)
-Place a compact scarcity pill just below the CTAs. Styled with a semi-transparent dark background to sit naturally over the hero image — subtle but impossible to miss.
+**Option B — Remove the quote entirely.** The stats above it (50+, 6-8 Weeks, 3-5x) already do the trust-building job. A fabricated quote undermines that. The TrustStrip stays clean and credible with just the three metrics.
 
-### 2. Contact Section (where they convert)
-Update the existing scarcity badge (currently says "accepting 2 new strategic partners") to match the new "4 crossed out, 1 remaining" format. This reinforces the urgency right at the decision point.
+I'd recommend **Option B** — removing the quote. The stats speak for themselves, and you have a dedicated Testimonials section further down with real quotes. Less is more here.
 
-## File Changes
+## 2. Other things I'd tighten up
+
+These are observations for future consideration — not part of this change:
+
+- **"50+ Businesses Transformed"** in the TrustStrip — is this accurate? The llms.txt says "12+ businesses." Inflated numbers erode trust if someone cross-references
+- **The About/AboutHero sections** still reference old positioning (automations, SaaS, "50+ Automations Deployed") — they're not used on the Index page currently, but worth cleaning up if they appear elsewhere
+- **"Estimated value of a single missed enterprise contract: £10k-50k"** in the Contact section — the range is very wide. Narrowing it (e.g., "£15k-£50k") would feel more precise and credible
+
+## Plan for Now
 
 | File | Change |
 |------|--------|
-| `src/components/Hero.tsx` | Add scarcity badge below the CTA buttons |
-| `src/components/Contact.tsx` | Update existing scarcity badge with strikethrough format |
+| `src/components/TrustStrip.tsx` | Remove the testimonial quote block (lines 48-54), keeping only the three stat metrics |
 
-## Design Details
+Simple, clean change — about 7 lines removed.
 
-**Hero badge:**
-- Positioned between the CTAs and the scroll indicator
-- Semi-transparent background (`bg-white/10 backdrop-blur-sm`) with a subtle border
-- Small flame or alert circle icon for visual urgency
-- Text: `~~4~~ 1 Spot Remaining for Q1 2026`
-- The "4" gets a `line-through` style and muted opacity
-- The "1" is highlighted with slightly bolder weight or accent color
-
-**Contact badge (updating existing):**
-- Same strikethrough concept: `~~4~~ 1 partnership spot remaining for Q1 2026`
-- Keep the existing rounded-full pill style
-- Update from "Currently accepting 2 new strategic partners" to the new format
-
-## Technical Approach
-
-- Use a `<span className="line-through opacity-50">4</span>` for the crossed-out number
-- Use a `<span className="font-semibold text-accent">1</span>` (or white in the hero) for the remaining number
-- Add an arrow or right-arrow symbol between them for the "decreasing" visual
-- Import `AlertCircle` or `Flame` icon from lucide-react for the badge icon
-
-No new components needed — just updates to two existing files.
