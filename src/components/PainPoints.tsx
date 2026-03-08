@@ -8,16 +8,16 @@ const PainPoints = () => {
 
   const painPoints = [
     {
-      pain: "The Referral Dependency Trap",
-      solution: "While your exceptional service fosters organic growth, this model inherently lacks predictability and caps your capacity for exponential expansion. We build systems for enterprise-scale lead generation.",
+      pain: "Stuck on Referrals",
+      solution: "Your pipeline depends on who happens to refer you. That's not a growth strategy — it's luck. We build predictable systems that bring enterprise clients to you.",
     },
     {
-      pain: "Digital Footprint Disparity",
-      solution: "Your deep expertise and proven track record are not adequately reflected in your online presence, ceding ground to competitors who may lack your substance but possess superior digital visibility.",
+      pain: "Invisible Online",
+      solution: "You're great at what you do, but your online presence doesn't show it. Meanwhile, competitors with half your expertise are winning because they show up first.",
     },
     {
-      pain: "Scaling Momentum Stalled",
-      solution: "You command a highly effective, client-validated service offering, yet the mechanisms to penetrate larger markets and attract the sophisticated enterprise clientele you aspire to serve remain elusive.",
+      pain: "Ready to Scale, No Clear Path",
+      solution: "You know you could handle bigger clients and larger contracts. You just don't have a clear way to reach them. We map the route and help you get there.",
     }
   ];
 
@@ -50,10 +50,10 @@ const PainPoints = () => {
           {/* Section Header */}
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-charcoal">
-              The Unseen Barriers to Enterprise Scale
+              What's Really Holding You Back
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-              Even highly proficient service organizations encounter a ceiling imposed by over-reliance on organic referrals. Does this resonate with your strategic growth objectives?
+              Great service businesses hit the same walls. Here are the three most common ones — and what to do about them.
             </p>
           </div>
 
@@ -99,7 +99,7 @@ const PainPoints = () => {
                     </div>
                     <div>
                       <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">Our Solution</p>
-                      <p className="font-serif text-xl xl:text-2xl text-charcoal leading-relaxed">
+                      <p className="font-serif text-xl xl:text-2xl text-charcoal leading-relaxed font-light">
                         {painPoints[activeIndex]?.solution}
                       </p>
                     </div>

@@ -4,26 +4,26 @@ const ServicesHero = () => {
   const services = [
     {
       icon: Workflow,
-      pain: "Over-reliance on referrals limiting your scalability?",
+      pain: "Growing through referrals alone?",
       title: "Business Architecture",
-      outcome: "Engineering scalable growth ecosystems for enterprise acquisition",
-      description: "We transcend reactive growth, establishing resilient operational systems, a commanding digital presence, and incisive market positioning—ensuring your organization is strategically compelling to high-value enterprise clients.",
-      result: "Client secured inaugural enterprise contract within 6 weeks"
+      outcome: "A clear system for attracting enterprise clients — consistently",
+      description: "We help you move beyond word-of-mouth by building the systems, positioning, and digital presence that make enterprise buyers come to you.",
+      result: "Client secured first enterprise contract within 6 weeks"
     },
     {
       icon: Code2,
-      pain: "Your digital presence doesn't reflect your expertise?",
+      pain: "Your website doesn't reflect your expertise?",
       title: "Web Design & Development",
-      outcome: "Your high-performance digital gateway to enterprise clients",
-      description: "Enterprise-grade digital infrastructure and client-facing platforms optimized for intuitive user experience, robust trust-building, and superior conversion efficiency—guiding high-value prospects through their decision journey.",
+      outcome: "A website that earns trust and converts enterprise visitors",
+      description: "We build websites that look as good as your work is. Designed to guide high-value prospects from curiosity to conversation — fast.",
       result: "65% surge in bookings for a London beauty studio"
     },
     {
       icon: TrendingUp,
-      pain: "Ready to grow but unsure how to reach enterprise clients?",
+      pain: "Ready to grow but unsure where to start?",
       title: "Growth Strategy",
-      outcome: "Precision targeting for high-value client acquisition",
-      description: "We precisely delineate who constitutes your ideal enterprise client, where to engage them, what compelling value proposition resonates most profoundly, and how to establish market dominance within your specialized niche.",
+      outcome: "Know exactly who to target and how to reach them",
+      description: "We help you define your ideal enterprise client, figure out where they are, and craft the message that gets their attention.",
       result: "3x increase in qualified leads for a B2B consultancy"
     }
   ];
@@ -34,14 +34,14 @@ const ServicesHero = () => {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16 md:mb-20">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-charcoal">
-            Strategic Imperatives
+            What We Actually Do
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed">
-            Engineered for enterprise acquisition and retention—meticulously crafted to dismantle growth inhibitors and forge robust, predictable pathways to enterprise success
+            Three focused services designed to get you in front of enterprise clients — and help you win them
           </p>
         </div>
 
-        {/* Services Grid - 2x2 Layout */}
+        {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <div 

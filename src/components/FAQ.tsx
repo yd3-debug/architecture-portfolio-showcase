@@ -8,36 +8,36 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: "What distinguishes YektaD from traditional marketing or consulting agencies?",
-      answer: "YektaD operates as a strategic growth architect, not merely a service vendor. Unlike traditional agencies that often focus on isolated marketing tactics or general consulting, we specialize in end-to-end enterprise acquisition for established service businesses. Our methodology integrates business architecture, high-performance digital infrastructure, and precision growth strategies to deliver measurable 6-figure contracts, rather than just leads or advice. We are partners in your strategic evolution, focused on systemic growth and market leadership."
+      question: "How is YektaD different from a typical marketing agency?",
+      answer: "We're not a marketing agency — we're a growth partner. Instead of running ads or posting on social media, we focus on the full picture: your positioning, your digital presence, and your strategy for winning enterprise clients. Everything we do is designed to land you bigger contracts, not just more traffic."
     },
     {
-      question: "What is the typical investment range for YektaD's services?",
-      answer: "Our engagements are bespoke and scope-dependent, reflecting the unique strategic objectives and complexities of each enterprise client. While we do not offer standardized packages, our partnerships are structured to deliver significant ROI, typically targeting 6-figure contract acquisition. We prioritize value creation over cost, and a detailed investment proposal is provided after our Executive Discovery Session, tailored to your specific growth blueprint."
+      question: "How much does it cost?",
+      answer: "Every engagement is different because every business is different. We don't do cookie-cutter packages. After our Discovery Session, we'll put together a proposal that's tailored to your goals and budget. Our focus is always on ROI — the investment should pay for itself many times over."
     },
     {
-      question: "What results can I realistically expect, and how quickly?",
-      answer: "Our clients consistently experience tangible results, with the first qualified enterprise lead typically engaged within 6-8 weeks of initiating our strategic partnership. Beyond lead generation, our focus is on securing high-value, 6-figure contracts and establishing sustainable growth ecosystems. Specific outcomes are defined and measured against the Customized Growth Blueprint developed during our initial engagement, ensuring alignment with your strategic KPIs."
+      question: "What results can I expect, and how quickly?",
+      answer: "Most clients see their first qualified enterprise lead within 6–8 weeks. Beyond that, we focus on building systems that keep delivering — not just one-off wins. We'll set clear goals together during our initial session so you know exactly what to expect."
     },
     {
-      question: "How much time commitment is required from my executive team?",
-      answer: "We understand the demands on executive time. Our process is designed for maximum efficiency and minimal disruption. The Confidential Strategic Brief takes approximately 5 minutes, followed by a 30-minute Executive Discovery Session. Post-engagement, we provide clear communication channels and concise updates, ensuring your team remains informed and strategically engaged without being burdened by day-to-day oversight."
+      question: "How much of my time will this take?",
+      answer: "We know you're busy. The initial brief takes about 5 minutes, followed by a 30-minute Discovery Session. After that, we handle the heavy lifting and keep you updated with clear, concise communication — no unnecessary meetings."
     },
     {
-      question: "How do I know if YektaD is the right strategic partner for my business?",
-      answer: "YektaD is ideally suited for established service businesses that have achieved success through referrals but are now seeking to strategically scale into the enterprise market. You have a proven service, a desire for 6-figure contracts, and a readiness to invest in a transformative growth strategy. Our Executive Discovery Session is specifically designed to assess mutual fit, diagnose your unique challenges, and determine if our specialized expertise aligns with your ambitious growth objectives."
+      question: "How do I know if YektaD is right for my business?",
+      answer: "We work best with established service businesses that have a proven offering but are stuck growing through referrals alone. If you want to break into the enterprise market and are ready to invest in doing it properly, we're likely a good fit. The Discovery Session is designed to figure that out together."
     },
     {
-      question: "What happens after I schedule an Executive Discovery Session?",
-      answer: "Upon scheduling, you will receive a brief Confidential Strategic Brief to complete, which helps us understand your business context. This is followed by a 30-minute Executive Discovery Session where we engage in an in-depth dialogue to diagnose your challenges and explore potential solutions. Within 48 hours of this session, you will receive a Customized Growth Blueprint—a no-obligation, strategic proposal outlining a bespoke plan to achieve your enterprise growth ambitions."
+      question: "What happens after I book a Discovery Session?",
+      answer: "You'll get a short brief to fill out (5 minutes) so we can understand your business before we talk. Then we have a 30-minute conversation to dig into your challenges and opportunities. Within 48 hours, you'll receive a tailored growth plan — no obligation, no pressure."
     },
     {
-      question: "What if I'm not satisfied with the partnership or results?",
-      answer: "Our commitment is to delivering measurable results and fostering long-term strategic partnerships. We establish clear KPIs and milestones within your Customized Growth Blueprint. Should any aspect of our engagement not meet the agreed-upon expectations, we prioritize open communication and proactive problem-solving. Our success is intrinsically linked to yours, and we are dedicated to ensuring your complete satisfaction."
+      question: "What if it doesn't work out?",
+      answer: "We set clear goals and milestones from day one. If something isn't working, we'll be the first to flag it and adjust. Our success depends on yours — we're not interested in long engagements that don't deliver results."
     },
     {
-      question: "Why should we partner with YektaD instead of expanding our internal team?",
-      answer: "Expanding internal teams for specialized enterprise acquisition can be a lengthy, costly, and high-risk endeavor. YektaD provides immediate access to a highly specialized team with a proven framework and deep expertise in B2B enterprise growth, without the overheads of recruitment, training, and infrastructure development. We offer an agile, results-driven alternative, allowing your core team to focus on service delivery while we architect and execute your market expansion."
+      question: "Why not just hire someone in-house?",
+      answer: "Hiring for enterprise growth is expensive, slow, and risky. You need strategy, design, development, and market expertise — that's a full team. With us, you get all of that from day one, without the overhead of recruitment, training, and management."
     }
   ];
 
@@ -47,10 +47,10 @@ const FAQ = () => {
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 text-charcoal">
-            Strategic Clarity for Enterprise Leaders
+            Frequently Asked Questions
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-            We understand that engaging a strategic partner for enterprise growth is a significant decision. Here's the clarity you need.
+            Straight answers to the questions we hear most
           </p>
         </div>
 
@@ -75,7 +75,7 @@ const FAQ = () => {
         {/* CTA */}
         <div className="text-center mt-12 sm:mt-16">
           <p className="text-sm sm:text-base text-muted-foreground font-light mb-4 sm:mb-6">
-            Still have questions? Let's engage in a strategic dialogue.
+            Still have questions? Let's talk.
           </p>
           <a href="#contact">
             <button className="px-6 py-2.5 sm:px-8 sm:py-3 text-xs sm:text-sm font-light text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg">

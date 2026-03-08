@@ -4,13 +4,13 @@ import heroImage from '@/assets/testimonials-hero.jpg';
 const Testimonials = () => {
   const testimonials = [
     {
-      quote: "YektaD didn't merely revamp our online presence; they engineered a comprehensive, seamless client acquisition ecosystem. The 65% increase in appointments within three months is a direct testament to their strategic foresight and flawless execution. Our clients now experience a truly frictionless and professional engagement journey.",
+      quote: "YektaD didn't just redesign our website — they built a complete system for attracting and converting clients. We saw a 65% increase in bookings within three months. Our clients now have a seamless, professional experience from the first click.",
       name: "Sahar",
       title: "Owner, Studio Solena — Ealing, London",
       metric: "+65% bookings"
     },
     {
-      quote: "From foundational brand identity to advanced website functionality, YektaD delivered an integrated solution that instantaneously amplified our market perception. We are now unequivocally recognized as the established, credible maintenance partner we always aspired to be, attracting a consistently higher caliber of inquiries.",
+      quote: "From brand identity to a fully functional website, YektaD delivered everything we needed to be taken seriously. We're now seen as the established, credible maintenance partner we always were — and the quality of inquiries has jumped significantly.",
       name: "Petru",
       title: "Founder, Mainteniq — London, UK",
       metric: "Brand & Web"
@@ -19,7 +19,7 @@ const Testimonials = () => {
 
   return (
     <section className="bg-soft-gray overflow-hidden">
-      {/* FULL WIDTH HERO IMAGE - TRUE EDGE TO EDGE */}
+      {/* FULL WIDTH HERO IMAGE */}
       <div className="w-full h-[350px] md:h-[450px] lg:h-[550px]">
         <img 
           src={heroImage} 
@@ -33,10 +33,10 @@ const Testimonials = () => {
         <div className="max-w-[1600px] mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 md:mb-20 px-4 sm:px-6">
             <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 sm:mb-4 md:mb-6 text-charcoal">
-              Executive Endorsements
+              What Our Clients Say
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light">
-              Validated impact from our enterprise partners
+              Real results from real partnerships
             </p>
           </div>
 
