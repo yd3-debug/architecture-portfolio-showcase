@@ -22,7 +22,7 @@ const Contact = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-charcoal/5 rounded-full">
             <Users className="w-4 h-4 text-charcoal" />
             <span className="text-xs sm:text-sm font-medium text-charcoal">
-              <span className="line-through opacity-50">4</span>
+              <span className="line-through opacity-50">3</span>
               <span className="mx-1">→</span>
               <span className="font-semibold text-accent">1</span> partnership spot remaining for Q1 2026
             </span>
