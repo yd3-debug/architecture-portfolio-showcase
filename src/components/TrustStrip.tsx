@@ -45,13 +45,6 @@ const TrustStrip = () => {
           </div>
         </div>
 
-        {/* Featured Testimonial Quote */}
-        <div className="mt-6 sm:mt-8 text-center max-w-2xl mx-auto">
-          <p className="text-sm sm:text-base text-muted-foreground italic">
-            "We landed our first £50k enterprise contract 3 weeks after launching our new positioning."
-          </p>
-          <p className="mt-2 text-xs text-muted-foreground/80">— B2B Consultancy Founder</p>
-        </div>
       </div>
     </section>
   );
