@@ -1,10 +1,9 @@
-import { useState } from 'react';
-import { Gem, Building2, Users, CheckSquare, Square, ArrowRight } from 'lucide-react';
+import { Gem, Building2, Users, ArrowRight } from 'lucide-react';
 import heroImage from '@/assets/who-we-help-hero.jpg';
 
-const qualificationChecklist = [
+const qualificationList = [
   "You've grown primarily through referrals and word-of-mouth",
-  "You have a proven product/service that clients love",
+  "You have a proven product or service that clients love",
   "You're invisible online but competitors rank above you",
   "You're ready to invest in sustainable growth (not quick fixes)",
   "You want enterprise clients but don't know how to reach them"
@@ -29,21 +28,9 @@ const clientProfiles = [
 ];
 
 const WhoWeHelp = () => {
-  const [checkedItems, setCheckedItems] = useState<number[]>([]);
-
-  const toggleItem = (index: number) => {
-    setCheckedItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
-    );
-  };
-
-  const checkedCount = checkedItems.length;
-
   return (
     <section className="bg-secondary/30">
-      {/* FULL WIDTH HERO IMAGE - TRUE EDGE TO EDGE */}
+      {/* FULL WIDTH HERO IMAGE */}
       <div className="w-full h-[350px] md:h-[450px] lg:h-[550px]">
         <img 
           src={heroImage} 
@@ -65,45 +52,30 @@ const WhoWeHelp = () => {
           But you're invisible online—and the enterprise clients who need you can't find you.
         </p>
 
-        {/* Self-Qualification Checklist */}
+        {/* Static List */}
         <div className="bg-background rounded-xl p-6 sm:p-8 border border-border mb-10 max-w-2xl">
           <h3 className="font-serif text-lg sm:text-xl mb-4 text-foreground">Does this sound like you?</h3>
           <div className="space-y-3">
-            {qualificationChecklist.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => toggleItem(index)}
-                className="flex items-start gap-3 w-full text-left group"
-              >
-                {checkedItems.includes(index) ? (
-                  <CheckSquare className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
-                ) : (
-                  <Square className="w-5 h-5 text-muted-foreground/50 mt-0.5 flex-shrink-0 group-hover:text-muted-foreground transition-colors" />
-                )}
-                <span className={`text-sm sm:text-base leading-relaxed ${
-                  checkedItems.includes(index) ? 'text-foreground' : 'text-muted-foreground'
-                }`}>
+            {qualificationList.map((item, index) => (
+              <div key={index} className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
+                <span className="text-sm sm:text-base leading-relaxed text-muted-foreground">
                   {item}
                 </span>
-              </button>
+              </div>
             ))}
           </div>
           
-          {/* Dynamic CTA based on checked count */}
-          {checkedCount >= 3 && (
-            <div className="mt-6 pt-6 border-t border-border">
-              <div className="flex items-center gap-2 mb-3">
-                <span className="text-accent font-medium text-sm">✓ {checkedCount} out of 5</span>
-              </div>
-              <a 
-                href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg"
-              >
-                We should talk
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-          )}
+          {/* Always-visible CTA */}
+          <div className="mt-6 pt-6 border-t border-border">
+            <a 
+              href="#contact"
+              className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg"
+            >
+              We should talk
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
