@@ -11,7 +11,7 @@ const TrustStrip = () => {
               <Users className="w-5 h-5 text-primary" />
             </div>
             <div>
-              <p className="text-xl sm:text-2xl font-serif font-medium text-foreground">12+</p>
+              <p className="text-xl sm:text-2xl font-serif font-medium text-foreground">50+</p>
               <p className="text-xs sm:text-sm text-muted-foreground">Businesses Transformed</p>
             </div>
           </div>
