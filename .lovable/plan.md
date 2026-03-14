@@ -1,31 +1,52 @@
 
+# Add Scarcity / FOMO Badge with Strikethrough
 
-# Integrate Shader Animation as Hero Background
+## The Concept
 
-## What Changes
+A small, eye-catching badge showing availability dropping from 4 to 1 spot, using a strikethrough on the old number. This creates urgency and fear of missing out.
 
-Replace the static hero background images (desktop and mobile) with the Three.js shader animation. The animated shader will serve as the full background of the hero section, with the existing dark overlay on top to keep text readable.
+Visual example:
+```text
+[flame icon] ~~4~~ → 1 Spot Remaining for Q1 2026
+```
 
-## Technical Details
+## Where It Goes
 
-### 1. Install dependency
-- Add `three` npm package (the project already has React 18, so no version conflicts)
+Two placements for maximum impact:
 
-### 2. Create the shader component
-- Add `src/components/ui/shader-animation.tsx` — the provided Three.js shader component as-is (remove `"use client"` directive since this is Vite, not Next.js)
+### 1. Hero Section (first thing visitors see)
+Place a compact scarcity pill just below the CTAs. Styled with a semi-transparent dark background to sit naturally over the hero image — subtle but impossible to miss.
 
-### 3. Update Hero.tsx
-- Import `ShaderAnimation`
-- Replace both desktop and mobile background image `<div>` blocks with a single `ShaderAnimation` component positioned absolutely behind the content
-- Keep the `bg-charcoal/60` overlay on top of the shader for text contrast
-- Remove the `heroDesktop` and `heroMobile` image imports (no longer needed)
-- The mobile fixed-background CSS (`hero-mobile-fixed`) will apply to the shader container instead
+### 2. Contact Section (where they convert)
+Update the existing scarcity badge (currently says "accepting 2 new strategic partners") to match the new "4 crossed out, 1 remaining" format. This reinforces the urgency right at the decision point.
+
+## File Changes
 
 | File | Change |
 |------|--------|
-| `src/components/ui/shader-animation.tsx` | New file — shader component |
-| `src/components/Hero.tsx` | Replace image backgrounds with `ShaderAnimation` |
-| `package.json` | Add `three` dependency |
+| `src/components/Hero.tsx` | Add scarcity badge below the CTA buttons |
+| `src/components/Contact.tsx` | Update existing scarcity badge with strikethrough format |
 
-The shader renders colorful animated rings/circles on a dark background — visually striking and unique compared to a static photo.
+## Design Details
 
+**Hero badge:**
+- Positioned between the CTAs and the scroll indicator
+- Semi-transparent background (`bg-white/10 backdrop-blur-sm`) with a subtle border
+- Small flame or alert circle icon for visual urgency
+- Text: `~~4~~ 1 Spot Remaining for Q1 2026`
+- The "4" gets a `line-through` style and muted opacity
+- The "1" is highlighted with slightly bolder weight or accent color
+
+**Contact badge (updating existing):**
+- Same strikethrough concept: `~~4~~ 1 partnership spot remaining for Q1 2026`
+- Keep the existing rounded-full pill style
+- Update from "Currently accepting 2 new strategic partners" to the new format
+
+## Technical Approach
+
+- Use a `<span className="line-through opacity-50">4</span>` for the crossed-out number
+- Use a `<span className="font-semibold text-accent">1</span>` (or white in the hero) for the remaining number
+- Add an arrow or right-arrow symbol between them for the "decreasing" visual
+- Import `AlertCircle` or `Flame` icon from lucide-react for the badge icon
+
+No new components needed — just updates to two existing files.
