@@ -1,29 +1,12 @@
 import { ArrowRight, Calendar, Flame } from 'lucide-react';
-import heroDesktop from '@/assets/hero-desktop-new.jpg';
-import heroMobile from '@/assets/hero-mobile.jpg';
+import { ShaderAnimation } from '@/components/ui/shader-animation';
 
 const Hero = () => {
   return (
     <section className="relative h-[85vh] lg:min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Desktop Background Image */}
-      <div className="absolute inset-0 z-0 hidden lg:block">
-        <img 
-          src={heroDesktop} 
-          alt="Strategic business planning workspace with documents and professional tools"
-          className="w-full h-full object-cover object-center"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-charcoal/60"></div>
-      </div>
-
-      {/* Mobile Background Image - Fixed for scroll-over effect */}
-      <div className="absolute inset-0 z-0 block lg:hidden hero-mobile-fixed">
-        <img 
-          src={heroMobile} 
-          alt="Strategic business planning workspace with documents and professional tools" 
-          className="w-full h-full object-cover object-center"
-          loading="eager"
-        />
+      {/* Shader Background */}
+      <div className="absolute inset-0 z-0 hero-mobile-fixed lg:!position-absolute">
+        <ShaderAnimation />
         <div className="absolute inset-0 bg-charcoal/60"></div>
       </div>
 
