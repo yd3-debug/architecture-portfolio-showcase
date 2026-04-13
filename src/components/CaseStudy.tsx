@@ -1,4 +1,4 @@
-import { Building2, Truck, Shield, ArrowRight, Globe } from 'lucide-react';
+import { Building2, Truck, Shield, ArrowRight, Globe, Database } from 'lucide-react';
 
 const deliverables = [
   {
@@ -25,6 +25,20 @@ const deliverables = [
         manufacturing in <span className="text-charcoal font-medium">Italy</span> and freight lanes
         to <span className="text-charcoal font-medium">US (New York)</span> and{' '}
         <span className="text-charcoal font-medium">France (Paris)</span>.
+      </>
+    ),
+  },
+  {
+    icon: Database,
+    title: 'NFC & LOA Infrastructure',
+    description: (
+      <>
+        Designed and implemented a{' '}
+        <span className="text-charcoal font-medium">custom NFC authentication system</span> and{' '}
+        <span className="text-charcoal font-medium">Letter of Authorisation (LOA)</span> framework —
+        backed by a purpose-built{' '}
+        <span className="text-charcoal font-medium">backend database</span> — to verify product
+        provenance and protect the brand in premium retail channels.
       </>
     ),
   },
@@ -139,7 +153,7 @@ const CaseStudy = () => {
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-light mb-10 sm:mb-12">
             Key Deliverables
           </p>
-          <div className="grid sm:grid-cols-3 gap-8 sm:gap-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
             {deliverables.map((d, i) => (
               <div key={i}>
                 <div className="w-11 h-11 rounded-xl border border-charcoal/10 flex items-center justify-center mb-5 bg-soft-gray">
