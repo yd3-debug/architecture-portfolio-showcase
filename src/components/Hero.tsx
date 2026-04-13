@@ -1,92 +1,118 @@
-import { ArrowRight, Calendar } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen bg-[#0d0d0d] overflow-hidden flex items-center">
-      <div className="w-full max-w-7xl mx-auto grid lg:grid-cols-2 min-h-screen">
+    <section className="relative min-h-screen bg-[#070707] overflow-hidden">
 
-        {/* Left — copy, no 3D behind it */}
-        <div className="flex flex-col justify-center px-8 sm:px-12 lg:px-16 py-24 lg:py-0 relative z-10">
+      {/* ── 3D SCENE ─────────────────────────────────────────────
+          Fills right 62% on desktop, full-width behind on mobile.
+          Three gradient masks blend it seamlessly into the dark bg.
+      ─────────────────────────────────────────────────────────── */}
+      <div className="absolute inset-0 lg:left-[38%]">
+        <iframe
+          src="https://my.spline.design/webdiagram-ZOJH9vcCzv1MsqQbLpyazIZu/"
+          frameBorder="0"
+          width="100%"
+          height="100%"
+          title="Business architecture visualisation"
+          aria-hidden="true"
+          className="w-full h-full pointer-events-none lg:pointer-events-auto"
+          loading="lazy"
+        />
+        {/* Left blend — merges 3D into dark text panel */}
+        <div className="absolute inset-y-0 left-0 w-[55%] bg-gradient-to-r
+                        from-[#070707] via-[#070707]/75 to-transparent pointer-events-none" />
+        {/* Bottom vignette */}
+        <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t
+                        from-[#070707] to-transparent pointer-events-none" />
+        {/* Mobile top fade */}
+        <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b
+                        from-[#070707] to-transparent pointer-events-none lg:hidden" />
+        {/* Spline watermark cover */}
+        <div className="absolute bottom-0 right-0 w-52 h-12 bg-[#070707]" />
+      </div>
 
-          <p className="text-[10px] sm:text-xs uppercase tracking-[0.3em] text-white/35 mb-8 font-light">
+      {/* ── TEXT CONTENT ──────────────────────────────────────── */}
+      <div className="relative z-10 min-h-screen flex flex-col justify-between
+                      px-6 sm:px-10 lg:px-16 xl:px-20
+                      pt-28 pb-10 lg:pt-0 lg:pb-0
+                      w-full lg:w-[52%]">
+
+        {/* Top tag */}
+        <div className="hidden lg:flex items-center gap-3 pt-32">
+          <div className="w-1.5 h-1.5 rounded-full bg-accent" />
+          <span className="text-[10px] uppercase tracking-[0.3em] text-white/30 font-light">
             Business Architecture &nbsp;·&nbsp; Strategic Partnership
-          </p>
+          </span>
+        </div>
 
-          <h1 className="font-serif font-light text-white leading-[1.03] tracking-tight mb-8
-                          text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl">
-            I architect<br />
-            how businesses<br />
-            <span className="text-white/40">scale.</span>
+        {/* Headline block */}
+        <div className="py-12 lg:py-0 lg:mt-auto">
+          <h1
+            className="font-serif font-light text-white tracking-tight leading-[0.95]
+                       text-[clamp(3rem,8vw,7.5rem)] mb-6 sm:mb-8"
+          >
+            Architecture<br />
+            <span className="text-white/22">for enterprise</span><br />
+            growth.
           </h1>
 
-          <p className="text-sm sm:text-base text-white/45 font-light leading-relaxed max-w-sm mb-12">
-            Positioning, systems, and go-to-market infrastructure for service businesses ready to stop growing through referrals and start landing enterprise contracts.
+          {/* Thin rule */}
+          <div className="w-10 h-px bg-white/18 mb-6 sm:mb-8" />
+
+          <p className="text-sm sm:text-base text-white/38 font-light leading-relaxed
+                        max-w-xs sm:max-w-sm mb-8 sm:mb-10">
+            I design the positioning, systems, and go-to-market infrastructure that
+            moves service businesses from referrals to enterprise contracts.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-start gap-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
             <a
               href="#contact"
               className="inline-flex items-center gap-2.5 px-7 py-3.5 text-sm font-medium
-                         text-[#0d0d0d] bg-white hover:bg-white/85
-                         transition-all duration-300 rounded-lg"
+                         text-[#070707] bg-white hover:bg-white/85
+                         transition-all duration-300 rounded-lg shrink-0"
             >
-              <Calendar className="w-4 h-4" />
               Book a Strategy Session
             </a>
             <a
               href="#case-study"
-              className="inline-flex items-center gap-2 text-white/45 hover:text-white/80
-                         text-sm font-light transition-all py-3.5"
+              className="inline-flex items-center gap-2 text-white/38 hover:text-white/75
+                         text-sm font-light transition-all group"
             >
               See the work
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
+        </div>
 
-          {/* Minimal credential strip */}
-          <div className="mt-16 pt-8 border-t border-white/8 flex items-center gap-8">
-            <div>
-              <p className="font-serif text-2xl text-white font-light">12+</p>
-              <p className="text-[11px] text-white/30 font-light mt-0.5">Businesses transformed</p>
-            </div>
-            <div className="w-px h-10 bg-white/10" />
-            <div>
-              <p className="font-serif text-2xl text-white font-light">90 days</p>
-              <p className="text-[11px] text-white/30 font-light mt-0.5">To first enterprise lead</p>
-            </div>
-            <div className="w-px h-10 bg-white/10" />
-            <div>
-              <p className="font-serif text-2xl text-white font-light">UK · EU</p>
-              <p className="text-[11px] text-white/30 font-light mt-0.5">Markets served</p>
-            </div>
+        {/* ── STATS STRIP ───────────────────────────────────────── */}
+        <div className="border-t border-white/[0.07] pt-6 pb-2 lg:pb-8
+                        flex items-center gap-6 sm:gap-10 lg:mt-auto">
+          <div>
+            <p className="font-serif text-xl sm:text-2xl text-white font-light leading-none">12+</p>
+            <p className="text-[10px] text-white/25 font-light mt-1.5 tracking-wide">Businesses</p>
+          </div>
+          <div className="w-px h-8 bg-white/[0.08]" />
+          <div>
+            <p className="font-serif text-xl sm:text-2xl text-white font-light leading-none">90 days</p>
+            <p className="text-[10px] text-white/25 font-light mt-1.5 tracking-wide">To first enterprise lead</p>
+          </div>
+          <div className="w-px h-8 bg-white/[0.08]" />
+          <div>
+            <p className="font-serif text-xl sm:text-2xl text-white font-light leading-none">UK · EU</p>
+            <p className="text-[10px] text-white/25 font-light mt-1.5 tracking-wide">Markets served</p>
           </div>
         </div>
 
-        {/* Right — Spline 3D, clean, no text on top */}
-        <div className="relative h-[55vw] lg:h-auto lg:min-h-screen">
-          <iframe
-            src="https://my.spline.design/webdiagram-ZOJH9vcCzv1MsqQbLpyazIZu/"
-            frameBorder="0"
-            width="100%"
-            height="100%"
-            title="Business architecture diagram"
-            aria-hidden="true"
-            className="absolute inset-0 w-full h-full pointer-events-none lg:pointer-events-auto"
-            loading="lazy"
-          />
-          {/* Cover Spline watermark (bottom-right of iframe) */}
-          <div className="absolute bottom-0 right-0 w-44 h-10 bg-[#0d0d0d]" />
-        </div>
-
       </div>
 
-      {/* Scroll cue */}
-      <div className="absolute bottom-8 left-8 sm:left-12 lg:left-16 flex items-center gap-3">
-        <div className="w-4 h-7 border border-white/15 rounded-full flex items-start justify-center p-1">
-          <div className="w-0.5 h-1.5 bg-white/30 rounded-full animate-bounce" />
-        </div>
-        <span className="text-[10px] text-white/25 uppercase tracking-[0.2em] font-light">Scroll</span>
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 right-8 lg:right-16 hidden lg:flex flex-col items-center gap-2 z-10">
+        <div className="w-px h-12 bg-white/10" />
+        <span className="text-[9px] text-white/20 uppercase tracking-[0.25em] rotate-90 mt-2">Scroll</span>
       </div>
+
     </section>
   );
 };
