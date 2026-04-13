@@ -20,19 +20,19 @@ const AboutYekta = () => {
               About Yekta
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-charcoal leading-[1.1] mb-8">
-              I help great businesses<br />
-              <span className="text-muted-foreground">stop being invisible.</span>
+              I architect the systems<br />
+              <span className="text-muted-foreground">that scale businesses.</span>
             </h2>
 
             <div className="space-y-5 text-sm sm:text-base text-muted-foreground font-light leading-relaxed">
               <p>
-                I'm <strong className="text-charcoal font-medium">Yekta Dastranj</strong>, and every engagement at YektaD is led personally by me — no account managers, no junior teams.
+                I'm <strong className="text-charcoal font-medium">Yekta Dastranj</strong> — Business Architect and Strategic Partner. Every engagement at YektaD is led personally by me. No account managers, no junior teams.
               </p>
               <p>
-                Over the past 10+ years I've noticed the same pattern: exceptional service businesses growing entirely through referrals, invisible to the enterprise buyers who desperately need them. They don't have a quality problem — they have a visibility problem.
+                Over 10+ years I've seen the same pattern: exceptional service businesses growing through referrals, invisible to the enterprise buyers who need them most. They don't have a quality problem — they have an architecture problem. Their positioning, systems, and go-to-market approach aren't built for enterprise.
               </p>
               <p>
-                I built YektaD to close that gap. We combine sharp positioning, a web presence that ranks, and a repeatable outreach system to get you in front of the right clients — consistently.
+                I build what's missing: the commercial infrastructure, the web presence that ranks, and the outreach system that replaces luck with a repeatable pipeline.
               </p>
             </div>
 
