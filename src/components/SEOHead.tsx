@@ -20,11 +20,11 @@ interface SEOHeadProps {
 }
 
 const SEOHead = ({
-  title = "YektaD — From Word-of-Mouth to Enterprise Clients in 90 Days",
-  description = "We've helped 12+ service businesses land 6-figure enterprise contracts. Stop relying on referrals—get found by the clients who need you. Book a free strategy call.",
+  title = "YektaD — Enterprise Client Acquisition for Service Businesses | Yekta Dastranj",
+  description = "Yekta Dastranj helps 12+ service businesses land 6-figure enterprise contracts within 90 days. Expert business architecture, web design & growth strategy. Book a free strategy call.",
   canonicalPath = "",
-  ogImage = "/og-image.jpg?v=3",
-  ogImageSquare = "/og-image-square.jpg?v=3",
+  ogImage = "/og-image.jpg?v=4",
+  ogImageSquare = "/og-image-square.jpg?v=4",
   ogType = "website",
   noIndex = false,
   breadcrumbs,
@@ -37,7 +37,32 @@ const SEOHead = ({
   const fullImageUrl = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
   const fullSquareImageUrl = ogImageSquare.startsWith('http') ? ogImageSquare : `${baseUrl}${ogImageSquare}`;
 
-  // Generate breadcrumb schema
+  // Person schema — E-E-A-T authorship signal
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${baseUrl}/#yekta`,
+    "name": "Yekta Dastranj",
+    "jobTitle": "Founder & Business Visibility Strategist",
+    "description": "Yekta Dastranj has 10+ years of experience helping established service businesses land enterprise contracts. He personally leads every YektaD engagement.",
+    "url": baseUrl,
+    "email": "contact@yektad.com",
+    "worksFor": { "@id": `${baseUrl}/#organization` },
+    "knowsAbout": [
+      "Enterprise Client Acquisition",
+      "B2B Marketing Strategy",
+      "Business Architecture",
+      "Market Positioning",
+      "Web Design for Service Businesses",
+      "Growth Strategy"
+    ],
+    "sameAs": [
+      "https://linkedin.com/in/yektadastranj",
+      "https://twitter.com/yektad"
+    ]
+  };
+
+  // Breadcrumb schema
   const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -49,7 +74,7 @@ const SEOHead = ({
     }))
   } : null;
 
-  // Generate article schema for blog posts
+  // Article schema for blog posts
   const articleSchema = ogType === 'article' && articlePublishedTime ? {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -59,11 +84,13 @@ const SEOHead = ({
     "datePublished": articlePublishedTime,
     "dateModified": articleModifiedTime || articlePublishedTime,
     "author": {
-      "@type": "Organization",
-      "name": articleAuthor || "YektaD"
+      "@type": "Person",
+      "@id": `${baseUrl}/#yekta`,
+      "name": articleAuthor || "Yekta Dastranj"
     },
     "publisher": {
       "@type": "Organization",
+      "@id": `${baseUrl}/#organization`,
       "name": "YektaD",
       "logo": {
         "@type": "ImageObject",
@@ -82,10 +109,15 @@ const SEOHead = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={fullUrl} />
-      
+      <meta name="author" content="Yekta Dastranj — YektaD" />
+      <meta name="last-modified" content="2026-04-13" />
+
       {/* Robots */}
-      {noIndex && <meta name="robots" content="noindex, nofollow" />}
-      
+      {noIndex
+        ? <meta name="robots" content="noindex, nofollow" />
+        : <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      }
+
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={fullUrl} />
@@ -94,22 +126,22 @@ const SEOHead = ({
       <meta property="og:image" content={fullImageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={`${title} - YektaD Business Visibility Consulting`} />
+      <meta property="og:image:alt" content={`${title} — YektaD by Yekta Dastranj`} />
       <meta property="og:image" content={fullSquareImageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="1200" />
       <meta property="og:site_name" content="YektaD" />
       <meta property="og:locale" content="en_US" />
-      
+
       {/* Article-specific OG tags */}
       {ogType === 'article' && articlePublishedTime && (
         <>
           <meta property="article:published_time" content={articlePublishedTime} />
           {articleModifiedTime && <meta property="article:modified_time" content={articleModifiedTime} />}
-          <meta property="article:author" content={articleAuthor || "YektaD"} />
+          <meta property="article:author" content={articleAuthor || "Yekta Dastranj"} />
         </>
       )}
-      
+
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@YektaD" />
@@ -118,15 +150,20 @@ const SEOHead = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImageUrl} />
-      <meta name="twitter:image:alt" content={`${title} - YektaD Business Visibility Consulting`} />
-      
+      <meta name="twitter:image:alt" content={`${title} — YektaD by Yekta Dastranj`} />
+
+      {/* Person Schema — E-E-A-T */}
+      <script type="application/ld+json">
+        {JSON.stringify(personSchema)}
+      </script>
+
       {/* Breadcrumb Schema */}
       {breadcrumbSchema && (
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}
         </script>
       )}
-      
+
       {/* Article Schema */}
       {articleSchema && (
         <script type="application/ld+json">
