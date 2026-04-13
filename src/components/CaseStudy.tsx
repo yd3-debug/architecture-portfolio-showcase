@@ -1,4 +1,4 @@
-import { Building2, Truck, Shield, ArrowRight, Globe } from 'lucide-react';
+import { Building2, Truck, Shield, ArrowRight, Globe, Nfc, FileCheck, Database, CheckCircle2 } from 'lucide-react';
 
 const deliverables = [
   {
@@ -64,8 +64,9 @@ const CaseStudy = () => {
             to Global Luxury Brand
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground font-light leading-relaxed max-w-2xl">
-            How I engineered the commercial and operational infrastructure to transform a hidden gem
-            into an internationally recognised furniture brand.
+            How I engineered the commercial and operational infrastructure — including a
+            proprietary authentication system — to transform a hidden gem into an internationally
+            recognised furniture brand.
           </p>
         </div>
 
@@ -84,7 +85,6 @@ const CaseStudy = () => {
 
         {/* Challenge → Architecture → Result */}
         <div className="grid md:grid-cols-3 gap-4 sm:gap-6 mb-14 sm:mb-16 md:mb-20">
-          {/* Challenge */}
           <div className="bg-soft-gray rounded-2xl p-7 sm:p-8 border border-border/40">
             <h3 className="font-serif text-lg sm:text-xl mb-4 text-charcoal">The Challenge</h3>
             <p className="text-sm sm:text-base text-muted-foreground font-light leading-relaxed">
@@ -97,7 +97,6 @@ const CaseStudy = () => {
             </p>
           </div>
 
-          {/* Architecture */}
           <div className="bg-soft-gray rounded-2xl p-7 sm:p-8 border border-border/40 relative">
             <div className="hidden md:flex absolute -left-3 top-1/2 -translate-y-1/2
                              w-6 h-6 bg-charcoal rounded-full items-center justify-center">
@@ -114,7 +113,6 @@ const CaseStudy = () => {
             </p>
           </div>
 
-          {/* Result */}
           <div className="bg-charcoal rounded-2xl p-7 sm:p-8 text-white relative">
             <div className="hidden md:flex absolute -left-3 top-1/2 -translate-y-1/2
                              w-6 h-6 bg-accent rounded-full items-center justify-center">
@@ -134,10 +132,106 @@ const CaseStudy = () => {
           </div>
         </div>
 
+        {/* ── PROPRIETARY INNOVATION: NFC + LOA ─────────────────── */}
+        <div className="mb-14 sm:mb-16 md:mb-20 rounded-2xl overflow-hidden border border-charcoal/10">
+          {/* Header bar */}
+          <div className="bg-charcoal px-7 sm:px-10 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <Nfc className="w-5 h-5 text-accent shrink-0" />
+              <span className="text-xs uppercase tracking-[0.22em] text-white/60 font-light">
+                Proprietary Innovation
+              </span>
+            </div>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-accent/70 font-light">
+              Original concept &amp; implementation — Yekta Dastranj
+            </span>
+          </div>
+
+          {/* Body */}
+          <div className="bg-[#0f0f0f] px-7 sm:px-10 py-8 sm:py-10">
+            <h4 className="font-serif text-xl sm:text-2xl md:text-3xl text-white font-light mb-4 leading-snug">
+              NFC-Authenticated Letter of<br className="hidden sm:block" /> Authorisation System
+            </h4>
+            <p className="text-sm sm:text-base text-white/55 font-light leading-relaxed max-w-2xl mb-10">
+              A system I conceived and built from scratch: every VandaVee piece ships with a
+              physical <strong className="text-white/80 font-medium">Letter of Authorisation</strong> — a
+              printed document carrying an embedded{' '}
+              <strong className="text-white/80 font-medium">NFC chip</strong>. When scanned, the chip
+              queries a{' '}
+              <strong className="text-white/80 font-medium">custom backend database</strong> I designed
+              and built, returning a verified certificate of authenticity in real time. The idea, the
+              architecture, and the implementation were entirely mine.
+            </p>
+
+            {/* Flow diagram */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-0">
+
+              {/* Step 1 */}
+              <div className="flex sm:flex-col items-center sm:items-center gap-4 sm:gap-3 flex-1">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                  <FileCheck className="w-5 h-5 text-white/60" />
+                </div>
+                <div className="sm:text-center">
+                  <p className="text-xs font-medium text-white/80 mb-0.5">Physical LOA</p>
+                  <p className="text-[11px] text-white/35 font-light leading-snug">
+                    Printed document<br className="hidden sm:block" /> ships with every piece
+                  </p>
+                </div>
+              </div>
+
+              <ArrowRight className="w-4 h-4 text-white/15 shrink-0 rotate-90 sm:rotate-0 mx-2 self-center sm:self-auto" />
+
+              {/* Step 2 */}
+              <div className="flex sm:flex-col items-center sm:items-center gap-4 sm:gap-3 flex-1">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                  <Nfc className="w-5 h-5 text-white/60" />
+                </div>
+                <div className="sm:text-center">
+                  <p className="text-xs font-medium text-white/80 mb-0.5">NFC Chip</p>
+                  <p className="text-[11px] text-white/35 font-light leading-snug">
+                    Embedded in the<br className="hidden sm:block" /> paper — scan with any phone
+                  </p>
+                </div>
+              </div>
+
+              <ArrowRight className="w-4 h-4 text-white/15 shrink-0 rotate-90 sm:rotate-0 mx-2 self-center sm:self-auto" />
+
+              {/* Step 3 */}
+              <div className="flex sm:flex-col items-center sm:items-center gap-4 sm:gap-3 flex-1">
+                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                  <Database className="w-5 h-5 text-white/60" />
+                </div>
+                <div className="sm:text-center">
+                  <p className="text-xs font-medium text-white/80 mb-0.5">Backend Database</p>
+                  <p className="text-[11px] text-white/35 font-light leading-snug">
+                    Custom-built to store<br className="hidden sm:block" /> every registered piece
+                  </p>
+                </div>
+              </div>
+
+              <ArrowRight className="w-4 h-4 text-white/15 shrink-0 rotate-90 sm:rotate-0 mx-2 self-center sm:self-auto" />
+
+              {/* Step 4 */}
+              <div className="flex sm:flex-col items-center sm:items-center gap-4 sm:gap-3 flex-1">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="w-5 h-5 text-accent" />
+                </div>
+                <div className="sm:text-center">
+                  <p className="text-xs font-medium text-accent mb-0.5">Verified Authentic</p>
+                  <p className="text-[11px] text-white/35 font-light leading-snug">
+                    Real-time certificate<br className="hidden sm:block" /> of provenance
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
         {/* Key deliverables */}
         <div className="border-t border-border pt-12 sm:pt-14 md:pt-16">
           <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground font-light mb-10 sm:mb-12">
-            Key Deliverables
+            Further Deliverables
           </p>
           <div className="grid sm:grid-cols-3 gap-8 sm:gap-10">
             {deliverables.map((d, i) => (
