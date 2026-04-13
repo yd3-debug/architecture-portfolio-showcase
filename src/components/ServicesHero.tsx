@@ -58,12 +58,12 @@ const ServicesHero = () => {
           {services.map((s) => (
             <div
               key={s.number}
-              className="group grid grid-cols-1 lg:grid-cols-[5rem_1fr_1fr] gap-4 lg:gap-10
-                         py-10 sm:py-12 hover:bg-soft-gray/50 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8
+              className="group grid grid-cols-1 md:grid-cols-[4rem_1fr_1.2fr] gap-4 md:gap-8 lg:gap-10
+                         py-8 sm:py-10 hover:bg-soft-gray/50 -mx-4 px-4 sm:-mx-6 sm:px-6
                          transition-colors duration-300 rounded-xl cursor-default"
             >
               {/* Number */}
-              <div className="hidden lg:flex items-start pt-1">
+              <div className="hidden md:flex items-start pt-1">
                 <span className="font-serif text-4xl text-charcoal/10 group-hover:text-accent/20
                                  transition-colors font-light leading-none">
                   {s.number}
@@ -73,8 +73,8 @@ const ServicesHero = () => {
               {/* Left: title + pain */}
               <div className="flex flex-col justify-start gap-3">
                 <div className="flex items-center gap-3">
-                  <span className="font-serif text-lg text-charcoal/20 font-light lg:hidden">{s.number}</span>
-                  <h3 className="font-serif text-xl sm:text-2xl text-charcoal font-light">
+                  <span className="font-serif text-base text-charcoal/20 font-light md:hidden">{s.number}</span>
+                  <h3 className="font-serif text-lg sm:text-xl md:text-2xl text-charcoal font-light">
                     {s.title}
                   </h3>
                 </div>
