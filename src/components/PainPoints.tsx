@@ -3,19 +3,19 @@ const painPoints = [
     number: '01',
     pain: 'Stuck on Referrals',
     solution:
-      'Your pipeline depends on who happens to mention you. That's not a growth strategy — it's luck. We build predictable systems that bring enterprise clients to you.',
+      "Your pipeline depends on who happens to mention you. That's not a growth strategy — it's luck. We build predictable systems that bring enterprise clients to you.",
   },
   {
     number: '02',
     pain: 'Invisible Online',
     solution:
-      'You're great at what you do, but your online presence doesn't show it. Competitors with half your expertise rank above you and win the clients you should be getting.',
+      "You're great at what you do, but your online presence doesn't show it. Competitors with half your expertise rank above you and win the clients you should be getting.",
   },
   {
     number: '03',
     pain: 'No Clear Path to Scale',
     solution:
-      'You know you could handle bigger clients and larger contracts. You just don't have a clear way to reach them. We map the route and help you get there.',
+      "You know you could handle bigger clients and larger contracts. You just don't have a clear way to reach them. We map the route and help you get there.",
   },
 ];
 
