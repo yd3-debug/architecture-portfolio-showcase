@@ -4,7 +4,27 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen bg-[#070707] overflow-hidden">
 
-      {/* 3D — right panel, tablet and desktop only (hidden on mobile) */}
+      {/* 3D — full bleed on mobile, right panel on md+ */}
+      {/* Mobile: full-screen background with heavy gradient so text is readable */}
+      <div className="absolute inset-0 md:hidden">
+        <iframe
+          src="https://my.spline.design/webdiagram-ZOJH9vcCzv1MsqQbLpyazIZu/"
+          frameBorder="0"
+          width="100%"
+          height="100%"
+          title="Business architecture visualisation"
+          aria-hidden="true"
+          className="w-full h-full pointer-events-none"
+          loading="lazy"
+        />
+        {/* Heavy overlay: text must be readable */}
+        <div className="absolute inset-0 bg-gradient-to-b
+                        from-[#070707]/95 via-[#070707]/80 to-[#070707]/95 pointer-events-none" />
+        {/* Watermark cover */}
+        <div className="absolute bottom-0 right-0 w-52 h-12 bg-[#070707]" />
+      </div>
+
+      {/* Tablet / desktop: right panel only */}
       <div className="hidden md:block absolute inset-y-0 right-0 w-[55%] lg:w-[58%]">
         <iframe
           src="https://my.spline.design/webdiagram-ZOJH9vcCzv1MsqQbLpyazIZu/"
@@ -81,7 +101,7 @@ const Hero = () => {
                         flex items-center gap-5 sm:gap-8">
           <div>
             <p className="font-serif text-xl sm:text-2xl text-white font-light leading-none">12+</p>
-            <p className="text-[10px] text-white/50 font-light mt-1.5 tracking-wide uppercase">Businesses</p>
+            <p className="text-[10px] text-white/50 font-light mt-1.5 tracking-wide uppercase">Enterprise clients</p>
           </div>
           <div className="w-px h-7 bg-white/[0.12] shrink-0" />
           <div>
