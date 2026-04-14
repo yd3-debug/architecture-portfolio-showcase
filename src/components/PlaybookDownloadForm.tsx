@@ -88,8 +88,10 @@ const PlaybookDownloadForm = () => {
     });
     
     if (error) {
-      console.error('Failed to save lead:', error);
-      throw error;
+      if (import.meta.env.DEV) {
+        console.error('Lead save failed:', error.message);
+      }
+      throw new Error('Failed to save data');
     }
   };
 
