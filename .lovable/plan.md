@@ -1,52 +1,22 @@
 
-# Add Scarcity / FOMO Badge with Strikethrough
 
-## The Concept
+# Fix Broken Build — Reinstall Dependencies
 
-A small, eye-catching badge showing availability dropping from 4 to 1 spot, using a strikethrough on the old number. This creates urgency and fear of missing out.
+## What Happened
 
-Visual example:
-```text
-[flame icon] ~~4~~ → 1 Spot Remaining for Q1 2026
-```
+When `three` was installed, the package manager (`bun`) failed to resolve a transitive dependency (`js-yaml`), which left `node_modules` in a broken state. That's why every single import fails — not just `three`.
 
-## Where It Goes
+## Fix
 
-Two placements for maximum impact:
+1. **Clean install dependencies** — Remove `node_modules` and lockfiles, then reinstall everything fresh
+2. **Verify `three` is in `package.json`** — Confirm the dependency was actually added
+3. **If `bun` continues to fail on `js-yaml`**, switch the install to `npm` which handles resolution differently
 
-### 1. Hero Section (first thing visitors see)
-Place a compact scarcity pill just below the CTAs. Styled with a semi-transparent dark background to sit naturally over the hero image — subtle but impossible to miss.
+| Step | Command |
+|------|---------|
+| Clean | `rm -rf node_modules bun.lock bun.lockb` |
+| Reinstall | `npm install` (or `bun install` if it resolves cleanly) |
+| Verify build | `npx vite build --mode development` |
 
-### 2. Contact Section (where they convert)
-Update the existing scarcity badge (currently says "accepting 2 new strategic partners") to match the new "4 crossed out, 1 remaining" format. This reinforces the urgency right at the decision point.
+No code changes needed — this is purely a dependency resolution fix.
 
-## File Changes
-
-| File | Change |
-|------|--------|
-| `src/components/Hero.tsx` | Add scarcity badge below the CTA buttons |
-| `src/components/Contact.tsx` | Update existing scarcity badge with strikethrough format |
-
-## Design Details
-
-**Hero badge:**
-- Positioned between the CTAs and the scroll indicator
-- Semi-transparent background (`bg-white/10 backdrop-blur-sm`) with a subtle border
-- Small flame or alert circle icon for visual urgency
-- Text: `~~4~~ 1 Spot Remaining for Q1 2026`
-- The "4" gets a `line-through` style and muted opacity
-- The "1" is highlighted with slightly bolder weight or accent color
-
-**Contact badge (updating existing):**
-- Same strikethrough concept: `~~4~~ 1 partnership spot remaining for Q1 2026`
-- Keep the existing rounded-full pill style
-- Update from "Currently accepting 2 new strategic partners" to the new format
-
-## Technical Approach
-
-- Use a `<span className="line-through opacity-50">4</span>` for the crossed-out number
-- Use a `<span className="font-semibold text-accent">1</span>` (or white in the hero) for the remaining number
-- Add an arrow or right-arrow symbol between them for the "decreasing" visual
-- Import `AlertCircle` or `Flame` icon from lucide-react for the badge icon
-
-No new components needed — just updates to two existing files.
