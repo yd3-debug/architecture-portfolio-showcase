@@ -72,8 +72,9 @@ const Hero = () => {
 
           <p className="text-sm sm:text-base text-white/80 font-light leading-relaxed
                         max-w-[22rem] mb-8 sm:mb-10">
-            I design the positioning, systems, and go-to-market infrastructure that
-            moves service businesses from referrals to enterprise contracts.
+            Most businesses have the capability. What they lack is the architecture —
+            the positioning, systems, and commercial infrastructure built
+            specifically to attract enterprise.
           </p>
 
           <div className="flex flex-row flex-wrap items-center gap-4 sm:gap-7">
@@ -96,22 +97,22 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Stats strip */}
+        {/* Qualitative markers */}
         <div className="border-t border-white/[0.1] pt-5 pb-6 md:pb-8 md:mt-auto
-                        flex items-center gap-5 sm:gap-8">
+                        flex items-center gap-5 sm:gap-8 flex-wrap">
           <div>
-            <p className="font-serif text-xl sm:text-2xl text-white font-light leading-none">12+</p>
-            <p className="text-[10px] text-white/50 font-light mt-1.5 tracking-wide uppercase">Enterprise clients</p>
+            <p className="text-[10px] text-white/35 font-light tracking-wide uppercase mb-1">Approach</p>
+            <p className="text-sm text-white/75 font-light">Selective by design</p>
           </div>
           <div className="w-px h-7 bg-white/[0.12] shrink-0" />
           <div>
-            <p className="font-serif text-xl sm:text-2xl text-white font-light leading-none">90 days</p>
-            <p className="text-[10px] text-white/50 font-light mt-1.5 tracking-wide uppercase">First enterprise lead</p>
+            <p className="text-[10px] text-white/35 font-light tracking-wide uppercase mb-1">Method</p>
+            <p className="text-sm text-white/75 font-light">Architecture over tactics</p>
           </div>
           <div className="w-px h-7 bg-white/[0.12] shrink-0" />
           <div>
-            <p className="font-serif text-xl sm:text-2xl text-white font-light leading-none">UK · EU</p>
-            <p className="text-[10px] text-white/50 font-light mt-1.5 tracking-wide uppercase">Markets</p>
+            <p className="text-[10px] text-white/35 font-light tracking-wide uppercase mb-1">Markets</p>
+            <p className="text-sm text-white/75 font-light">UK · EU · US</p>
           </div>
         </div>
 

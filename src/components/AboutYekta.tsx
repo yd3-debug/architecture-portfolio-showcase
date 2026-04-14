@@ -1,17 +1,10 @@
-import { ArrowRight, Award, Globe, Users } from 'lucide-react';
-
-const credentials = [
-  { icon: Users,  value: '12+',    label: 'Businesses transformed' },
-  { icon: Award,  value: '90 days', label: 'Average time to first enterprise lead' },
-  { icon: Globe,  value: 'UK · US · EU', label: 'Clients served globally' },
-];
+import { ArrowRight, Globe } from 'lucide-react';
 
 const AboutYekta = () => {
   return (
     <section id="about" className="bg-white py-20 sm:py-28 md:py-36 px-6 sm:px-8 lg:px-12">
       <div className="max-w-6xl mx-auto">
 
-        {/* Grid: story left, credentials right */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
           {/* Left — story */}
@@ -20,19 +13,22 @@ const AboutYekta = () => {
               About Yekta
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-charcoal leading-[1.1] mb-8">
-              I architect the systems<br />
-              <span className="text-muted-foreground">that scale businesses.</span>
+              The architecture<br />
+              <span className="text-muted-foreground">behind the growth.</span>
             </h2>
 
             <div className="space-y-5 text-sm sm:text-base text-muted-foreground font-light leading-relaxed">
               <p>
-                I'm <strong className="text-charcoal font-medium">Yekta Dastranj</strong> — Business Architect and Strategic Partner. Every engagement at YektaD is led personally by me. No account managers, no junior teams.
+                <strong className="text-charcoal font-medium">Yekta Dastranj</strong> is a Business Architect and Strategic Partner. Every engagement at YektaD is led personally by Yekta — no account managers, no junior teams handed the brief.
               </p>
               <p>
-                Over 10+ years I've seen the same pattern: exceptional service businesses growing through referrals, invisible to the enterprise buyers who need them most. They don't have a quality problem — they have an architecture problem. Their positioning, systems, and go-to-market approach aren't built for enterprise.
+                The same pattern appears across industries: businesses with genuine expertise, real results, and strong products — invisible to the enterprise buyers who need them most. The issue is never quality. It is architecture. The positioning is vague. The digital presence doesn't command trust. The go-to-market approach wasn't built for enterprise buyers, and no system exists to reach them consistently.
               </p>
               <p>
-                I build what's missing: the commercial infrastructure, the web presence that ranks, and the outreach system that replaces luck with a repeatable pipeline.
+                YektaD builds what's missing — the commercial infrastructure, the digital presence built to rank and convert, and the outreach systems that replace referral dependency with a pipeline that works by design.
+              </p>
+              <p className="text-charcoal/70 italic font-light border-l-2 border-accent/40 pl-4">
+                "Before any engagement begins, the full picture has to be clear — where the business is, where it needs to go, and every step in between. That clarity is non-negotiable."
               </p>
             </div>
 
@@ -46,38 +42,41 @@ const AboutYekta = () => {
             </a>
           </div>
 
-          {/* Right — credentials */}
+          {/* Right — what sets this apart */}
           <div className="lg:pt-16 space-y-4">
-            {credentials.map((c, i) => (
+
+            {[
+              {
+                title: "Not every business is a fit",
+                body: "YektaD works with a small number of businesses at a time. Each engagement is taken only when there is a clear, complete vision for what can be built — and confidence it can be delivered."
+              },
+              {
+                title: "Digital presence is part of the architecture",
+                body: "A website is not a brochure. It is infrastructure. Every site built at YektaD is engineered for search visibility, trust, and conversion — designed to work as a commercial asset, not a placeholder."
+              },
+              {
+                title: "One person. Full accountability.",
+                body: "Every email comes from Yekta. Every strategy is built by Yekta. The business owner gets direct access — not a process, not a portal."
+              },
+            ].map((item, i) => (
               <div
                 key={i}
-                className="flex items-center gap-6 p-6 sm:p-7 rounded-2xl bg-soft-gray
-                           border border-border/40 hover:border-accent/30 transition-colors"
+                className="p-6 sm:p-7 rounded-2xl bg-soft-gray border border-border/40 hover:border-accent/30 transition-colors"
               >
-                <div className="w-12 h-12 rounded-xl bg-white border border-border flex items-center justify-center flex-shrink-0">
-                  <c.icon className="w-5 h-5 text-accent" />
-                </div>
-                <div>
-                  <p className="font-serif text-2xl sm:text-3xl text-charcoal font-light leading-none mb-1">
-                    {c.value}
-                  </p>
-                  <p className="text-xs sm:text-sm text-muted-foreground font-light">{c.label}</p>
-                </div>
+                <h4 className="font-serif text-base sm:text-lg text-charcoal font-light mb-2">
+                  {item.title}
+                </h4>
+                <p className="text-xs sm:text-sm text-muted-foreground font-light leading-relaxed">
+                  {item.body}
+                </p>
               </div>
             ))}
 
-            {/* Quote */}
-            <div className="mt-6 p-6 sm:p-8 rounded-2xl bg-charcoal text-white">
-              <p className="font-serif text-base sm:text-lg font-light leading-relaxed opacity-90 mb-4">
-                "Every email is read and responded to by me personally. That's not a promise — it's just how I work."
-              </p>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center">
-                  <span className="text-accent text-xs font-medium">YD</span>
-                </div>
-                <span className="text-sm text-white/60 font-light">Yekta Dastranj, Founder</span>
-              </div>
+            <div className="flex items-center gap-3 pt-2 px-1">
+              <Globe className="w-4 h-4 text-muted-foreground/50" />
+              <span className="text-xs text-muted-foreground/50 font-light">Serving clients across UK, EU and US markets</span>
             </div>
+
           </div>
 
         </div>
