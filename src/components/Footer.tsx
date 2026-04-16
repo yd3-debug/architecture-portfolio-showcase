@@ -1,4 +1,4 @@
-import { Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -51,6 +51,16 @@ const Footer = () => {
             {/* Legal & Contact */}
             <div>
               <h4 className="text-sm sm:text-base md:text-lg font-bold mb-3 sm:mb-4 md:mb-6">Company</h4>
+              {/* Client Portal */}
+              <a
+                href="https://portal.yektad.com/login"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 mb-4 sm:mb-6 px-3 py-2 rounded-lg border border-accent/30 bg-accent/10 hover:bg-accent/20 hover:border-accent/60 transition-all duration-200 group w-fit"
+              >
+                <Lock className="w-3.5 h-3.5 text-accent flex-shrink-0" />
+                <span className="text-white text-xs sm:text-sm font-medium">Client Portal</span>
+              </a>
+
               <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6 text-xs sm:text-sm">
                 <li><Link to="/legal/privacy-policy" className="text-white/70 hover:text-accent transition-colors duration-200">Privacy Policy</Link></li>
                 <li><Link to="/legal/terms-of-service" className="text-white/70 hover:text-accent transition-colors duration-200">Terms of Service</Link></li>
