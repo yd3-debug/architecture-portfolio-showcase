@@ -170,12 +170,12 @@ const CaseStudy = () => {
               {/* Step 1 */}
               <div className="flex sm:flex-col items-center sm:items-center gap-4 sm:gap-3 flex-1">
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                  <FileCheck className="w-5 h-5 text-white/60" />
+                  <Nfc className="w-5 h-5 text-white/60" />
                 </div>
                 <div className="sm:text-center">
-                  <p className="text-xs font-medium text-white/80 mb-0.5">Physical LOA</p>
+                  <p className="text-xs font-medium text-white/80 mb-0.5">NFC Tap</p>
                   <p className="text-[11px] text-white/35 font-light leading-snug">
-                    Printed document<br className="hidden sm:block" /> ships with every piece
+                    Embedded chip opens<br className="hidden sm:block" /> a secure link on tap
                   </p>
                 </div>
               </div>
@@ -185,12 +185,12 @@ const CaseStudy = () => {
               {/* Step 2 */}
               <div className="flex sm:flex-col items-center sm:items-center gap-4 sm:gap-3 flex-1">
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                  <Nfc className="w-5 h-5 text-white/60" />
+                  <UserPlus className="w-5 h-5 text-white/60" />
                 </div>
                 <div className="sm:text-center">
-                  <p className="text-xs font-medium text-white/80 mb-0.5">NFC Chip</p>
+                  <p className="text-xs font-medium text-white/80 mb-0.5">Client Registration</p>
                   <p className="text-[11px] text-white/35 font-light leading-snug">
-                    Embedded in the<br className="hidden sm:block" /> paper — scan with any phone
+                    Owner registers their<br className="hidden sm:block" /> piece via the link
                   </p>
                 </div>
               </div>
@@ -200,12 +200,12 @@ const CaseStudy = () => {
               {/* Step 3 */}
               <div className="flex sm:flex-col items-center sm:items-center gap-4 sm:gap-3 flex-1">
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                  <Database className="w-5 h-5 text-white/60" />
+                  <Mail className="w-5 h-5 text-white/60" />
                 </div>
                 <div className="sm:text-center">
-                  <p className="text-xs font-medium text-white/80 mb-0.5">Backend Database</p>
+                  <p className="text-xs font-medium text-white/80 mb-0.5">Branded Email LOA</p>
                   <p className="text-[11px] text-white/35 font-light leading-snug">
-                    Custom-built to store<br className="hidden sm:block" /> every registered piece
+                    Personalised LOA sent<br className="hidden sm:block" /> via branded email
                   </p>
                 </div>
               </div>
@@ -215,12 +215,12 @@ const CaseStudy = () => {
               {/* Step 4 */}
               <div className="flex sm:flex-col items-center sm:items-center gap-4 sm:gap-3 flex-1">
                 <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-5 h-5 text-accent" />
+                  <Database className="w-5 h-5 text-accent" />
                 </div>
                 <div className="sm:text-center">
-                  <p className="text-xs font-medium text-accent mb-0.5">Verified Authentic</p>
+                  <p className="text-xs font-medium text-accent mb-0.5">Securely Stored</p>
                   <p className="text-[11px] text-white/35 font-light leading-snug">
-                    Real-time certificate<br className="hidden sm:block" /> of provenance
+                    Record saved in<br className="hidden sm:block" /> custom backend database
                   </p>
                 </div>
               </div>
