@@ -1,22 +1,18 @@
 
 
-# Fix Broken Build — Reinstall Dependencies
+# Rename "Letter of Authorisation" → "Letter of Authentication"
 
-## What Happened
+The wording only appears in `src/components/CaseStudy.tsx` (the proprietary innovation section). Three text changes needed:
 
-When `three` was installed, the package manager (`bun`) failed to resolve a transitive dependency (`js-yaml`), which left `node_modules` in a broken state. That's why every single import fails — not just `three`.
+| Line | Current | New |
+|------|---------|-----|
+| 153 (heading) | `NFC-Authenticated Letter of Authorisation System` | `NFC & LOA — Letter of Authentication System` |
+| 157 (body) | `physical Letter of Authorisation` | `physical Letter of Authentication (LOA)` |
+| 135 (comment) | `NFC + LOA` | unchanged (already correct) |
 
-## Fix
+The comment on line 135 (`NFC + LOA`) is already aligned with the new naming, so no change there. The rest of the section (NFC chip, backend database, flow diagram steps) stays as is — the user only asked about the LOA wording.
 
-1. **Clean install dependencies** — Remove `node_modules` and lockfiles, then reinstall everything fresh
-2. **Verify `three` is in `package.json`** — Confirm the dependency was actually added
-3. **If `bun` continues to fail on `js-yaml`**, switch the install to `npm` which handles resolution differently
-
-| Step | Command |
-|------|---------|
-| Clean | `rm -rf node_modules bun.lock bun.lockb` |
-| Reinstall | `npm install` (or `bun install` if it resolves cleanly) |
-| Verify build | `npx vite build --mode development` |
-
-No code changes needed — this is purely a dependency resolution fix.
+| File | Change |
+|------|--------|
+| `src/components/CaseStudy.tsx` | Update heading (line 153) and body strong tag (line 157) |
 
