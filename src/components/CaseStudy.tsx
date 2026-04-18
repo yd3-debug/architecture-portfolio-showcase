@@ -1,4 +1,4 @@
-import { Building2, Truck, Shield, ArrowRight, Globe, Nfc, FileCheck, Database, CheckCircle2 } from 'lucide-react';
+import { Building2, Truck, Shield, ArrowRight, Globe, Nfc, UserPlus, Mail, Database, CheckCircle2 } from 'lucide-react';
 
 const deliverables = [
   {
