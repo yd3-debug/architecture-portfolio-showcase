@@ -150,11 +150,11 @@ const CaseStudy = () => {
           {/* Body */}
           <div className="bg-[#0f0f0f] px-7 sm:px-10 py-8 sm:py-10">
             <h4 className="font-serif text-xl sm:text-2xl md:text-3xl text-white font-light mb-4 leading-snug">
-              NFC-Authenticated Letter of<br className="hidden sm:block" /> Authorisation System
+              NFC &amp; LOA — Letter of<br className="hidden sm:block" /> Authentication System
             </h4>
             <p className="text-sm sm:text-base text-white/55 font-light leading-relaxed max-w-2xl mb-10">
               A system I conceived and built from scratch: every VandaVee piece ships with a
-              physical <strong className="text-white/80 font-medium">Letter of Authorisation</strong> — a
+              physical <strong className="text-white/80 font-medium">Letter of Authentication (LOA)</strong> — a
               printed document carrying an embedded{' '}
               <strong className="text-white/80 font-medium">NFC chip</strong>. When scanned, the chip
               queries a{' '}
