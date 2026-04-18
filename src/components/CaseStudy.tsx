@@ -154,7 +154,7 @@ const CaseStudy = () => {
             </h4>
             <p className="text-sm sm:text-base text-white/55 font-light leading-relaxed max-w-2xl mb-10">
               A system I conceived and built from scratch: every VandaVee piece ships with a
-              physical <strong className="text-white/80 font-medium">Letter of Authorisation</strong> — a
+              physical <strong className="text-white/80 font-medium">Letter of Authentication (LOA)</strong> — a
               printed document carrying an embedded{' '}
               <strong className="text-white/80 font-medium">NFC chip</strong>. When scanned, the chip
               queries a{' '}
