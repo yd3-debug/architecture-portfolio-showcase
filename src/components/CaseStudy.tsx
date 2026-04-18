@@ -1,4 +1,4 @@
-import { Building2, Truck, Shield, ArrowRight, Globe, Nfc, FileCheck, Database, CheckCircle2 } from 'lucide-react';
+import { Building2, Truck, Shield, ArrowRight, Globe, Nfc, UserPlus, Mail, Database, CheckCircle2 } from 'lucide-react';
 
 const deliverables = [
   {
@@ -153,14 +153,15 @@ const CaseStudy = () => {
               NFC &amp; LOA — Letter of<br className="hidden sm:block" /> Authentication System
             </h4>
             <p className="text-sm sm:text-base text-white/55 font-light leading-relaxed max-w-2xl mb-10">
-              A system I conceived and built from scratch: every VandaVee piece ships with a
-              physical <strong className="text-white/80 font-medium">Letter of Authentication (LOA)</strong> — a
-              printed document carrying an embedded{' '}
-              <strong className="text-white/80 font-medium">NFC chip</strong>. When scanned, the chip
-              queries a{' '}
-              <strong className="text-white/80 font-medium">custom backend database</strong> I designed
-              and built, returning a verified certificate of authenticity in real time. The idea, the
-              architecture, and the implementation were entirely mine.
+              An end-to-end authentication system I designed and built from scratch. Every VandaVee
+              piece ships with an embedded{' '}
+              <strong className="text-white/80 font-medium">NFC chip</strong>. When tapped, the chip
+              opens a registration link where the client enters their details. They then receive a
+              personalised{' '}
+              <strong className="text-white/80 font-medium">Letter of Authentication (LOA)</strong>{' '}
+              via branded email, while the record is securely stored in a{' '}
+              <strong className="text-white/80 font-medium">custom backend database</strong> —
+              creating a verified, traceable certificate of provenance for every piece.
             </p>
 
             {/* Flow diagram */}
@@ -169,12 +170,12 @@ const CaseStudy = () => {
               {/* Step 1 */}
               <div className="flex sm:flex-col items-center sm:items-center gap-4 sm:gap-3 flex-1">
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                  <FileCheck className="w-5 h-5 text-white/60" />
+                  <Nfc className="w-5 h-5 text-white/60" />
                 </div>
                 <div className="sm:text-center">
-                  <p className="text-xs font-medium text-white/80 mb-0.5">Physical LOA</p>
+                  <p className="text-xs font-medium text-white/80 mb-0.5">NFC Tap</p>
                   <p className="text-[11px] text-white/35 font-light leading-snug">
-                    Printed document<br className="hidden sm:block" /> ships with every piece
+                    Embedded chip opens<br className="hidden sm:block" /> a secure link on tap
                   </p>
                 </div>
               </div>
@@ -184,12 +185,12 @@ const CaseStudy = () => {
               {/* Step 2 */}
               <div className="flex sm:flex-col items-center sm:items-center gap-4 sm:gap-3 flex-1">
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                  <Nfc className="w-5 h-5 text-white/60" />
+                  <UserPlus className="w-5 h-5 text-white/60" />
                 </div>
                 <div className="sm:text-center">
-                  <p className="text-xs font-medium text-white/80 mb-0.5">NFC Chip</p>
+                  <p className="text-xs font-medium text-white/80 mb-0.5">Client Registration</p>
                   <p className="text-[11px] text-white/35 font-light leading-snug">
-                    Embedded in the<br className="hidden sm:block" /> paper — scan with any phone
+                    Owner registers their<br className="hidden sm:block" /> piece via the link
                   </p>
                 </div>
               </div>
@@ -199,12 +200,12 @@ const CaseStudy = () => {
               {/* Step 3 */}
               <div className="flex sm:flex-col items-center sm:items-center gap-4 sm:gap-3 flex-1">
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
-                  <Database className="w-5 h-5 text-white/60" />
+                  <Mail className="w-5 h-5 text-white/60" />
                 </div>
                 <div className="sm:text-center">
-                  <p className="text-xs font-medium text-white/80 mb-0.5">Backend Database</p>
+                  <p className="text-xs font-medium text-white/80 mb-0.5">Branded Email LOA</p>
                   <p className="text-[11px] text-white/35 font-light leading-snug">
-                    Custom-built to store<br className="hidden sm:block" /> every registered piece
+                    Personalised LOA sent<br className="hidden sm:block" /> via branded email
                   </p>
                 </div>
               </div>
@@ -214,12 +215,12 @@ const CaseStudy = () => {
               {/* Step 4 */}
               <div className="flex sm:flex-col items-center sm:items-center gap-4 sm:gap-3 flex-1">
                 <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-5 h-5 text-accent" />
+                  <Database className="w-5 h-5 text-accent" />
                 </div>
                 <div className="sm:text-center">
-                  <p className="text-xs font-medium text-accent mb-0.5">Verified Authentic</p>
+                  <p className="text-xs font-medium text-accent mb-0.5">Securely Stored</p>
                   <p className="text-[11px] text-white/35 font-light leading-snug">
-                    Real-time certificate<br className="hidden sm:block" /> of provenance
+                    Record saved in<br className="hidden sm:block" /> custom backend database
                   </p>
                 </div>
               </div>
