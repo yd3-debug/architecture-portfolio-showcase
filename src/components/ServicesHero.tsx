@@ -3,27 +3,27 @@ import { ArrowRight } from 'lucide-react';
 const services = [
   {
     number: '01',
-    title: 'Business Architecture',
-    pain: 'Growing through referrals alone?',
+    title: 'Custom Websites',
+    pain: "Website doesn't reflect the business you actually are?",
     description:
-      "I build the positioning, systems, and commercial infrastructure that make enterprise buyers come to you — consistently. Not tactics. Architecture.",
-    result: 'Client secured first enterprise contract within 6 weeks',
+      "A custom site built from scratch — designed around your work, fast to load, easy to update, and built to be found on Google. No templates, no clutter, no jargon.",
+    result: '+65% more bookings for Studio Solena in 3 months',
   },
   {
     number: '02',
-    title: 'Web Design & Development',
-    pain: "Website doesn't reflect your expertise?",
+    title: 'Positioning & Brand',
+    pain: 'People don\'t quite "get" what you do?',
     description:
-      "Mobile-first, SEO-optimised websites built to earn trust and convert high-value visitors into booked conversations. Custom — no templates.",
-    result: '+65% increase in bookings within 3 months',
+      "We sharpen how your business shows up — what you say, who it's for, and why someone should choose you over the next name on the list. Clear, confident, true to you.",
+    result: 'Mainteniq rebranded and taken seriously overnight',
   },
   {
     number: '03',
-    title: 'Growth Strategy',
-    pain: 'Ready to scale but unsure where to start?',
+    title: 'Growth Systems',
+    pain: 'Ready to grow but not sure how?',
     description:
-      "A clear, actionable plan: who your ideal enterprise buyer is, where they search, and the exact message that gets their attention and starts a conversation.",
-    result: '3× increase in qualified inbound leads',
+      "Practical systems that help your business run more smoothly and bring in the right kind of work — without you having to manage everything yourself. Small steps, real results.",
+    result: 'Steadier enquiries, less time chasing leads',
   },
 ];
 
@@ -40,7 +40,7 @@ const ServicesHero = () => {
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-charcoal leading-[1.05]">
               Three ways I help<br />
-              <span className="text-muted-foreground">businesses reach scale</span>
+              <span className="text-muted-foreground">small businesses grow</span>
             </h2>
           </div>
           <a
@@ -48,7 +48,7 @@ const ServicesHero = () => {
             className="inline-flex items-center gap-2 text-sm font-light text-muted-foreground
                        hover:text-charcoal transition-colors group shrink-0"
           >
-            Discuss your situation
+            Tell me about your business
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
@@ -107,7 +107,7 @@ const ServicesHero = () => {
             className="inline-flex items-center gap-2 px-7 py-3.5 text-sm font-medium
                        text-white bg-charcoal hover:bg-accent transition-all duration-300 rounded-lg shrink-0"
           >
-            Book a Strategy Session
+            Book a Discovery Session
           </a>
         </div>
 

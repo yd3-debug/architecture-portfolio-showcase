@@ -20,8 +20,8 @@ interface SEOHeadProps {
 }
 
 const SEOHead = ({
-  title = "YektaD — Enterprise Client Acquisition for Service Businesses | Yekta Dastranj",
-  description = "Yekta Dastranj helps 12+ service businesses land 6-figure enterprise contracts within 90 days. Expert business architecture, web design & growth strategy. Book a free strategy call.",
+  title = "YektaD — Websites & Growth Systems for Small Businesses | Yekta Dastranj",
+  description = "From hidden to found. Yekta Dastranj helps independent founders and small teams (1–10 people) with custom websites, sharper positioning, and simple growth systems. Selective by design — book a free Discovery Session.",
   canonicalPath = "",
   ogImage = "/og-image.jpg?v=4",
   ogImageSquare = "/og-image-square.jpg?v=4",
@@ -43,18 +43,18 @@ const SEOHead = ({
     "@type": "Person",
     "@id": `${baseUrl}/#yekta`,
     "name": "Yekta Dastranj",
-    "jobTitle": "Business Architect & Strategic Partner",
-    "description": "Yekta Dastranj is a Business Architect with 10+ years of experience designing the commercial systems, positioning, and go-to-market infrastructure that help service businesses land enterprise contracts. He personally leads every YektaD engagement.",
+    "jobTitle": "Growth Partner for Small Businesses",
+    "description": "Yekta Dastranj helps independent founders and small teams build the websites, positioning, and simple growth systems that take them from hidden to found. He personally leads every YektaD engagement.",
     "url": baseUrl,
     "email": "contact@yektad.com",
     "worksFor": { "@id": `${baseUrl}/#organization` },
     "knowsAbout": [
-      "Enterprise Client Acquisition",
-      "B2B Marketing Strategy",
-      "Business Architecture",
-      "Market Positioning",
-      "Web Design for Service Businesses",
-      "Growth Strategy"
+      "Small Business Growth",
+      "Web Design for Small Businesses",
+      "Brand Positioning",
+      "Online Visibility",
+      "SEO for Small Businesses",
+      "Operations for Small Teams"
     ],
     "sameAs": [
       "https://linkedin.com/in/yektadastranj",

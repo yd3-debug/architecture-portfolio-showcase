@@ -139,7 +139,7 @@ const PlaybookDownloadForm = () => {
             Download Your Free Playbook
           </DialogTitle>
           <DialogDescription className="text-muted-foreground">
-            Enter your details to get the Enterprise Visibility Playbook—the exact framework we use to help consultancies land bigger contracts.
+            Enter your details to get the Small Business Visibility Playbook — the simple framework I use to help small businesses get found by the right people.
           </DialogDescription>
         </DialogHeader>
         
