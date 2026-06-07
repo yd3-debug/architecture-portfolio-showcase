@@ -13,22 +13,22 @@ const AboutYekta = () => {
               About Yekta
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-charcoal leading-[1.1] mb-8">
-              The architecture<br />
-              <span className="text-muted-foreground">behind the growth.</span>
+              Small businesses,<br />
+              <span className="text-muted-foreground">done properly.</span>
             </h2>
 
             <div className="space-y-5 text-sm sm:text-base text-muted-foreground font-light leading-relaxed">
               <p>
-                <strong className="text-charcoal font-medium">Yekta Dastranj</strong> is a Business Architect and Strategic Partner. Every engagement at YektaD is led personally by Yekta — no account managers, no junior teams handed the brief.
+                I'm <strong className="text-charcoal font-medium">Yekta Dastranj</strong>. I work with independent founders and small teams — usually one to ten people — who are great at what they do but largely invisible online.
               </p>
               <p>
-                The same pattern appears across industries: businesses with genuine expertise, real results, and strong products — invisible to the enterprise buyers who need them most. The issue is never quality. It is architecture. The positioning is vague. The digital presence doesn't command trust. The go-to-market approach wasn't built for enterprise buyers, and no system exists to reach them consistently.
+                The pattern is always the same: real skill, happy clients, word-of-mouth growth — and a digital presence that doesn't show any of it. The website looks thrown together, the positioning is vague, and the people who'd happily pay for what you offer simply can't find you.
               </p>
               <p>
-                YektaD builds what's missing — the commercial infrastructure, the digital presence built to rank and convert, and the outreach systems that replace referral dependency with a pipeline that works by design.
+                That's what I fix. A website that actually reflects your work, clearer positioning, and a few simple systems that help you grow without losing what makes the business yours in the first place.
               </p>
               <p className="text-charcoal/70 italic font-light border-l-2 border-accent/40 pl-4">
-                "Before any engagement begins, the full picture has to be clear — where the business is, where it needs to go, and every step in between. That clarity is non-negotiable."
+                "I only take on work I'm confident I can deliver. That means turning some businesses away — but the ones I work with get my full attention."
               </p>
             </div>
 
@@ -47,16 +47,16 @@ const AboutYekta = () => {
 
             {[
               {
-                title: "Not every business is a fit",
-                body: "YektaD works with a small number of businesses at a time. Each engagement is taken only when there is a clear, complete vision for what can be built — and confidence it can be delivered."
+                title: "A handful of clients at a time",
+                body: "I work with a small number of businesses at once so each one gets real attention. If I can't see a clear path to results before we start, I won't take the project on."
               },
               {
-                title: "Digital presence is part of the architecture",
-                body: "A website is not a brochure. It is infrastructure. Every site built at YektaD is engineered for search visibility, trust, and conversion — designed to work as a commercial asset, not a placeholder."
+                title: "Your website is doing more than you think",
+                body: "For most small businesses it's the first impression — and often the only one. I build sites that look like the business you actually are, load fast, and quietly do the work of bringing in new enquiries."
               },
               {
-                title: "One person. Full accountability.",
-                body: "Every email comes from Yekta. Every strategy is built by Yekta. The business owner gets direct access — not a process, not a portal."
+                title: "You talk to me, not a team",
+                body: "Every email, every call, every decision comes from me. No account managers, no handoffs. Just direct access to the person doing the work."
               },
             ].map((item, i) => (
               <div
@@ -74,7 +74,7 @@ const AboutYekta = () => {
 
             <div className="flex items-center gap-3 pt-2 px-1">
               <Globe className="w-4 h-4 text-muted-foreground/50" />
-              <span className="text-xs text-muted-foreground/50 font-light">Serving clients across UK, EU and US markets</span>
+              <span className="text-xs text-muted-foreground/50 font-light">Working with small businesses across the UK, EU and US</span>
             </div>
 
           </div>

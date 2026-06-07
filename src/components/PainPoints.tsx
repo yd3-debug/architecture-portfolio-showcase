@@ -3,19 +3,19 @@ const painPoints = [
     number: '01',
     pain: 'Stuck on Referrals',
     solution:
-      "Your pipeline depends on who happens to mention you. That's not a growth strategy — it's luck. We build predictable systems that bring enterprise clients to you.",
+      "New work only shows up when someone happens to mention you. That's not a plan — it's luck. Together we build a few simple systems so the right clients can find you on their own.",
   },
   {
     number: '02',
     pain: 'Invisible Online',
     solution:
-      "You're great at what you do, but your online presence doesn't show it. Competitors with half your expertise rank above you and win the clients you should be getting.",
+      "You're genuinely good at what you do, but your website doesn't show it. People searching for exactly what you offer end up clicking on someone with half your experience instead.",
   },
   {
     number: '03',
-    pain: 'No Clear Path to Scale',
+    pain: 'No Clear Way to Grow',
     solution:
-      "You know you could handle bigger clients and larger contracts. You just don't have a clear way to reach them. We map the route and help you get there.",
+      "You know there's more in this business — better clients, steadier work, a bit more breathing room. You just don't have a clear way to get there without losing what makes it yours.",
   },
 ];
 
@@ -30,7 +30,7 @@ const PainPoints = () => {
             The Problem
           </p>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-white leading-[1.1]">
-            What's really<br />
+            What's quietly<br />
             <span className="text-white/50">holding you back</span>
           </h2>
         </div>

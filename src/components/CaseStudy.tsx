@@ -60,13 +60,13 @@ const CaseStudy = () => {
             Featured Case Study
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-charcoal leading-[1.1] mb-5">
-            VandaVee: From Founder-Dependent<br className="hidden sm:block" />
-            to Global Luxury Brand
+            VandaVee: A Small Brand,<br className="hidden sm:block" />
+            Built to Travel.
           </h2>
           <p className="text-sm sm:text-base text-muted-foreground font-light leading-relaxed max-w-2xl">
-            How I engineered the commercial and operational infrastructure — including a
-            proprietary authentication system — to transform a hidden gem into an internationally
-            recognised furniture brand.
+            Proof that careful work scales. A small, founder-led furniture business given the
+            systems, presence, and a proprietary authentication tool to operate confidently
+            across three countries — without losing the personal touch that made it special.
           </p>
         </div>
 
@@ -88,12 +88,11 @@ const CaseStudy = () => {
           <div className="bg-soft-gray rounded-2xl p-7 sm:p-8 border border-border/40">
             <h3 className="font-serif text-lg sm:text-xl mb-4 text-charcoal">The Challenge</h3>
             <p className="text-sm sm:text-base text-muted-foreground font-light leading-relaxed">
-              VandaVee had a high-value product but lacked the operational engine to scale. The
-              business relied on{' '}
+              VandaVee made beautiful pieces but the business ran on{' '}
               <span className="text-charcoal font-medium">ad-hoc social media sales</span>,{' '}
-              <span className="text-charcoal font-medium">undefined logistics</span>, and a
-              founder-centric workflow that was{' '}
-              <span className="text-charcoal font-medium">unscalable and high-risk</span>.
+              <span className="text-charcoal font-medium">no clear logistics</span>, and a
+              founder doing everything herself —{' '}
+              <span className="text-charcoal font-medium">no room to grow</span> without burning out.
             </p>
           </div>
 
@@ -102,14 +101,13 @@ const CaseStudy = () => {
                              w-6 h-6 bg-charcoal rounded-full items-center justify-center">
               <ArrowRight className="w-3 h-3 text-white" />
             </div>
-            <h3 className="font-serif text-lg sm:text-xl mb-4 text-charcoal">The Architecture</h3>
+            <h3 className="font-serif text-lg sm:text-xl mb-4 text-charcoal">The Work</h3>
             <p className="text-sm sm:text-base text-muted-foreground font-light leading-relaxed">
-              As <span className="text-charcoal font-medium">Director of Operations & Growth</span>, I
-              built the commercial and operational infrastructure — establishing the{' '}
-              <span className="text-charcoal font-medium">systems</span>,{' '}
-              <span className="text-charcoal font-medium">partnerships</span>, and{' '}
-              <span className="text-charcoal font-medium">supply chains</span> needed for
-              international expansion.
+              I led <span className="text-charcoal font-medium">operations and growth</span> — putting
+              the <span className="text-charcoal font-medium">systems</span>,{' '}
+              <span className="text-charcoal font-medium">partnerships</span> and{' '}
+              <span className="text-charcoal font-medium">supply chain</span> in place so the
+              business could ship internationally without it all sitting on one person's shoulders.
             </p>
           </div>
 
@@ -120,14 +118,11 @@ const CaseStudy = () => {
             </div>
             <h3 className="font-serif text-lg sm:text-xl mb-4">The Result</h3>
             <p className="text-sm sm:text-base font-light leading-relaxed opacity-90">
-              A{' '}
-              <span className="font-medium text-white">fully operationalised luxury brand</span> with
-              secured access to the{' '}
-              <span className="font-medium text-white">US and EU markets</span>, functioning{' '}
-              <span className="font-medium text-white">
-                independent of the founder's daily oversight
-              </span>
-              .
+              A small brand operating{' '}
+              <span className="font-medium text-white">calmly and confidently</span> across the{' '}
+              <span className="font-medium text-white">US and EU</span> — with the founder back
+              doing what she does best, instead of{' '}
+              <span className="font-medium text-white">firefighting every day</span>.
             </p>
           </div>
         </div>

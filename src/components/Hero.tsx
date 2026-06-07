@@ -55,7 +55,7 @@ const Hero = () => {
         <div className="flex items-center gap-3 md:pt-32">
           <div className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
           <span className="text-[10px] uppercase tracking-[0.28em] text-white/60 font-light">
-            Business Architecture &nbsp;·&nbsp; Strategic Partnership
+            Web Design &amp; Growth &nbsp;·&nbsp; For Small Businesses
           </span>
         </div>
 
@@ -63,18 +63,16 @@ const Hero = () => {
         <div className="md:mt-auto">
           <h1 className="font-serif font-light tracking-tight leading-[0.95]
                          text-[clamp(2.8rem,6.5vw,6.5rem)] mb-6 sm:mb-8">
-            <span className="text-white">Architecture</span><br />
-            <span className="text-accent">for enterprise</span><br />
-            <span className="text-white">growth.</span>
+            <span className="text-white">From hidden</span><br />
+            <span className="text-accent">to found.</span>
           </h1>
 
           <div className="w-10 h-px bg-white/25 mb-5 sm:mb-7" />
 
           <p className="text-sm sm:text-base text-white/80 font-light leading-relaxed
                         max-w-[22rem] mb-8 sm:mb-10">
-            Most businesses have the capability. What they lack is the architecture —
-            the positioning, systems, and commercial infrastructure built
-            specifically to attract enterprise.
+            Websites, positioning, and growth systems built for independent founders
+            and small teams — by someone who actually cares how your business runs.
           </p>
 
           <div className="flex flex-row flex-wrap items-center gap-4 sm:gap-7">
@@ -84,7 +82,7 @@ const Hero = () => {
                          text-sm font-medium text-[#070707] bg-white hover:bg-white/85
                          transition-all duration-300 rounded-lg shrink-0"
             >
-              Book a Strategy Session
+              Book a Discovery Session
             </a>
             <a
               href="#case-study"
@@ -107,7 +105,7 @@ const Hero = () => {
           <div className="w-px h-7 bg-white/[0.12] shrink-0" />
           <div>
             <p className="text-[10px] text-white/35 font-light tracking-wide uppercase mb-1">Method</p>
-            <p className="text-sm text-white/75 font-light">Architecture over tactics</p>
+            <p className="text-sm text-white/75 font-light">Built around you</p>
           </div>
           <div className="w-px h-7 bg-white/[0.12] shrink-0" />
           <div>

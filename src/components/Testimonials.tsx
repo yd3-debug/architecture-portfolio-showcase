@@ -3,14 +3,14 @@ import { Quote, TrendingUp } from 'lucide-react';
 const testimonials = [
   {
     quote:
-      "YektaD didn't just redesign our website — they built a complete system for attracting and converting clients. We saw a 65% increase in bookings within three months. Our clients now have a seamless, professional experience from the first click.",
+      "Yekta didn't just redesign our website — he built a proper system around how we actually work. We saw a 65% increase in bookings within three months, and the whole experience finally feels like the studio we always knew we were.",
     name: 'Sahar',
     title: 'Owner, Studio Solena — Ealing, London',
     metric: '+65% bookings',
   },
   {
     quote:
-      "From brand identity to a fully functional website, YektaD delivered everything we needed to be taken seriously. We're now seen as the established, credible maintenance partner we always were — and the quality of inquiries has jumped significantly.",
+      "From brand identity to a fully working website, Yekta gave us everything we needed to be taken seriously. We're finally seen as the credible, established maintenance team we always were — and the quality of enquiries has jumped significantly.",
     name: 'Petru',
     title: 'Founder, Mainteniq — London, UK',
     metric: 'Brand & Web',
@@ -64,7 +64,7 @@ const Testimonials = () => {
 
         {/* Trust line */}
         <p className="text-center text-sm text-muted-foreground font-light mt-10 sm:mt-12">
-          50% refund guarantee if unsatisfied after month one — never claimed.
+          Selective by design — I only take on work I'm confident I can deliver.
         </p>
 
       </div>

@@ -24,8 +24,8 @@ const Footer = () => {
                 className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto mb-4 sm:mb-6 brightness-0 invert"
               />
               <p className="text-white/80 mb-4 sm:mb-6 leading-relaxed max-w-md text-sm sm:text-base">
-                We help established businesses move beyond word of mouth—building the visibility 
-                systems that attract enterprise clients. 12+ businesses. 6-figure contracts.
+                Custom websites, sharper positioning, and simple growth systems for
+                independent founders and small teams. From hidden to found — done properly.
               </p>
               <div className="text-white/50 text-xs space-y-0.5">
                 <p>Y &amp; A Design Ltd — Registered in England &amp; Wales</p>
@@ -37,7 +37,7 @@ const Footer = () => {
             <div>
               <h4 className="text-sm sm:text-base md:text-lg font-bold mb-3 sm:mb-4 md:mb-6">Services</h4>
               <ul className="space-y-2 sm:space-y-3">
-                {['Business Architecture', 'Operations Management', 'Web Design & Development', 'Growth Strategy'].map((service) => (
+                {['Custom Websites', 'Positioning & Brand', 'Growth Systems', 'Discovery Session'].map((service) => (
                   <li key={service}>
                     <a href="#services" className="text-white/70 hover:text-accent transition-colors duration-200 flex items-center gap-2 group text-xs sm:text-sm">
                       <span className="w-0 h-0.5 bg-accent group-hover:w-4 transition-all duration-200"></span>
@@ -89,7 +89,7 @@ const Footer = () => {
                 © {currentYear} YektaD. All rights reserved.
               </div>
               <div className="text-xs sm:text-sm text-white/60">
-                Built with ❤️ for business growth
+                Built with ❤️ for small businesses
               </div>
             </div>
           </div>

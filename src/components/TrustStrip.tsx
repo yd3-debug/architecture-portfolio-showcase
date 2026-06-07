@@ -1,15 +1,15 @@
 const pillars = [
   {
     label: "Selective by design",
-    body: "Every engagement begins with a clear vision of what's possible. If that path isn't visible before we start, the engagement doesn't begin.",
+    body: "I take on a handful of small businesses at a time so each one gets real attention. If I can't see a clear path to results, the engagement doesn't begin.",
   },
   {
-    label: "Architecture, not tactics",
-    body: "Campaigns end. Systems compound. We build the commercial infrastructure that makes enterprise buyers come to you — and stay.",
+    label: "Built around your business",
+    body: "No templates, no copy-paste strategies. Everything is shaped around how you actually work and what you want to build next.",
   },
   {
-    label: "Every angle considered",
-    body: "Digital presence, positioning, go-to-market, operations — each element is designed as part of one coherent system, never in isolation.",
+    label: "One person, fully invested",
+    body: "Every email, every decision, every detail comes from me. You're not handed off to a junior team — you get a partner who cares about your business.",
   },
 ];
 

@@ -8,36 +8,36 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: "How is YektaD different from a typical marketing agency?",
-      answer: "We're not a marketing agency — we're a growth partner. Instead of running ads or posting on social media, we focus on the full picture: your positioning, your digital presence, and your strategy for winning enterprise clients. Everything we do is designed to land you bigger contracts, not just more traffic."
+      question: "How is YektaD different from a marketing agency or freelancer?",
+      answer: "I'm not running ads or pumping out social posts, and I'm not juggling fifty clients at once. I work with a small number of businesses at a time and look at the whole picture — your website, how you're positioned, and the small systems that help you grow. It's closer to having a thoughtful partner than hiring a vendor."
     },
     {
       question: "How much does it cost?",
-      answer: "Every engagement is different because every business is different. We don't do cookie-cutter packages. After our Discovery Session, we'll put together a proposal that's tailored to your goals and budget. Our focus is always on ROI — the investment should pay for itself many times over."
+      answer: "Every business is different, so every proposal is different — I don't sell packages off a menu. After our Discovery Session I'll send you a clear, honest proposal scoped to what you actually need. The goal is always for the work to pay for itself, not for it to feel like an expense."
     },
     {
       question: "What results can I expect, and how quickly?",
-      answer: "Most clients see their first qualified enterprise lead within 6–8 weeks. Beyond that, we focus on building systems that keep delivering — not just one-off wins. We'll set clear goals together during our initial session so you know exactly what to expect."
+      answer: "Most small businesses I work with start seeing better enquiries within a couple of months of going live. The real win is steadier work, clearer positioning, and a business that runs more calmly. We'll agree on what good looks like before we start so there are no surprises."
     },
     {
       question: "How much of my time will this take?",
-      answer: "We know you're busy. The initial brief takes about 5 minutes, followed by a 30-minute Discovery Session. After that, we handle the heavy lifting and keep you updated with clear, concise communication — no unnecessary meetings."
+      answer: "I know you're busy. There's a short brief (about 5 minutes), a 30-minute Discovery Session, then I do most of the heavy lifting. You'll get clear updates and only the meetings that actually matter — no admin for the sake of admin."
     },
     {
-      question: "How do I know if YektaD is right for my business?",
-      answer: "We work best with established service businesses that have a proven offering but are stuck growing through referrals alone. If you want to break into the enterprise market and are ready to invest in doing it properly, we're likely a good fit. The Discovery Session is designed to figure that out together."
+      question: "Is this right for my business if I'm just one person, or a small team?",
+      answer: "Yes — that's exactly who I work with. Most of my clients are solo founders or teams of one to ten. If you've got real skill and happy customers but your online presence doesn't reflect any of it, we're probably a good fit."
     },
     {
       question: "What happens after I book a Discovery Session?",
-      answer: "You'll get a short brief to fill out (5 minutes) so we can understand your business before we talk. Then we have a 30-minute conversation to dig into your challenges and opportunities. Within 48 hours, you'll receive a tailored growth plan — no obligation, no pressure."
+      answer: "You'll get a short brief to fill in (5 minutes) so I can understand your business before we talk. Then we have a 30-minute conversation about where things are and where you want to go. Within 48 hours you'll get a tailored plan — no pressure, no obligation."
     },
     {
       question: "What if it doesn't work out?",
-      answer: "We set clear goals and milestones from day one. If something isn't working, we'll be the first to flag it and adjust. Our success depends on yours — we're not interested in long engagements that don't deliver results."
+      answer: "We set clear goals from day one. If something isn't working, I'll be the first to flag it and adjust. I'd rather have a hard conversation early than drag out work that isn't delivering — my reputation depends on yours doing well."
     },
     {
-      question: "Why not just hire someone in-house?",
-      answer: "Hiring for enterprise growth is expensive, slow, and risky. You need strategy, design, development, and market expertise — that's a full team. With us, you get all of that from day one, without the overhead of recruitment, training, and management."
+      question: "Why not just use a website builder or template?",
+      answer: "You absolutely can — and for some businesses, that's enough. But a templated site usually looks like a templated site, ranks poorly, and quietly costs you the enquiries you don't even know you're missing. A custom, considered website tends to do a lot of quiet work in the background."
     }
   ];
 

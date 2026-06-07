@@ -3,9 +3,9 @@ import PlaybookDownloadForm from './PlaybookDownloadForm';
 
 const Contact = () => {
   const nextSteps = [
-    "Quick brief (5 min) so we understand your business before we talk",
-    "30-minute Discovery Session to uncover what's holding you back",
-    "Tailored growth plan within 48 hours — no obligation"
+    "Quick brief (5 min) so I understand your business before we talk",
+    "30-minute Discovery Session to figure out what's getting in the way",
+    "A tailored plan within 48 hours — no pressure, no obligation"
   ];
 
   return (
@@ -13,10 +13,10 @@ const Contact = () => {
       <div className="container-professional max-w-5xl">
         <div className="text-center mb-10 sm:mb-14 md:mb-20">
           <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-3 sm:mb-4 md:mb-6 text-charcoal">
-            Let's Talk About Your Growth
+            Let's Talk About Your Business
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-light leading-relaxed max-w-2xl mx-auto mb-6">
-            We work with a small number of businesses at a time so we can give each one the attention it deserves.
+            I work with a handful of small businesses at a time so each one gets the attention it deserves.
           </p>
           {/* Scarcity Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-charcoal/5 rounded-full">
@@ -38,7 +38,7 @@ const Contact = () => {
             </div>
             <h3 className="font-serif text-xl sm:text-2xl mb-3">Book a Discovery Session</h3>
             <p className="text-sm sm:text-base text-white/70 font-light mb-6 leading-relaxed">
-              A 30-minute conversation to understand your business, identify what's blocking growth, and explore whether we're the right fit.
+              A 30-minute conversation to understand your business, see what's getting in the way of growth, and figure out if we're a good fit.
             </p>
             
             {/* What happens next */}
@@ -69,21 +69,21 @@ const Contact = () => {
             </div>
             <h3 className="font-serif text-xl sm:text-2xl mb-3 text-charcoal">Not Ready to Talk Yet?</h3>
             <p className="text-sm sm:text-base text-muted-foreground font-light mb-6 leading-relaxed">
-              Download our free Enterprise Visibility Playbook — the same framework we use with clients to win enterprise contracts.
+              Download the free Small Business Visibility Playbook — the simple framework I use with clients to help them get found by the right people.
             </p>
             
             <div className="space-y-3 mb-8">
               <div className="flex items-start gap-3">
                 <ArrowRight className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground font-light">The 5 positioning mistakes that make great businesses invisible to enterprise buyers</span>
+                <span className="text-sm text-muted-foreground font-light">The 5 positioning mistakes that quietly make small businesses invisible online</span>
               </div>
               <div className="flex items-start gap-3">
                 <ArrowRight className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground font-light">The "enterprise-ready" website checklist that actually converts</span>
+                <span className="text-sm text-muted-foreground font-light">A simple website checklist that actually turns visitors into enquiries</span>
               </div>
               <div className="flex items-start gap-3">
                 <ArrowRight className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground font-light">How to price for corporate procurement without underselling yourself</span>
+                <span className="text-sm text-muted-foreground font-light">How to price your work confidently — without underselling yourself</span>
               </div>
             </div>
 
@@ -105,7 +105,7 @@ const Contact = () => {
             >
               contact@yektad.com
             </a>
-            <p className="text-xs text-muted-foreground/70 mt-2 italic">Every email is personally read and responded to by Yekta</p>
+            <p className="text-xs text-muted-foreground/70 mt-2 italic">Every email is read and replied to personally by Yekta</p>
           </div>
 
           {/* Location */}
@@ -116,7 +116,7 @@ const Contact = () => {
             <h3 className="font-serif text-base sm:text-lg md:text-xl mb-2 sm:mb-3 text-charcoal">Services</h3>
             <p className="text-xs sm:text-sm md:text-base text-muted-foreground font-light">
               Remote & On-site<br />
-              Serving clients worldwide
+              Small businesses worldwide
             </p>
           </div>
         </div>
@@ -124,10 +124,10 @@ const Contact = () => {
         {/* Cost of Waiting */}
         <div className="text-center pt-8 sm:pt-10 md:pt-12 border-t border-border">
           <p className="text-sm sm:text-base text-muted-foreground font-light mb-2">
-            Every month without a clear enterprise strategy is a month your competitors are winning the clients you should be landing.
+            Every month you stay invisible online is a month the right clients are finding someone else instead.
           </p>
           <p className="text-xs text-muted-foreground/70">
-            Estimated value of a single missed enterprise contract: £15k–£50k.
+            It usually costs less to fix than to keep ignoring.
           </p>
         </div>
       </div>
